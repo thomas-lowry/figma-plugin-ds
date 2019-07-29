@@ -1,0 +1,65 @@
+.flex.flex--column
+	.flex.flex--mb-med
+		h1.section__title Checkboxes and switches
+	.flex.flex--mb-small
+		h2.section__subhead Checkbox
+	.flex.flex--mb-med
+		.flex.flex--quarter.flex--column.flex--outline.flex--centered.flex--padding
+			<div class="checkbox">
+				<input class="checkbox__box" type="checkbox" id="checkbox1">
+				<label class="checkbox__label" for="checkbox1">Unchecked</label>
+			</div>
+		.flex.flex--quarter.flex--column.flex--outline.flex--centered.flex--padding
+			<div class="checkbox">
+				<input class="checkbox__box" type="checkbox" id="checkbox2"checked>
+				<label class="checkbox__label" for="checkbox2">Checked</label>
+			</div>
+		.flex.flex--quarter.flex--column.flex--outline.flex--centered.flex--padding
+			<div class="checkbox">
+				<input class="checkbox__box" type="checkbox" id="checkbox3" disabled>
+				<label class="checkbox__label" for="checkbox3">Disabled</label>
+			</div>
+		.flex.flex--quarter.flex--column.flex--outline.flex--centered.flex--padding
+			<div class="checkbox">
+				<input class="checkbox__box" type="checkbox" id="checkbox4" checked disabled>
+				<label class="checkbox__label" for="checkbox4">Disabled</label>
+			</div>
+	.flex.flex--mb-large
+		pre
+			code.html
+				| &lt;div class="checkbox"&gt;
+				|     &lt;input class="checkbox__box" type="checkbox" id="uniqueId"&gt;
+				|     &lt;label class="checkbox__label" for="uniqueId"&gt;Label&lt;/label&gt;
+				| &lt;/div&gt;	
+	
+	
+	.flex.flex--mb-small
+		h2.section__subhead Switch
+	.flex.flex--mb-med
+		.flex.flex--quarter.flex--column.flex--outline.flex--centered.flex--padding
+			<div class="switch">
+				<input class="switch__toggle" type="checkbox" id="switch1">
+				<label class="switch__label" for="switch1">On</label>
+			</div>
+		.flex.flex--quarter.flex--column.flex--outline.flex--centered.flex--padding
+			<div class="switch">
+				<input class="switch__toggle" type="checkbox" id="switch2" checked>
+				<label class="switch__label" for="switch2">Off</label>
+			</div>
+		.flex.flex--quarter.flex--column.flex--outline.flex--centered.flex--padding
+			<div class="switch">
+				<input class="switch__toggle" type="checkbox" id="switch3" disabled>
+				<label class="switch__label" for="switch3">Disabled</label>
+			</div>
+		.flex.flex--quarter.flex--column.flex--outline.flex--centered.flex--padding
+			<div class="switch">
+				<input class="switch__toggle" type="checkbox" id="switch4" disabled checked>
+				<label class="switch__label" for="switch4">Disabled</label>
+			</div>
+	.flex.flex--mb-large
+		pre
+			code.html
+				| &lt;div class="switch"&gt;
+				|     &lt;input class="switch__toggle" type="checkbox" id="uniqueId"&gt;
+				|     &lt;label class="switch__label" for="uniqueId"&gt;Label&lt;/label&gt;
+				| &lt;/div&gt;

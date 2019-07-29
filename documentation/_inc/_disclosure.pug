@@ -1,0 +1,53 @@
+.flex.flex--column
+	.flex.flex--mb-med
+		h1.section__title Disclosure
+	.flex.flex--mb-med(style="min-height: 168px;")
+		.flex.flex--half.flex--centered.flex--outline.flex--padding.flex--top
+			<ul class="disclosure">
+				<li class="disclosure__item">
+					<div class="disclosure__label">Disclosure</div>
+					<div class="disclosure__content">Panel content here</div>
+				</li>
+				<li class="disclosure__item">
+					<div class="disclosure__label">Disclosure</div>
+					<div class="disclosure__content">Panel content here</div>
+				</li>
+				<li class="disclosure__item">
+					<div class="disclosure__label">Disclosure</div>
+					<div class="disclosure__content">Panel content here</div>
+				</li>
+			</ul>
+		.flex.flex--half.flex--centered.flex--outline.flex--padding.flex--top
+			<ul class="disclosure">
+				<li class="disclosure__item disclosure--section">
+					<div class="disclosure__label">Disclosure section</div>
+					<div class="disclosure__content">Panel content here</div>
+				</li>
+				<li class="disclosure__item disclosure--section">
+					<div class="disclosure__label">Disclosure section</div>
+					<div class="disclosure__content">Panel content here</div>
+				</li>
+				<li class="disclosure__item disclosure--section">
+					<div class="disclosure__label">Disclosure section</div>
+					<div class="disclosure__content">Panel content here</div>
+				</li>
+			</ul>
+				
+	.flex.flex--mb-small
+		pre
+			code.html
+				|&lt;ul class="disclosure"&gt;
+				|    &lt;li class="disclosure__item"&gt;
+				|        &lt;div class="disclosure__label disclosure--section"&gt;Disclosure&lt;/div&gt;
+				|        &lt;div class="disclosure__content"&gt;Panel content here&lt;/div&gt;
+				|    &lt;/li&gt;
+				|    &lt;li class="disclosure__item"&gt;
+				|        &lt;div class="disclosure__label"&gt;Disclosure&lt;/div&gt;
+				|        &lt;div class="disclosure__content"&gt;Panel content here&lt;/div&gt;
+				|    &lt;/li&gt;
+				|&lt;/ul&gt;
+	.flex
+		pre
+			code.javascript
+				| //initialize javascript
+				| disclosure.init();

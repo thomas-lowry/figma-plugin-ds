@@ -1,0 +1,16 @@
+.flex.flex--column
+	.flex.flex--mb-med
+		h1.section__title Inputs
+	.flex.flex--mb-med.flex--column.flex--padding.flex--outline
+			.flex.flex--mb-med
+				<input type="input" class="input" placeholder="Placeholder">
+			.flex.flex--mb-med
+				<input type="input" class="input" value="Value" placeholder="Placeholder">
+			.flex
+				<input type="input" class="input" value="Disabled" placeholder="Placeholder" disabled>
+	.flex
+		pre
+			code.html
+				| &lt;input type="input" class="input" placeholder="Placeholder"&gt;
+				| &lt;input type="input" class="input" value="Value"&gt;
+				| &lt;input type="input" class="input" value="Value" disabled&gt;

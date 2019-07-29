@@ -1,0 +1,111 @@
+pre {
+	width: 100%;
+	margin: 0;
+
+	cursor: text;
+}
+
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	width: 100%;
+	padding: 16px;
+
+	font-family: 'Roboto-mono', monospace;
+	font-size: 12px;
+	line-height: 18px;
+
+	color: $figma-black-3;
+	border-radius: $border-radius-small;
+	background: #f5f5f5;
+
+	&::-webkit-scrollbar {
+		width: 12px;
+
+		background-color: transparent;
+		background-image: none;
+		background-repeat: repeat-x;
+		background-size: 100% auto;
+	}
+
+	&::-webkit-scrollbar-track {
+		border: solid 3px transparent;
+		box-shadow: inset 0 0 10px 10px transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border: solid 3px transparent;
+		border-radius: 6px;
+		box-shadow: inset 0 0 10px 10px $figma-black-3;
+	}
+}
+.hljs-keyword, .hljs-operator {
+	color: $figma-hot-pink;
+}
+.hljs-pattern-match {
+	color: $figma-hot-pink;
+}
+.hljs-pattern-match .hljs-constructor {
+	color: $figma-blue;
+}
+.hljs-function {
+	color: $figma-blue;
+}
+.hljs-function .hljs-params {
+	color: $figma-green;
+}
+.hljs-function .hljs-params .hljs-typing {
+	color: #fd971f;
+}
+.hljs-module-access .hljs-module {
+	color: $figma-purple;
+}
+.hljs-constructor {
+	color: #e2b93d;
+}
+.hljs-constructor .hljs-string {
+	color: #9ccc65;
+}
+.hljs-comment, .hljs-quote {
+	color: $figma-black-3;
+}
+.hljs-doctag, .hljs-formula {
+	color: #c678dd;
+}
+.hljs-section, .hljs-name, .hljs-selector-tag, .hljs-deletion, .hljs-subst {
+	color: $figma-purple;
+}
+.hljs-literal {
+	color: $figma-black-3;
+}
+.hljs-string, .hljs-regexp, .hljs-addition, .hljs-attribute, .hljs-meta-string {
+	color: $figma-blue;
+}
+.hljs-built_in, .hljs-class .hljs-title {
+	color: #e6c07b;
+}
+.hljs-attr, .hljs-variable, .hljs-template-variable, .hljs-type, .hljs-selector-class, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-number {
+	color: $figma-black-8;
+}
+.hljs-symbol, .hljs-bullet, .hljs-link, .hljs-meta, .hljs-selector-id, .hljs-title {
+	color: $figma-blue;
+}
+.hljs-emphasis {
+	font-style: italic;
+}
+.hljs-strong {
+	font-weight: bold;
+}
+.hljs-link {
+	text-decoration: underline;
+}
+
+
+.javascript.hljs {
+	color: $figma-blue;
+}
+
+.html.hljs {
+	color: rgba(0,0,0,0.5);
+}

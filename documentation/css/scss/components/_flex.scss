@@ -1,0 +1,115 @@
+.flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	&--column {
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	&--half {
+		width: calc(50% - 8px);
+	}
+
+	&--third {
+		width: calc(33% - 8px);
+	}
+
+	&--third-compact {
+		width: calc(33% - 4px);
+	}
+
+	&--two-thirds {
+		width: calc(66% - 8px);
+	}
+
+	&--quarter {
+		width: calc(25% - 8px);
+	}
+
+	&--fifth {
+		width: calc(20% - 8px);
+	}
+
+	&--mb-small {
+		margin-bottom: 8px;
+	}
+
+	&--mb-med {
+		margin-bottom: 16px;
+	}
+
+	&--mb-large {
+		margin-bottom: 24px;
+	}
+
+	&--outline {
+		border: 1px solid $figma-black-1;
+	}
+
+	&--centered {
+		align-items: center;
+	}
+
+	&--padding {
+		padding: 16px;
+	}
+
+	&--top {
+		align-items: flex-start;
+	}
+
+	&--no-shrink {
+		flex-shrink: 0;
+	}
+
+	&--wrap {
+		flex-wrap: wrap;
+	}
+
+	&--start {
+		justify-content: flex-start;
+	}
+
+	&--pv-small {
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
+	&--dark {
+		background-color: $figma-black;
+	}
+
+	&--bg-white {
+		background-color: $figma-white;
+	}
+
+	&--scroll {
+		overflow-y: scroll;
+		max-height: 254px;
+
+		border-bottom: 1px solid #f5f5f5;
+		background-color: #f5f5f5;
+
+		&::-webkit-scrollbar {
+			width: 12px;
+
+			background-color: transparent;
+			background-image: none;
+			background-repeat: repeat-x;
+			background-size: 100% auto;
+		}
+
+		&::-webkit-scrollbar-track {
+			border: solid 3px transparent;
+			box-shadow: inset 0 0 10px 10px transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border: solid 3px transparent;
+			border-radius: 6px;
+			box-shadow: inset 0 0 10px 10px $figma-black-3;
+		}
+	}
+}
