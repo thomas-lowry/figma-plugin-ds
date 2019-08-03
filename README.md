@@ -1,5 +1,5 @@
 # Figma Plugin DS
-A small lightweight design system for use in Figma Plugins
+A small lightweight design system for use in [Figma Plugins](https://www.figma.com/plugin-docs/)
 
 ## To use:
 Include the contents of `figma-plugin-ds.min.css` inline within the `<style>` tag in `ui.html` of your plugin
@@ -20,3 +20,7 @@ Open to anyone willing to help or help me get this into a more npm-able format.
 ### Roadmap
 * Tooltips
 * Option strips
+
+---
+
+Design of components and icon © copyright [Figma](https://www.figma.com). Goal of this kit is to make UI components that mirror those found in the Figma UI available for use when creating plugins.
