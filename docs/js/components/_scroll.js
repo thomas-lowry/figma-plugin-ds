@@ -85,7 +85,6 @@ export function scroll() {
 		for (let i = 0; i < elementsLen; i++) {
 			elements[i].classList.remove('layer--selected');
 			elements[i].classList.remove('layer--selected-nested');
-			console.log('del');
 		}
 	}
 
