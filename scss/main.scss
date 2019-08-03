@@ -1,7 +1,7 @@
-@import 'base';
-@import 'typography';
-@import 'variables';
-@import 'mixins';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/variables';
+@import 'base/mixins';
 
 //Components — customize this to import only the components you need
 @import 'components/label';
