@@ -77,7 +77,6 @@ function scroll() {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
 				let section = entry.target.parentNode.previousElementSibling.name;
-				window.location.hash = '#' + section;
 				highlightNav(section);
 				entry.target.classList.add('section__frame--selected');
 			} else {
