@@ -1,315 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Figma Plugin DS</title>
-    <!--documentation site CSS-->
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-    <!--figma plugin CSS-->
-    <link href="../plugin-ui/css/main.css" rel="stylesheet" type="text/css">
-  </head>
-</html>
-<body>
-  <div class="toolbar">
-    <div class="toolbar__left">
-      <div class="toolbar__menu"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!DOCTYPE html><html lang="en"><head><title>Figma Plugin DS</title><!--documentation site CSS--><link href="css/main.css" rel="stylesheet" type="text/css"><!--figma plugin CSS--><link href="../plugin-ui/css/main.css" rel="stylesheet" type="text/css"></head></html><body><div class="intersect"></div><div class="toolbar"><div class="toolbar__left"><div class="toolbar__menu"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M27 25H13V26H27V25ZM27 20H13V21H27V20ZM27 15H13V16H27V15Z" fill="white"/>
-</svg>
-      </div>
-      <div class="toolbar__button toolbar__button--move toolbar__button--active"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+</svg></div><div class="toolbar__button toolbar__button--move toolbar__button--active"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6656 12.4799L15.6454 13.0721L26.8717 19.8586L27.8715 20.463L26.744 20.769L21.5248 22.1855L18.4864 26.776L17.8227 27.7786L17.5797 26.6011L14.897 13.6011L14.6656 12.4799ZM16.1078 14.5202L18.3161 25.2214L20.7949 21.4764L20.899 21.3192L21.0809 21.2698L25.3545 20.1099L16.1078 14.5202Z" fill="white"/>
-</svg>
-      </div>
-      <div class="toolbar__button toolbar__button--pen"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+</svg></div><div class="toolbar__button toolbar__button--pen"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M21.1219 15.6407L21.1104 15.6374L14.4437 13.7366L19.3533 18.6462C19.5491 18.5525 19.7684 18.5 20 18.5C20.8284 18.5 21.5 19.1716 21.5 20C21.5 20.8284 20.8284 21.5 20 21.5C19.1716 21.5 18.5 20.8284 18.5 20C18.5 19.7684 18.5525 19.5491 18.6462 19.3533L13.7425 14.4496L15.5745 20.8403L15.585 20.8768L15.5927 20.914C16.0146 22.9612 17.8287 24.5 20 24.5C20.4945 24.5 20.9685 24.4206 21.411 24.2746L21.9959 24.0817L22.4314 24.5172L24.2782 26.364L26.3995 24.2426L24.5346 22.3777L24.1041 21.9472L24.2888 21.3672C24.4257 20.9373 24.5 20.4783 24.5 20C24.5 17.9074 23.0707 16.1461 21.1335 15.6437L21.1219 15.6407ZM27.1066 23.5355L27.8137 24.2426L27.1066 24.9497L24.9853 27.0711L24.2782 27.7782L23.5711 27.0711L21.7243 25.2243C21.1819 25.4032 20.6023 25.5 20 25.5C17.3448 25.5 15.129 23.6184 14.6133 21.1159L12.3246 13.1324L12 12L13.1329 12.323L21.3846 14.6758C23.7519 15.2896 25.5 17.4407 25.5 20C25.5 20.5825 25.4095 21.1438 25.2417 21.6706L27.1066 23.5355Z" fill="white"/>
-</svg>
-      </div>
-    </div>
-    <div class="toolbar__title">
-      <div class="toolbar__site">Figma Plugin UI</div>
-      <div class="toolbar__divider"><svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+</svg></div></div><div class="toolbar__title"><div class="toolbar__site">Figma Plugin UI</div><div class="toolbar__divider"><svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.03174 19.8245L10.0317 3.82446L10.9681 4.17559L4.96807 20.1756L4.03174 19.8245Z" fill="white" fill-opacity="0.4"/>
-</svg>
-      </div>
-      <div class="toolbar__page">{{ pageName }}</div>
-    </div>
-    <div class="toolbar__right"></div>
-  </div>
-  <div class="layers-panel">
-    <div class="layers-panel__header"></div>
-    <div class="layers-panel__list">
-      <div class="layer layer--frame"><a class="layer__link" href="#intro">
-          <div class="layer__row">
-            <div class="layer__icon"></div>
-            <div class="layer__name layer--top-level">Introduction													</div>
-          </div></a></div>
-      <div class="layer layer--frame"><a class="layer__link" href="#components">
-          <div class="layer__row">
-            <div class="layer__chevron"></div>
-            <div class="layer__icon"></div>
-            <div class="layer__name layer--top-level">Components</div>
-          </div></a>
-        <div class="layer__nested-layers"> 
-          <div class="layer layer--component"><a class="layer__link" href="#buttons">
-              <div class="layer__row layer--nested">
-                <div class="layer__icon"></div>
-                <div class="layer__name">Buttons</div>
-              </div></a></div>
-          <div class="layer layer--component"><a class="layer__link" href="#checkbox-switch">
-              <div class="layer__row layer--nested">
-                <div class="layer__icon"></div>
-                <div class="layer__name">Checkbox + switch</div>
-              </div></a></div>
-          <div class="layer layer--component"><a class="layer__link" href="#disclosure">
-              <div class="layer__row layer--nested">
-                <div class="layer__icon"></div>
-                <div class="layer__name">Disclosure panels</div>
-              </div></a></div>
-          <div class="layer layer--component"><a class="layer__link" href="#inputs">
-              <div class="layer__row layer--nested">
-                <div class="layer__icon"></div>
-                <div class="layer__name">Input</div>
-              </div></a></div>
-          <div class="layer layer--component"><a class="layer__link" href="#icon-input">
-              <div class="layer__row layer--nested">
-                <div class="layer__icon"></div>
-                <div class="layer__name">Icon input</div>
-              </div></a></div>
-          <div class="layer layer--component"><a class="layer__link" href="#icons">
-              <div class="layer__row layer--nested">
-                <div class="layer__icon"></div>
-                <div class="layer__name">Icons	</div>
-              </div></a></div>
-          <div class="layer layer--component"><a class="layer__link" href="#labels-sections">
-              <div class="layer__row layer--nested">
-                <div class="layer__icon"></div>
-                <div class="layer__name">Labels + sections</div>
-              </div></a></div>
-          <div class="layer layer--component"><a class="layer__link" href="#onboarding">
-              <div class="layer__row layer--nested">
-                <div class="layer__icon"></div>
-                <div class="layer__name">Onboarding tip</div>
-              </div></a></div>
-          <div class="layer layer--component"><a class="layer__link" href="#select-menu">
-              <div class="layer__row layer--nested">
-                <div class="layer__icon"></div>
-                <div class="layer__name">Select menu</div>
-              </div></a></div>
-          <div class="layer layer--component"><a class="layer__link" href="#textarea">
-              <div class="layer__row layer--nested">
-                <div class="layer__icon"></div>
-                <div class="layer__name">Textarea	</div>
-              </div></a></div>
-          <div class="layer layer--component"><a class="layer__link" href="#visual-bell">
-              <div class="layer__row layer--nested">
-                <div class="layer__icon"></div>
-                <div class="layer__name">Visual bell</div>
-              </div></a></div>
-        </div>
-      </div>
-      <div class="layer layer--frame"><a class="layer__link" href="#tokens">
-          <div class="layer__row">
-            <div class="layer__chevron"></div>
-            <div class="layer__icon"></div>
-            <div class="layer__name layer--top-level">Tokens</div>
-          </div></a>
-        <div class="layer__nested-layers"> 
-          <div class="layer layer--frame"><a class="layer__link" href="#colors">
-              <div class="layer__row layer--nested">
-                <div class="layer__icon"></div>
-                <div class="layer__name">Color</div>
-              </div></a></div>
-          <div class="layer layer--frame"><a class="layer__link" href="#border-radius">
-              <div class="layer__row layer--nested">
-                <div class="layer__icon"></div>
-                <div class="layer__name">Border radius</div>
-              </div></a></div>
-          <div class="layer layer--frame"><a class="layer__link" href="#shadows">
-              <div class="layer__row layer--nested">
-                <div class="layer__icon"></div>
-                <div class="layer__name">Shadows</div>
-              </div></a></div>
-        </div>
-      </div>
-      <div class="layer layer--frame"><a class="layer__link" href="#typography">
-          <div class="layer__row">
-            <div class="layer__chevron"></div>
-            <div class="layer__icon"></div>
-            <div class="layer__name layer--top-level">Typography</div>
-          </div></a>
-        <div class="layer__nested-layers"> 
-          <div class="layer layer--type"><a class="layer__link" href="#typography-positive">
-              <div class="layer__row layer--nested">
-                <div class="layer__icon"></div>
-                <div class="layer__name">Positive</div>
-              </div></a></div>
-          <div class="layer layer--type"><a class="layer__link" href="#typography-negative">
-              <div class="layer__row layer--nested">
-                <div class="layer__icon"></div>
-                <div class="layer__name">Negative	</div>
-              </div></a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="layout">
-    <div class="page-container"><a name="intro"></a>
-      <div class="section">
-        <div class="section__frame section__frame--intro">
-          <div class="flex flex--column">
-            <div class="flex flex--mb-med">
-              <h1 class="section__title">A design system for Figma plugins</h1>
-            </div>
-            <div class="flex">
-              <div class="flex flex--half flex--column">
-                <div class="flex flex--mb-large">
-                  <div class="section__lede">An unofficially supported design system that closely mirrors the Figma UI for use in the development of Figma plugins.</div>
-                </div>
-                <div class="flex flex--mb-med">
-                  <p class="section__content">The system is built with HTML, CSS and native Javascript with no dependencies. Simply include the minified JS + CSS inline within your plugin UI or as part of your build process. You can also modify and recompile main.scss to include only the components you need in order to reduce file size.</p>
-                </div>
-                <div class="flex flex--mb-large">
-                  <p class="section__content">Created and maintained by <a href="https://twitter.com/negativespaceca" target="blank">Thomas Lowry</a></p>
-                </div>
-                <div class="flex flex--start"><a class="button button--secondary button--margin-right" href="#">View on GitHub</a><a class="button button--primary" href="#">Download</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><a name="components"></a>
-      <div class="section">
-        <div class="section__frame section--section-header"></div>
-      </div><a name="buttons"></a>
-      <div class="section section--component">
-        <div class="section__frame">
-          <div class="flex flex--column">
-            <div class="flex flex--mb-med">
-              <h1 class="section__title">Buttons</h1>
-            </div>
-            <div class="flex flex--mb-small">
-              <h2 class="section__subhead">Primary</h2>
-            </div>
-            <div class="flex flex--mb-large">
-              <div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><button class='button button--primary'>Label</button>
-                <h3 class="section__eyebrow section--margin-top">Normal</h3>
-              </div>
-              <div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><button class='button button--primary' disabled>Label</button>
-                <h3 class="section__eyebrow section--margin-top">Disabled</h3>
-              </div>
-              <div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><button class='button button--primary-destructive'>Label</button>
-                <h3 class="section__eyebrow section--margin-top">Destructive</h3>
-              </div>
-              <div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><button class='button button--primary-destructive' disabled>Label</button>
-                <h3 class="section__eyebrow section--margin-top">Disabled</h3>
-              </div>
-            </div>
-            <div class="flex flex--mb-small">
-              <h2 class="section__subhead">Secondary</h2>
-            </div>
-            <div class="flex flex--mb-med">
-              <div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><button class='button button--secondary'>Label</button>
-                <h3 class="section__eyebrow section--margin-top">Normal</h3>
-              </div>
-              <div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><button class='button button--secondary' disabled>Label</button>
-                <h3 class="section__eyebrow section--margin-top">Disabled</h3>
-              </div>
-              <div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><button class='button button--secondary-destructive'>Label</button>
-                <h3 class="section__eyebrow section--margin-top">Destructive</h3>
-              </div>
-              <div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><button class='button button--secondary-destructive' disabled>Label</button>
-                <h3 class="section__eyebrow section--margin-top">Disabled</h3>
-              </div>
-            </div>
-            <div class="flex">
-              <pre><code class="html">&lt;!-- Primary --&gt;
+</svg></div><div class="toolbar__page">{{ pageName }}</div></div><div class="toolbar__right"><div class="avatar">T</div><div class="zoom">100%</div></div></div><div class="layers-panel"><div class="layers-panel__header"></div><div class="layers-panel__list"><div class="layer layer--frame"><a class="layer__link" href="#intro"><div class="layer__row"><div class="layer__icon"></div><div class="layer__name layer--top-level">Introduction													</div></div></a></div><div class="layer layer--frame"><a class="layer__link" href="#components"><div class="layer__row"><div class="layer__chevron"></div><div class="layer__icon"></div><div class="layer__name layer--top-level">Components</div></div></a><div class="layer__nested-layers"> <div class="layer layer--component"><a class="layer__link" href="#buttons"><div class="layer__row layer--nested"><div class="layer__icon"></div><div class="layer__name">Buttons</div></div></a></div><div class="layer layer--component"><a class="layer__link" href="#checkbox-switch"><div class="layer__row layer--nested"><div class="layer__icon"></div><div class="layer__name">Checkbox + switch</div></div></a></div><div class="layer layer--component"><a class="layer__link" href="#disclosure"><div class="layer__row layer--nested"><div class="layer__icon"></div><div class="layer__name">Disclosure panels</div></div></a></div><div class="layer layer--component"><a class="layer__link" href="#inputs"><div class="layer__row layer--nested"><div class="layer__icon"></div><div class="layer__name">Input</div></div></a></div><div class="layer layer--component"><a class="layer__link" href="#icon-input"><div class="layer__row layer--nested"><div class="layer__icon"></div><div class="layer__name">Icon input</div></div></a></div><div class="layer layer--component"><a class="layer__link" href="#icons"><div class="layer__row layer--nested"><div class="layer__icon"></div><div class="layer__name">Icons	</div></div></a></div><div class="layer layer--component"><a class="layer__link" href="#labels-sections"><div class="layer__row layer--nested"><div class="layer__icon"></div><div class="layer__name">Labels, sections + dividers</div></div></a></div><div class="layer layer--component"><a class="layer__link" href="#onboarding"><div class="layer__row layer--nested"><div class="layer__icon"></div><div class="layer__name">Onboarding tip</div></div></a></div><div class="layer layer--component"><a class="layer__link" href="#select-menu"><div class="layer__row layer--nested"><div class="layer__icon"></div><div class="layer__name">Select menu</div></div></a></div><div class="layer layer--component"><a class="layer__link" href="#textarea"><div class="layer__row layer--nested"><div class="layer__icon"></div><div class="layer__name">Textarea	</div></div></a></div><div class="layer layer--component"><a class="layer__link" href="#visual-bell"><div class="layer__row layer--nested"><div class="layer__icon"></div><div class="layer__name">Visual bell</div></div></a></div></div></div><div class="layer layer--frame"><a class="layer__link" href="#tokens"><div class="layer__row"><div class="layer__chevron"></div><div class="layer__icon"></div><div class="layer__name layer--top-level">Tokens</div></div></a><div class="layer__nested-layers"> <div class="layer layer--frame"><a class="layer__link" href="#colors"><div class="layer__row layer--nested"><div class="layer__icon"></div><div class="layer__name">Color</div></div></a></div><div class="layer layer--frame"><a class="layer__link" href="#border-shadows"><div class="layer__row layer--nested"><div class="layer__icon"></div><div class="layer__name">Border radius and shadows</div></div></a></div><div class="layer layer--frame"><a class="layer__link" href="#typography"><div class="layer__row layer--nested"><div class="layer__icon"></div><div class="layer__name">Typography</div></div></a></div></div></div></div></div><div class="layout"><div class="page-container"><a name="intro"></a><div class="section"><div class="section__frame section__frame--intro"><div class="flex flex--column"><div class="flex flex--mb-med"><h1 class="section__title">A design system for Figma plugins</h1></div><div class="flex flex--mb-large"><div class="flex flex--two-thirds"><div class="section__lede">An unofficially supported design system that closely mirrors the Figma UI for use in the development of Figma plugins.</div></div></div><div class="flex flex--column"><div class="flex flex--half flex--mb-med"><p class="section__content">The system is built with HTML, CSS and native Javascript with no dependencies. Simply include the minified JS + CSS inline within your plugin UI or as part of your build process. You can modify and recompile main.scss to include only the components you need and the reduce file size.</p></div><div class="flex flex--mb-large"><p class="section__content">Created and maintained by <a href="https://twitter.com/negativespaceca" target="blank">Thomas Lowry</a></p></div><div class="flex flex--start"><a class="button button--secondary button--margin-right" href="#">View on GitHub</a><a class="button button--primary" href="#">Download</a></div></div></div></div></div><a name="components"></a><div class="section"><div class="section__frame section--section-header section__frame--components"><div class="flex flex--column"><div class="flex flex--mb-med"><h1 class="section__title section--white">Components</h1></div><div class="flex flex--mb-large"><div class="flex flex--half"><div class="section__lede section--white-4">Interact with the collection of components and their corresponding markup and javascript functions.</div></div></div></div></div></div><a name="buttons"></a><div class="section section--component"><div class="section__frame"><div class="flex flex--column"><div class="flex flex--mb-med"><h1 class="section__title">Buttons</h1></div><div class="flex flex--mb-small"><h2 class="section__subhead">Primary</h2></div><div class="flex flex--mb-large"><div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><button class='button button--primary'>Label</button><h3 class="section__eyebrow section--margin-top">Normal</h3></div><div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><button class='button button--primary' disabled>Label</button><h3 class="section__eyebrow section--margin-top">Disabled</h3></div><div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><button class='button button--primary-destructive'>Label</button><h3 class="section__eyebrow section--margin-top">Destructive</h3></div><div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><button class='button button--primary-destructive' disabled>Label</button><h3 class="section__eyebrow section--margin-top">Disabled</h3></div></div><div class="flex flex--mb-small"><h2 class="section__subhead">Secondary</h2></div><div class="flex flex--mb-med"><div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><button class='button button--secondary'>Label</button><h3 class="section__eyebrow section--margin-top">Normal</h3></div><div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><button class='button button--secondary' disabled>Label</button><h3 class="section__eyebrow section--margin-top">Disabled</h3></div><div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><button class='button button--secondary-destructive'>Label</button><h3 class="section__eyebrow section--margin-top">Destructive</h3></div><div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><button class='button button--secondary-destructive' disabled>Label</button><h3 class="section__eyebrow section--margin-top">Disabled</h3></div></div><div class="flex"><pre><code class="html">&lt;!-- Primary --&gt;
 &lt;button class='button button--primary'&gt;Label&lt;/button&gt;
 &lt;button class='button button--primary-destructive'&gt;Label&lt;/button&gt;
 
 &lt;!-- Secondary --&gt;
 &lt;button class='button button--secondary'&gt;Label&lt;/button&gt;
-&lt;button class='button button--secondary-destructive'&gt;Label&lt;/button&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-      </div><a name="checkbox-switch"></a>
-      <div class="section section--component">
-        <div class="section__frame">
-          <div class="flex flex--column">
-            <div class="flex flex--mb-med">
-              <h1 class="section__title">Checkboxes and switches</h1>
-            </div>
-            <div class="flex flex--mb-small">
-              <h2 class="section__subhead">Checkbox</h2>
-            </div>
-            <div class="flex flex--mb-med">
-              <div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><div class="checkbox">
+&lt;button class='button button--secondary-destructive'&gt;Label&lt;/button&gt;</code></pre></div></div></div></div><a name="checkbox-switch"></a><div class="section section--component"><div class="section__frame"><div class="flex flex--column"><div class="flex flex--mb-med"><h1 class="section__title">Checkboxes and switches</h1></div><div class="flex flex--mb-small"><h2 class="section__subhead">Checkbox</h2></div><div class="flex flex--mb-med"><div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><div class="checkbox">
 <input class="checkbox__box" type="checkbox" id="checkbox1">
 <label class="checkbox__label" for="checkbox1">Unchecked</label>
-</div>
-              </div>
-              <div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><div class="checkbox">
+</div></div><div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><div class="checkbox">
 <input class="checkbox__box" type="checkbox" id="checkbox2"checked>
 <label class="checkbox__label" for="checkbox2">Checked</label>
-</div>
-              </div>
-              <div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><div class="checkbox">
+</div></div><div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><div class="checkbox">
 <input class="checkbox__box" type="checkbox" id="checkbox3" disabled>
 <label class="checkbox__label" for="checkbox3">Disabled</label>
-</div>
-              </div>
-              <div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><div class="checkbox">
+</div></div><div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><div class="checkbox">
 <input class="checkbox__box" type="checkbox" id="checkbox4" checked disabled>
 <label class="checkbox__label" for="checkbox4">Disabled</label>
-</div>
-              </div>
-            </div>
-            <div class="flex flex--mb-large">
-              <pre><code class="html">&lt;div class="checkbox"&gt;
+</div></div></div><div class="flex flex--mb-large"><pre><code class="html">&lt;div class="checkbox"&gt;
     &lt;input class="checkbox__box" type="checkbox" id="uniqueId"&gt;
     &lt;label class="checkbox__label" for="uniqueId"&gt;Label&lt;/label&gt;
-&lt;/div&gt;	</code></pre>
-            </div>
-            <div class="flex flex--mb-small">
-              <h2 class="section__subhead">Switch</h2>
-            </div>
-            <div class="flex flex--mb-med">
-              <div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><div class="switch">
+&lt;/div&gt;	</code></pre></div><div class="flex flex--mb-small"><h2 class="section__subhead">Switch</h2></div><div class="flex flex--mb-med"><div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><div class="switch">
 <input class="switch__toggle" type="checkbox" id="switch1">
 <label class="switch__label" for="switch1">On</label>
-</div>
-              </div>
-              <div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><div class="switch">
+</div></div><div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><div class="switch">
 <input class="switch__toggle" type="checkbox" id="switch2" checked>
 <label class="switch__label" for="switch2">Off</label>
-</div>
-              </div>
-              <div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><div class="switch">
+</div></div><div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><div class="switch">
 <input class="switch__toggle" type="checkbox" id="switch3" disabled>
 <label class="switch__label" for="switch3">Disabled</label>
-</div>
-              </div>
-              <div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><div class="switch">
+</div></div><div class="flex flex--quarter flex--column flex--outline flex--centered flex--padding"><div class="switch">
 <input class="switch__toggle" type="checkbox" id="switch4" disabled checked>
 <label class="switch__label" for="switch4">Disabled</label>
-</div>
-              </div>
-            </div>
-            <div class="flex flex--mb-large">
-              <pre><code class="html">&lt;div class="switch"&gt;
+</div></div></div><div class="flex flex--mb-large"><pre><code class="html">&lt;div class="switch"&gt;
     &lt;input class="switch__toggle" type="checkbox" id="uniqueId"&gt;
     &lt;label class="switch__label" for="uniqueId"&gt;Label&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-      </div><a name="disclosure"></a>
-      <div class="section section--component">
-        <div class="section__frame">
-          <div class="flex flex--column">
-            <div class="flex flex--mb-med">
-              <h1 class="section__title">Disclosure</h1>
-            </div>
-            <div class="flex flex--mb-med" style="min-height: 168px;">
-              <div class="flex flex--half flex--centered flex--outline flex--padding flex--top"><ul class="disclosure">
+&lt;/div&gt;</code></pre></div></div></div></div><a name="disclosure"></a><div class="section section--component"><div class="section__frame"><div class="flex flex--column"><div class="flex flex--mb-med"><h1 class="section__title">Disclosure</h1></div><div class="flex flex--mb-med" style="min-height: 168px;"><div class="flex flex--half flex--centered flex--outline flex--padding flex--top"><ul class="disclosure">
 <li class="disclosure__item">
 <div class="disclosure__label">Disclosure</div>
 <div class="disclosure__content">Panel content here</div>
@@ -322,9 +55,7 @@
 <div class="disclosure__label">Disclosure</div>
 <div class="disclosure__content">Panel content here</div>
 </li>
-</ul>
-              </div>
-              <div class="flex flex--half flex--centered flex--outline flex--padding flex--top"><ul class="disclosure">
+</ul></div><div class="flex flex--half flex--centered flex--outline flex--padding flex--top"><ul class="disclosure">
 <li class="disclosure__item disclosure--section">
 <div class="disclosure__label">Disclosure section</div>
 <div class="disclosure__content">Panel content here</div>
@@ -337,11 +68,7 @@
 <div class="disclosure__label">Disclosure section</div>
 <div class="disclosure__content">Panel content here</div>
 </li>
-</ul>
-              </div>
-            </div>
-            <div class="flex flex--mb-small">
-              <pre><code class="html">&lt;ul class="disclosure"&gt;
+</ul></div></div><div class="flex flex--mb-small"><pre><code class="html">&lt;ul class="disclosure"&gt;
    &lt;li class="disclosure__item"&gt;
        &lt;div class="disclosure__label disclosure--section"&gt;Disclosure&lt;/div&gt;
        &lt;div class="disclosure__content"&gt;Panel content here&lt;/div&gt;
@@ -350,408 +77,65 @@
        &lt;div class="disclosure__label"&gt;Disclosure&lt;/div&gt;
        &lt;div class="disclosure__content"&gt;Panel content here&lt;/div&gt;
    &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-            </div>
-            <div class="flex">
-              <pre><code class="javascript">//initialize javascript
-disclosure.init();</code></pre>
-            </div>
-          </div>
-        </div>
-      </div><a name="inputs"></a>
-      <div class="section section--component">
-        <div class="section__frame">
-          <div class="flex flex--column">
-            <div class="flex flex--mb-med">
-              <h1 class="section__title">Inputs</h1>
-            </div>
-            <div class="flex flex--mb-med flex--column flex--padding flex--outline">
-              <div class="flex flex--mb-med"><input type="input" class="input" placeholder="Placeholder"></div>
-              <div class="flex flex--mb-med"><input type="input" class="input" value="Value" placeholder="Placeholder"></div>
-              <div class="flex"><input type="input" class="input" value="Disabled" placeholder="Placeholder" disabled></div>
-            </div>
-            <div class="flex">
-              <pre><code class="html">&lt;input type="input" class="input" placeholder="Placeholder"&gt;
+&lt;/ul&gt;</code></pre></div><div class="flex"><pre><code class="javascript">//initialize javascript
+disclosure.init();</code></pre></div></div></div></div><a name="inputs"></a><div class="section section--component"><div class="section__frame"><div class="flex flex--column"><div class="flex flex--mb-med"><h1 class="section__title">Inputs</h1></div><div class="flex flex--mb-med flex--column flex--padding flex--outline"><div class="flex flex--mb-med"><input type="input" class="input" placeholder="Placeholder"></div><div class="flex flex--mb-med"><input type="input" class="input" value="Value" placeholder="Placeholder"></div><div class="flex"><input type="input" class="input" value="Disabled" placeholder="Placeholder" disabled></div></div><div class="flex"><pre><code class="html">&lt;input type="input" class="input" placeholder="Placeholder"&gt;
 &lt;input type="input" class="input" value="Value"&gt;
-&lt;input type="input" class="input" value="Value" disabled&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-      </div><a name="icon-input"></a>
-      <div class="section section--component">
-        <div class="section__frame">
-          <div class="flex flex--column">
-            <div class="flex flex--mb-med">
-              <h1 class="section__title">Icon Input</h1>
-            </div>
-            <div class="flex flex--mb-med flex--outline flex--padding"><div class="input-icon">
+&lt;input type="input" class="input" value="Value" disabled&gt;</code></pre></div></div></div></div><a name="icon-input"></a><div class="section section--component"><div class="section__frame"><div class="flex flex--column"><div class="flex flex--mb-med"><h1 class="section__title">Icon Input</h1></div><div class="flex flex--mb-med flex--outline flex--padding"><div class="input-icon">
 <div class="input-icon__icon">
 <div class="icon icon--angle icon--black-3"></div><!--use icon component here-->
 </div>
 <input type="input" class="input-icon__input" value="0&deg;" placeholder="0">
-</div>
-            </div>
-            <div class="flex flex--mb-small">
-              <pre><code class="html">&lt;div class="input-icon"&gt;
+</div></div><div class="flex flex--mb-small"><pre><code class="html">&lt;div class="input-icon"&gt;
    &lt;div class="input-icon__icon"&gt;
      &lt;div class="icon icon--angle icon--black-3"&gt;&lt;/div&gt;
      &lt;/div&gt;
    &lt;input type="input" class="input-icon__input" value="0&deg;" placeholder="0&deg;"&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-            <div class="flex">
-              <pre><code class="javascript">//initialize javascript
-iconInput.init();</code></pre>
-            </div>
-          </div>
-        </div>
-      </div><a name="icons"></a>
-      <div class="section section--component">
-        <div class="section__frame">
-          <div class="flex flex--column">
-            <div class="flex flex--mb-med">
-              <h1 class="section__title">Icons</h1>
-            </div>
-            <div class="flex flex--mb-med">
-              <p class="section__content">Use the icon component with the corresponding modifier class to select the icon you want. Add additional modifier class to choose from blue, grey or white versions. You can also turn any icon into an icon button All icons are minified and URI encoded as SVG background images to avoid http requests. Customize the main.scss file to import only the icons you need to optimize performance.</p>
-            </div>
-            <div class="flex flex--mb-small flex--wrap">
-              <div class="flex flex--fifth flex--outline flex--column flex--centered flex--pv-small flex--mb-small"><div class="icon icon--adjust"></div>
-                <p class="section__eyebrow">--adjust</p>
-              </div>
-              <div class="flex flex--fifth flex--outline flex--column flex--centered flex--pv-small flex--mb-small"><div class="icon icon--adjust icon--blue"></div>
-                <p class="section__eyebrow">--adjust --blue</p>
-              </div>
-              <div class="flex flex--fifth flex--outline flex--column flex--centered flex--pv-small flex--mb-small"><div class="icon icon--adjust icon--grey"></div>
-                <p class="section__eyebrow">--adjust --grey</p>
-              </div>
-              <div class="flex flex--fifth flex--outline flex--column flex--centered flex--pv-small flex--mb-small flex--dark"><div class="icon icon--adjust icon--white"></div>
-                <p class="section__eyebrow section__eyebrow--inverse">--adjust --white</p>
-              </div>
-              <div class="flex flex--fifth flex--outline flex--column flex--centered flex--pv-small flex--mb-small"><div class="icon icon--adjust icon--button"></div>
-                <p class="section__eyebrow">--adjust --button</p>
-              </div>
-            </div>
-            <div class="flex flex--mb-med">
-              <pre><code class="html">&lt;!-- Icon --&gt;
+&lt;/div&gt;</code></pre></div><div class="flex"><pre><code class="javascript">//initialize javascript
+iconInput.init();</code></pre></div></div></div></div><a name="icons"></a><div class="section section--component"><div class="section__frame"><div class="flex flex--column"><div class="flex flex--mb-med"><h1 class="section__title">Components</h1></div><div class="flex flex--mb-med"><p class="section__content">A collection of components for use in Figma plugins.</p></div><div class="flex"><div class="flex flex--quarter flex--outline flex--column flex--centered flex--pv-small flex--mb-small"><div class="icon icon--adjust"></div><p class="section__eyebrow">--adjust</p></div><div class="flex flex--quarter flex--outline flex--column flex--centered flex--pv-small flex--mb-small"><div class="icon icon--adjust icon--blue"></div><p class="section__eyebrow">--adjust --blue</p></div><div class="flex flex--quarter flex--outline flex--column flex--centered flex--pv-small flex--mb-small"><div class="icon icon--adjust icon--black-3"></div><p class="section__eyebrow">--adjust --black-3</p></div><div class="flex flex--quarter flex--outline flex--column flex--centered flex--pv-small flex--mb-small flex--dark"><div class="icon icon--adjust icon--white"></div><p class="section__eyebrow section--white">--adjust --white</p></div></div><div class="flex flex--mb-med"><div class="flex flex--third flex--outline flex--column flex--centered flex--pv-small flex--mb-small"><div class="icon icon--adjust icon--button"></div><p class="section__eyebrow">--adjust --button</p></div><div class="flex flex--third flex--outline flex--column flex--centered flex--pv-small flex--mb-small"><div class="icon icon--adjust icon--button icon--selected"></div><p class="section__eyebrow">--adjust --button --selected</p></div><div class="flex flex--third flex--outline flex--column flex--centered flex--pv-small flex--mb-small"><div class="icon icon--text">W</div><p class="section__eyebrow">--text</p></div></div><div class="flex flex--mb-med"><pre><code class="html">&lt;!-- Icon --&gt;
 &lt;div class="icon icon--adjust"&gt;&lt;/div&gt;
 &lt;div class="icon icon--adjust icon--blue"&gt;&lt;/div&gt;
-&lt;div class="icon icon--adjust icon--grey"&gt;&lt;/div&gt;
+&lt;div class="icon icon--adjust icon--black-3"&gt;&lt;/div&gt;
 &lt;div class="icon icon--adjust icon--white"&gt;&lt;/div&gt;
 
 &lt;!-- Icon button --&gt;
-&lt;div class="icon icon--adjust icon--button"&gt;&lt;/div&gt;</code></pre>
-            </div>
-            <div class="flex flex--wrap flex--scroll flex--padding">
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--adjust"></div>
-                <p class="section__eyebrow">--adjust</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--alert"></div>
-                <p class="section__eyebrow">--alert</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--align-bottom"></div>
-                <p class="section__eyebrow">--align-bottom</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--align-middle"></div>
-                <p class="section__eyebrow">--align-middle</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--align-top"></div>
-                <p class="section__eyebrow">--align-top</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--angle"></div>
-                <p class="section__eyebrow">--angle</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--animated-fill"></div>
-                <p class="section__eyebrow">--animated-fill</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--arrow-left-right"></div>
-                <p class="section__eyebrow">--arrow-left-right</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--arrow-up-down"></div>
-                <p class="section__eyebrow">--arrow-up-down</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--blend-empty"></div>
-                <p class="section__eyebrow">--blend-empty</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--blend"></div>
-                <p class="section__eyebrow">--blend</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--break"></div>
-                <p class="section__eyebrow">--break</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--close"></div>
-                <p class="section__eyebrow">--close</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--comment"></div>
-                <p class="section__eyebrow">--comment</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--component"></div>
-                <p class="section__eyebrow">--component</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--corner-radius"></div>
-                <p class="section__eyebrow">--corner-radius</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--corners"></div>
-                <p class="section__eyebrow">--corners</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--dist-horiz-spacing"></div>
-                <p class="section__eyebrow">--dist-horiz-spacing</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--dist-vert-spacing"></div>
-                <p class="section__eyebrow">--dist-vert-spacing</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--draft"></div>
-                <p class="section__eyebrow">--draft</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--effects"></div>
-                <p class="section__eyebrow">--effects</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--ellipses"></div>
-                <p class="section__eyebrow">--ellipses</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--eyedropper"></div>
-                <p class="section__eyebrow">--eyedropper</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--frame"></div>
-                <p class="section__eyebrow">--frame</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--group"></div>
-                <p class="section__eyebrow">--group</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--hidden"></div>
-                <p class="section__eyebrow">--hidden</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--hyperlink"></div>
-                <p class="section__eyebrow">--hyperlink</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--image"></div>
-                <p class="section__eyebrow">--image</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--import"></div>
-                <p class="section__eyebrow">--import</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--instance"></div>
-                <p class="section__eyebrow">--instance</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-align-bottom"></div>
-                <p class="section__eyebrow">--layout-align-bottom</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-align-horiz-cent"></div>
-                <p class="section__eyebrow">--layout-align-horiz-cent</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-align-left"></div>
-                <p class="section__eyebrow">--layout-align-left</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-align-right"></div>
-                <p class="section__eyebrow">--layout-align-right</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-align-top"></div>
-                <p class="section__eyebrow">--layout-align-top</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-align-vert-cent"></div>
-                <p class="section__eyebrow">--layout-align-vert-cent</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-grid-columns"></div>
-                <p class="section__eyebrow">--layout-grid-columns</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-grid-rows"></div>
-                <p class="section__eyebrow">--layout-grid-rows</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-grid-uniform"></div>
-                <p class="section__eyebrow">--layout-grid-uniform</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--library"></div>
-                <p class="section__eyebrow">--library</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--link-broken"></div>
-                <p class="section__eyebrow">--link-broken</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--link-connected"></div>
-                <p class="section__eyebrow">--link-connected</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--list-detailed"></div>
-                <p class="section__eyebrow">--list-detailed</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--list"></div>
-                <p class="section__eyebrow">--list</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--lock-unlocked"></div>
-                <p class="section__eyebrow">--lock-unlocked</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--lock"></div>
-                <p class="section__eyebrow">--lock</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--mask"></div>
-                <p class="section__eyebrow">--mask</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--minus"></div>
-                <p class="section__eyebrow">--minus</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--node-connect"></div>
-                <p class="section__eyebrow">--node-connect</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--play"></div>
-                <p class="section__eyebrow">--play</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--plus"></div>
-                <p class="section__eyebrow">--plus</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--recent"></div>
-                <p class="section__eyebrow">--recent</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--reset-instance"></div>
-                <p class="section__eyebrow">--reset-instance</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--resize-to-fit"></div>
-                <p class="section__eyebrow">--resize-to-fit</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--resolve-filled"></div>
-                <p class="section__eyebrow">--resolve-filled</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--resolve"></div>
-                <p class="section__eyebrow">--resolve</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--restore"></div>
-                <p class="section__eyebrow">--restore</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--return"></div>
-                <p class="section__eyebrow">--return</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--search-large"></div>
-                <p class="section__eyebrow">--search-large</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--search"></div>
-                <p class="section__eyebrow">--search</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--share"></div>
-                <p class="section__eyebrow">--share</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--smiley"></div>
-                <p class="section__eyebrow">--smiley</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--star-off"></div>
-                <p class="section__eyebrow">--star-off</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--star-on"></div>
-                <p class="section__eyebrow">--star-on</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--stroke-weight"></div>
-                <p class="section__eyebrow">--stroke-weight</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--styles"></div>
-                <p class="section__eyebrow">--styles</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--tidy-up-grid"></div>
-                <p class="section__eyebrow">--tidy-up-grid</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--tidy-up-list-horiz"></div>
-                <p class="section__eyebrow">--tidy-up-list-horiz</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--tidy-up-list-vert"></div>
-                <p class="section__eyebrow">--tidy-up-list-vert</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--timer"></div>
-                <p class="section__eyebrow">--timer</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--trash"></div>
-                <p class="section__eyebrow">--trash</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--type"></div>
-                <p class="section__eyebrow">--type</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--vector-handles"></div>
-                <p class="section__eyebrow">--vector-handles</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--visible"></div>
-                <p class="section__eyebrow">--visible</p>
-              </div>
-              <div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--warning"></div>
-                <p class="section__eyebrow">--warning</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><a name="labels-sections"></a>
-      <div class="section section--component">
-        <div class="section__frame">
-          <div class="flex flex--column">
-            <div class="flex flex--mb-med">
-              <h1 class="section__title">Labels and sections</h1>
-            </div>
-            <div class="flex flex--mb-med">
-              <div class="flex flex--half flex--centered flex--outline flex--padding flex--top"><div class="label">Label</div></div>
-              <div class="flex flex--half flex--centered flex--outline flex--padding flex--top"><div class="section-title">Section</div></div>
-            </div>
-            <div class="flex flex--mb-small">
-              <pre><code class="html">&lt;!-- Label --&gt;
+&lt;div class="icon icon--adjust icon--button"&gt;&lt;/div&gt;
+&lt;div class="icon icon--adjust icon--button icon--selected"&gt;&lt;/div&gt;
+
+&lt;!-- Icon button --&gt;
+&lt;div class="icon icon--text"&gt;W&lt;/div&gt;</code></pre></div><div class="flex flex--wrap flex--scroll flex--padding"><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--adjust"></div><p class="section__eyebrow">--adjust</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--alert"></div><p class="section__eyebrow">--alert</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--align-bottom"></div><p class="section__eyebrow">--align-bottom</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--align-middle"></div><p class="section__eyebrow">--align-middle</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--align-top"></div><p class="section__eyebrow">--align-top</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--angle"></div><p class="section__eyebrow">--angle</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--animated-fill"></div><p class="section__eyebrow">--animated-fill</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--arrow-left-right"></div><p class="section__eyebrow">--arrow-left-right</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--arrow-up-down"></div><p class="section__eyebrow">--arrow-up-down</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--blend-empty"></div><p class="section__eyebrow">--blend-empty</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--blend"></div><p class="section__eyebrow">--blend</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--break"></div><p class="section__eyebrow">--break</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--close"></div><p class="section__eyebrow">--close</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--comment"></div><p class="section__eyebrow">--comment</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--component"></div><p class="section__eyebrow">--component</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--corner-radius"></div><p class="section__eyebrow">--corner-radius</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--corners"></div><p class="section__eyebrow">--corners</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--dist-horiz-spacing"></div><p class="section__eyebrow">--dist-horiz-spacing</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--dist-vert-spacing"></div><p class="section__eyebrow">--dist-vert-spacing</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--draft"></div><p class="section__eyebrow">--draft</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--effects"></div><p class="section__eyebrow">--effects</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--ellipses"></div><p class="section__eyebrow">--ellipses</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--eyedropper"></div><p class="section__eyebrow">--eyedropper</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--frame"></div><p class="section__eyebrow">--frame</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--group"></div><p class="section__eyebrow">--group</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--hidden"></div><p class="section__eyebrow">--hidden</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--hyperlink"></div><p class="section__eyebrow">--hyperlink</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--image"></div><p class="section__eyebrow">--image</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--import"></div><p class="section__eyebrow">--import</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--instance"></div><p class="section__eyebrow">--instance</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-align-bottom"></div><p class="section__eyebrow">--layout-align-bottom</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-align-horiz-cent"></div><p class="section__eyebrow">--layout-align-horiz-cent</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-align-left"></div><p class="section__eyebrow">--layout-align-left</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-align-right"></div><p class="section__eyebrow">--layout-align-right</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-align-top"></div><p class="section__eyebrow">--layout-align-top</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-align-vert-cent"></div><p class="section__eyebrow">--layout-align-vert-cent</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-grid-columns"></div><p class="section__eyebrow">--layout-grid-columns</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-grid-rows"></div><p class="section__eyebrow">--layout-grid-rows</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--layout-grid-uniform"></div><p class="section__eyebrow">--layout-grid-uniform</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--library"></div><p class="section__eyebrow">--library</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--link-broken"></div><p class="section__eyebrow">--link-broken</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--link-connected"></div><p class="section__eyebrow">--link-connected</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--list-detailed"></div><p class="section__eyebrow">--list-detailed</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--list"></div><p class="section__eyebrow">--list</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--lock-unlocked"></div><p class="section__eyebrow">--lock-unlocked</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--lock"></div><p class="section__eyebrow">--lock</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--mask"></div><p class="section__eyebrow">--mask</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--minus"></div><p class="section__eyebrow">--minus</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--node-connect"></div><p class="section__eyebrow">--node-connect</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--play"></div><p class="section__eyebrow">--play</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--plus"></div><p class="section__eyebrow">--plus</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--recent"></div><p class="section__eyebrow">--recent</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--reset-instance"></div><p class="section__eyebrow">--reset-instance</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--resize-to-fit"></div><p class="section__eyebrow">--resize-to-fit</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--resolve-filled"></div><p class="section__eyebrow">--resolve-filled</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--resolve"></div><p class="section__eyebrow">--resolve</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--restore"></div><p class="section__eyebrow">--restore</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--return"></div><p class="section__eyebrow">--return</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--search-large"></div><p class="section__eyebrow">--search-large</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--search"></div><p class="section__eyebrow">--search</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--share"></div><p class="section__eyebrow">--share</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--smiley"></div><p class="section__eyebrow">--smiley</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--star-off"></div><p class="section__eyebrow">--star-off</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--star-on"></div><p class="section__eyebrow">--star-on</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--stroke-weight"></div><p class="section__eyebrow">--stroke-weight</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--styles"></div><p class="section__eyebrow">--styles</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--tidy-up-grid"></div><p class="section__eyebrow">--tidy-up-grid</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--tidy-up-list-horiz"></div><p class="section__eyebrow">--tidy-up-list-horiz</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--tidy-up-list-vert"></div><p class="section__eyebrow">--tidy-up-list-vert</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--timer"></div><p class="section__eyebrow">--timer</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--trash"></div><p class="section__eyebrow">--trash</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--type"></div><p class="section__eyebrow">--type</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--vector-handles"></div><p class="section__eyebrow">--vector-handles</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--visible"></div><p class="section__eyebrow">--visible</p></div><div class="flex flex--third-compact flex--outline flex--centered flex--start flex--mb-small flex--bg-white"><div class="icon icon--warning"></div><p class="section__eyebrow">--warning</p></div></div></div></div></div><a name="labels-sections"></a><div class="section section--component"><div class="section__frame"><div class="flex flex--column"><div class="flex flex--mb-med"><h1 class="section__title">Labels, sections, and dividers</h1></div><div class="flex flex--mb-med"><div class="flex flex--third flex--centered flex--outline flex--padding flex--top"><div class="label">Label</div></div><div class="flex flex--third flex--centered flex--outline flex--padding flex--top"><div class="section-title">Section</div></div><div class="flex flex--third flex--centered flex--outline flex--padding flex--top flex--middle"><div class="divider"></div></div></div><div class="flex flex--mb-small"><pre><code class="html">&lt;!-- Label --&gt;
 &lt;div class="label"&gt;Label&lt;/div&gt;
 
 &lt;!-- Section --&gt;
-&lt;div class="section-title"&gt;Section title&lt;/div&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-      </div><a name="onboarding"></a>
-      <div class="section section--component">
-        <div class="section__frame">
-          <div class="flex flex--column">
-            <div class="flex flex--mb-med">
-              <h1 class="section__title">Inputs</h1>
-            </div>
-            <div class="flex flex--mb-med">
-              <div class="flex flex--half flex--outline flex--padding"><div class="onboarding-tip">
+&lt;div class="section-title"&gt;Section title&lt;/div&gt;
+
+&lt;!-- Divider --&gt;
+&lt;div class="divider"&gt;&lt;/div&gt;</code></pre></div></div></div></div><a name="onboarding"></a><div class="section section--component"><div class="section__frame"><div class="flex flex--column"><div class="flex flex--mb-med"><h1 class="section__title">Inputs</h1></div><div class="flex flex--mb-med"><div class="flex flex--half flex--outline flex--padding"><div class="onboarding-tip">
 <div class="onboarding-tip__icon">
 <div class="icon icon--visible"></div>
 </div>
 <div class="onboarding-tip__msg">Your onboarding tip goes here. This is like the tip shows you how to create local styles.</div>
-</div>
-              </div>
-              <div class="flex flex--half flex--outline flex--padding"><div class="onboarding-tip">
+</div></div><div class="flex flex--half flex--outline flex--padding"><div class="onboarding-tip">
 <div class="onboarding-tip__icon">
 <div class="icon icon--lock"></div>
 </div>
-<div class="onboarding-tip__msg">This component also uses the icon component, simply cange the modifier class to select the icon you wish to use or create your own.</div>
-</div>
-              </div>
-            </div>
-            <div class="flex">
-              <pre><code class="html">&lt;div class="onboarding-tip"&gt;
+<div class="onboarding-tip__msg">This component also uses the icon component, simply change the modifier class to select the icon you wish to use or create your own.</div>
+</div></div></div><div class="flex"><pre><code class="html">&lt;div class="onboarding-tip"&gt;
     &lt;div class="onboarding-tip__icon"&gt;
         &lt;div class="icon icon--visible"&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class="onboarding-tip__msg"&gt;Onboarding tip goes here.&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-      </div><a name="select-menu"></a>
-      <div class="section section--component">
-        <div class="section__frame">
-          <div class="flex flex--column">
-            <div class="flex flex--mb-med">
-              <h1 class="section__title">Select menu</h1>
-            </div>
-            <div class="flex flex--mb-med">
-              <div class="flex flex--half flex--column flex--outline flex--padding flex--centered"><select name="" id="select-menu1" class="select-menu">
+&lt;/div&gt;</code></pre></div></div></div></div><a name="select-menu"></a><div class="section section--component"><div class="section__frame"><div class="flex flex--column"><div class="flex flex--mb-med"><h1 class="section__title">Select menu</h1></div><div class="flex flex--mb-med"><div class="flex flex--half flex--column flex--outline flex--padding flex--centered"><select name="" id="select-menu1" class="select-menu">
 <option value="1" selected="selected">Item 1</option>
 <option value="2" >Item 2</option>
 <option value="3">Item 3</option>
 <option value="4">Item 4</option>
-</select>
-                <h3 class="section__eyebrow section--margin-top">Menu with initial selection</h3>
-              </div>
-              <div class="flex flex--half flex--column flex--outline flex--padding flex--centered"><select name="" id="select-menu2" class="select-menu" required>
+</select><h3 class="section__eyebrow section--margin-top">Menu with initial selection</h3></div><div class="flex flex--half flex--column flex--outline flex--padding flex--centered"><select name="" id="select-menu2" class="select-menu" required>
 <option value="">Please make a selection</option>
 <option value="1">Item 1</option>
 <option value="2">Item 2</option>
 <option value="3">Item 3</option>
 <option value="4">Item 4</option>
-</select>
-                <h3 class="section__eyebrow section--margin-top">Menu with no selection</h3>
-              </div>
-            </div>
-            <div class="flex flex--mb-med">
-              <div class="flex flex--half flex--column flex--outline flex--padding flex--centered"><select name="" id="select-menu3" class="select-menu">
+</select><h3 class="section__eyebrow section--margin-top">Menu with no selection</h3></div></div><div class="flex flex--mb-med"><div class="flex flex--half flex--column flex--outline flex--padding flex--centered"><select name="" id="select-menu3" class="select-menu">
 <optgroup>
 <option value="1" selected="selected">Item 1</option>
 <option value="2">Item 2</option>
@@ -760,10 +144,7 @@ iconInput.init();</code></pre>
 <option value="3">Item 3</option>
 <option value="4" >Item 4</option>
 </optgroup>
-</select>
-                <h3 class="section__eyebrow section--margin-top">Menu with option groups</h3>
-              </div>
-              <div class="flex flex--half flex--column flex--outline flex--padding flex--centered"><select name="" id="select-menu4" class="select-menu">
+</select><h3 class="section__eyebrow section--margin-top">Menu with option groups</h3></div><div class="flex flex--half flex--column flex--outline flex--padding flex--centered"><select name="" id="select-menu4" class="select-menu">
 <optgroup label="Group A">
 <option value="1" selected="selected">Item 1</option>
 <option value="2">Item 2</option>
@@ -772,18 +153,10 @@ iconInput.init();</code></pre>
 <option value="3">Item 3</option>
 <option value="4">Item 4</option>
 </optgroup>
-</select>
-                <h3 class="section__eyebrow section--margin-top">Menu with labeled option groups</h3>
-              </div>
-            </div>
-            <div class="flex flex--mb-small">
-              <pre><code class="html">&lt;select name="" id="select-menu1" class="select-menu"&gt;
+</select><h3 class="section__eyebrow section--margin-top">Menu with labeled option groups</h3></div></div><div class="flex flex--mb-small"><pre><code class="html">&lt;select name="" id="select-menu1" class="select-menu"&gt;
     &lt;option value="1" selected="selected"&gt;Item 1&lt;/option&gt;
     &lt;option value="2" &gt;Item 2&lt;/option&gt;
-&lt;/select&gt;</code></pre>
-            </div>
-            <div class="flex">
-              <pre><code class="javascript">//initialize javascript
+&lt;/select&gt;</code></pre></div><div class="flex"><pre><code class="javascript">//initialize javascript
 selectMenu.init();
 
 //settings
@@ -792,57 +165,16 @@ selectMenu.init({
 });
 
 //destroy
-selectMenu.destroy();</code></pre>
-            </div>
-          </div>
-        </div>
-      </div><a name="textarea"></a>
-      <div class="section section--component">
-        <div class="section__frame">
-          <div class="flex flex--column">
-            <div class="flex flex--mb-med">
-              <h1 class="section__title">Textarea</h1>
-            </div>
-            <div class="flex flex--mb-med">
-              <div class="flex flex--half flex--outline flex--padding flex--column flex--centered"><textarea rows="2" class="textarea">Some text inside a textarea</textarea>
-                <h3 class="section__eyebrow section--margin-top">Normal</h3>
-              </div>
-              <div class="flex flex--half flex--outline flex--padding flex--column flex--centered"><textarea rows="2" class="textarea" disabled>Some text inside a disabled textarea</textarea>
-                <h3 class="section__eyebrow section--margin-top">Disabled</h3>
-              </div>
-            </div>
-            <div class="flex flex--mb-small">
-              <pre><code class="html">&lt;textarea rows="2" class="textarea"&gt;Some text inside a textarea&lt;/textarea&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-      </div><a name="visual-bell"></a>
-      <div class="section section--component">
-        <div class="section__frame">
-          <div class="flex flex--column">
-            <div class="flex flex--mb-med">
-              <h1 class="section__title">Visual bell</h1>
-            </div>
-            <div class="flex flex--outline flex--padding flex--column flex--centered flex--mb-small"><div class="visual-bell">
+selectMenu.destroy();</code></pre></div></div></div></div><a name="textarea"></a><div class="section section--component"><div class="section__frame"><div class="flex flex--column"><div class="flex flex--mb-med"><h1 class="section__title">Textarea</h1></div><div class="flex flex--mb-med"><div class="flex flex--half flex--outline flex--padding flex--column flex--centered"><textarea rows="2" class="textarea">Some text inside a textarea</textarea><h3 class="section__eyebrow section--margin-top">Normal</h3></div><div class="flex flex--half flex--outline flex--padding flex--column flex--centered"><textarea rows="2" class="textarea" disabled>Some text inside a disabled textarea</textarea><h3 class="section__eyebrow section--margin-top">Disabled</h3></div></div><div class="flex flex--mb-small"><pre><code class="html">&lt;textarea rows="2" class="textarea"&gt;Some text inside a textarea&lt;/textarea&gt;</code></pre></div></div></div></div><a name="visual-bell"></a><div class="section section--component"><div class="section__frame"><div class="flex flex--column"><div class="flex flex--mb-med"><h1 class="section__title">Visual bell</h1></div><div class="flex flex--outline flex--padding flex--column flex--centered flex--mb-small"><div class="visual-bell">
 <span class="visual-bell__msg">Something was successful</span>
-</div>
-              <h3 class="section__eyebrow section--margin-top">Normal / informational</h3>
-            </div>
-            <div class="flex flex--outline flex--padding flex--column flex--centered flex--mb-small"><div class="visual-bell visual-bell--loading">
+</div><h3 class="section__eyebrow section--margin-top">Normal / informational</h3></div><div class="flex flex--outline flex--padding flex--column flex--centered flex--mb-small"><div class="visual-bell visual-bell--loading">
 <div class="visual-bell__spinner-container">
 <span class="visual-bell__spinner"></span>
 </div>
 <span class="visual-bell__msg">Saving data...</span>
-</div>
-              <h3 class="section__eyebrow section--margin-top">Loading</h3>
-            </div>
-            <div class="flex flex--outline flex--padding flex--column flex--centered flex--mb-small"><div class="visual-bell visual-bell--error">
+</div><h3 class="section__eyebrow section--margin-top">Loading</h3></div><div class="flex flex--outline flex--padding flex--column flex--centered flex--mb-small"><div class="visual-bell visual-bell--error">
 <span class="visual-bell__msg">There was an error</span>
-</div>
-              <h3 class="section__eyebrow section--margin-top">Error</h3>
-            </div>
-            <div class="flex flex--mb-small">
-              <pre><code class="html">&lt;!-- Normal / informational --&gt;
+</div><h3 class="section__eyebrow section--margin-top">Error</h3></div><div class="flex flex--mb-small"><pre><code class="html">&lt;!-- Normal / informational --&gt;
 &lt;div class="visual-bell"&gt;
     &lt;span class="visual-bell__msg"&gt;Something was successful&lt;/span&gt;
 &lt;/div&gt;
@@ -858,336 +190,9 @@ selectMenu.destroy();</code></pre>
 &lt;!-- Error --&gt;
 &lt;div class="visual-bell visual-bell--error"&gt;
     &lt;span class="visual-bell__msg"&gt;There was an error&lt;/span&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-      </div><a name="tokens"></a>
-      <div class="section">
-        <div class="section__frame section--section-header">
-          <div class="flex flex--column">
-            <div class="flex flex--mb-med">
-              <h1 class="section__title section__title--inverse">Tokens</h1>
-            </div>
-          </div>
-        </div>
-      </div><a name="colors"></a>
-      <div class="section">
-        <div class="section__frame"> 
-          <div class="flex flex--column">
-            <div class="flex flex--mb-med">
-              <h1 class="section__title">Colors</h1>
-            </div>
-            <div class="flex flex--mb-med">
-              <h2 class="section__subhead">Accent</h2>
-            </div>
-            <div class="flex flex--mb-large">
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--blue"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-blue</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--purple"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-pruple</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--hot-pink"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-hot-pink</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--green"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-green</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--red"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-red</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--yellow"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-yellow</div>
-              </div>
-            </div>
-            <div class="flex flex--mb-large">
-              <div class="section__divider"> </div>
-            </div>
-            <div class="flex flex--mb-med">
-              <h2 class="section__subhead">Foreground</h2>
-            </div>
-            <div class="flex flex--mb-large">
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--black"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-black</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--black-8"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-black-8</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--black-3"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-black-3</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile swatch--border">
-                  <div class="swatch__color swatch--white"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-white</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile swatch--border">
-                  <div class="swatch__color swatch--white-8"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-white-8</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile swatch--border">
-                  <div class="swatch__color swatch--white-4"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-white-4</div>
-              </div>
-            </div>
-            <div class="flex flex--mb-large">
-              <div class="section__divider"> </div>
-            </div>
-            <div class="flex flex--mb-med">
-              <h2 class="section__subhead">Background</h2>
-            </div>
-            <div class="flex flex--mb-large">
-              <div class="swatch">
-                <div class="swatch__tile swatch--border">
-                  <div class="swatch__color swatch--white"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-white</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--grey"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-grey</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--silver"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-silver</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--black"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-black</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--hud"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-hud</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--toolbar"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-toolbar</div>
-              </div>
-            </div>
-            <div class="flex flex--mb-large">
-              <div class="section__divider"> </div>
-            </div>
-            <div class="flex flex--mb-med">
-              <h2 class="section__subhead">Special</h2>
-            </div>
-            <div class="flex flex--mb-med">
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--blue-3"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-blue-3</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--selection-a"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-selection-a</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--selection-b"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-selection-b</div>
-              </div>
-            </div>
-            <div class="flex">
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--black-1"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-black-1</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--hover-fill"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-hover-fill</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile">
-                  <div class="swatch__color swatch--purple-4"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-hover-pruple-4</div>
-              </div>
-              <div class="swatch">
-                <div class="swatch__tile swatch--border">
-                  <div class="swatch__color swatch--white-2"></div>
-                  <div class="swatch__bg">
-                    <div class="swatch__white"></div>
-                    <div class="swatch__checkers"></div>
-                  </div>
-                </div>
-                <div class="swatch__label">$figma-hover-white-2</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><a name="border-radius"></a>
-      <div class="section">
-        <div class="section__frame">
-          <div class="flex flex--column">
-            <div class="flex flex--mb-med">
-              <h1 class="section__title">Border radius</h1>
-            </div>
-          </div>
-        </div>
-      </div><a name="shadows"></a>
-      <div class="section">
-        <div class="section__frame"> </div>
-      </div><a name="typography"></a>
-      <div class="section">
-        <div class="section__frame section--section-header"></div>
-      </div><a name="typography-positive"></a>
-      <div class="section">
-        <div class="section__frame"></div>
-      </div><a name="typography-negative"></a>
-      <div class="section">
-        <div class="section__frame"></div>
-      </div>
-    </div>
-  </div>
-  <!--javascript-->
-  <script src="js/intersection-observer.js"></script>
-  <script src="js/highlight.pack.js"></script>
-  <script src="js/main.js" type="module"></script>
-  <script src="../plugin-ui/scripts.min.js"></script><script>iconInput.init(),disclosure.init(),selectMenu.init({position: 'positionToSelection'})</script>
-</body>
+&lt;/div&gt;</code></pre></div></div></div></div><a name="tokens"></a><div class="section"><div class="section__frame section--section-header section__frame--tokens"><div class="flex flex--column"><div class="flex flex--mb-med"><h1 class="section__title section--white">Tokens</h1></div><div class="flex flex--mb-large"><div class="flex flex--half"><div class="section__lede section--white-4">Variables and mixins for reusable properties such as colors, drop shadows, border radius, and typography.</div></div></div></div></div></div><a name="colors"></a><div class="section"><div class="section__frame"> <div class="flex flex--column"><div class="flex flex--mb-med"><h1 class="section__title">Colors</h1></div><div class="flex flex--mb-med"><h2 class="section__subhead">Accent</h2></div><div class="flex flex--mb-large"><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--blue"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-blue</div></div><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--purple"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-pruple</div></div><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--hot-pink"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-hot-pink</div></div><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--green"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-green</div></div><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--red"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-red</div></div><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--yellow"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-yellow</div></div></div><div class="flex flex--mb-large"><div class="section__divider"> </div></div><div class="flex flex--mb-med"><h2 class="section__subhead">Foreground</h2></div><div class="flex flex--mb-large"><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--black"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-black</div></div><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--black-8"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-black-8</div></div><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--black-3"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-black-3</div></div><div class="swatch"><div class="swatch__tile swatch--border"><div class="swatch__color swatch--white"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-white</div></div><div class="swatch"><div class="swatch__tile swatch--border"><div class="swatch__color swatch--white-8"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-white-8</div></div><div class="swatch"><div class="swatch__tile swatch--border"><div class="swatch__color swatch--white-4"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-white-4</div></div></div><div class="flex flex--mb-large"><div class="section__divider"> </div></div><div class="flex flex--mb-med"><h2 class="section__subhead">Background</h2></div><div class="flex flex--mb-large"><div class="swatch"><div class="swatch__tile swatch--border"><div class="swatch__color swatch--white"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-white</div></div><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--grey"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-grey</div></div><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--silver"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-silver</div></div><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--black"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-black</div></div><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--hud"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-hud</div></div><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--toolbar"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-toolbar</div></div></div><div class="flex flex--mb-large"><div class="section__divider"> </div></div><div class="flex flex--mb-med"><h2 class="section__subhead">Special</h2></div><div class="flex flex--mb-med"><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--blue-3"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-blue-3</div></div><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--selection-a"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-selection-a</div></div><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--selection-b"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-selection-b</div></div></div><div class="flex"><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--black-1"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-black-1</div></div><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--hover-fill"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-hover-fill</div></div><div class="swatch"><div class="swatch__tile"><div class="swatch__color swatch--purple-4"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-hover-pruple-4</div></div><div class="swatch"><div class="swatch__tile swatch--border"><div class="swatch__color swatch--white-2"></div><div class="swatch__bg"><div class="swatch__white"></div><div class="swatch__checkers"></div></div></div><div class="swatch__label">$figma-hover-white-2</div></div></div></div></div></div><a name="border-shadows"></a><div class="section"><div class="section__frame"><div class="flex flex--column"><div class="flex flex--mb-med"><h1 class="section__title">Border radius and shadows</h1></div><div class="flex flex--mb-med"><h2 class="section__subhead">Border radius</h2></div></div><div class="flex flex--mb-large"><div class="flex flex--third flex--column flex--centered flex--padding flex--outline"><div class="border-radius border-radius--small">2px</div><p class="section__eyebrow">$border-radius-small</p></div><div class="flex flex--third flex--column flex--centered flex--padding flex--outline"><div class="border-radius border-radius--med">5px</div><p class="section__eyebrow">$border-radius-med</p></div><div class="flex flex--third flex--column flex--centered flex--padding flex--outline"><div class="border-radius border-radius--large">6px</div><p class="section__eyebrow">$border-radius-large</p></div></div><div class="flex flex--column"><div class="flex flex--mb-med"><h2 class="section__subhead">Shadows</h2></div></div><div class="flex"><div class="flex flex--half flex--column flex--centered flex--padding flex--outline"><div class="shadow shadow--floating"></div><p class="section__eyebrow">$shadow-floating-window</p></div><div class="flex flex--half flex--column flex--centered flex--padding flex--outline"><div class="shadow shadow--hud"></div><p class="section__eyebrow">$shadow-hud</p></div></div></div></div><a name="typography"></a><div class="section"><div class="section__frame"><div class="flex flex--column"><div class="flex flex--mb-med"><h1 class="section__title">Typography</h1></div><div class="flex flex--column flex--mb-large"><p class="section__content">The type system has 4 type sizes: small (11px), medium (12px), large (13px), and xlarge (14px). There are three different weights: normal, medium, and bold. There are versions optimized for positive and negative applications.</p></div></div><div class="flex flex--mb-med"><div class="flex flex--half flex--padding flex--outline flex--column"><div class="flex flex--mb-small"><h2 class="section__subhead">Positive</h2></div><div class="flex flex--column"><div class="type type--pos-small-normal">UI Pos 11 Normal</div><div class="type type--pos-small-medium">UI Pos 11 Medium</div><div class="type type--pos-small-bold">UI Pos 11 Bold</div><div class="divider"></div><div class="type type--pos-medium-normal">UI Pos 12 Normal</div><div class="type type--pos-medium-medium">UI Pos 12 Medium</div><div class="type type--pos-medium-bold">UI Pos 12 Bold</div><div class="divider"></div><div class="type type--pos-large-normal">UI Pos 13 Normal</div><div class="type type--pos-large-medium">UI Pos 13 Medium</div><div class="type type--pos-large-bold">UI Pos 13 Bold</div><div class="divider"></div><div class="type type--pos-xlarge-normal">UI Pos 14 Normal</div><div class="type type--pos-xlarge-medium">UI Pos 14 Medium</div><div class="type type--pos-xlarge-bold">UI Pos 14 Bold</div></div></div><div class="flex flex--half flex--padding flex--outline flex--column flex--dark"><div class="flex flex--mb-small"><h2 class="section__subhead section--white">Negative</h2></div><div class="flex flex--column"><div class="type type--neg-small-normal type--figma-white">UI Neg 11 Normal</div><div class="type type--neg-small-medium type--figma-white">UI Neg 11 Medium</div><div class="type type--neg-small-bold type--figma-white">UI Neg 11 Bold</div><div class="divider"></div><div class="type type--neg-medium-normal type--figma-white">UI Neg 12 Normal</div><div class="type type--neg-medium-medium type--figma-white">UI Neg 12 Medium</div><div class="type type--neg-medium-bold type--figma-white">UI Neg 12 Bold</div><div class="divider"></div><div class="type type--neg-large-normal type--figma-white">UI Neg 13 Normal</div><div class="type type--neg-large-medium type--figma-white">UI Neg 13 Medium</div><div class="type type--neg-large-bold type--figma-white">UI Neg 13 Bold</div><div class="divider"></div><div class="type type--neg-xlarge-normal type--figma-white">UI Neg 14 Normal</div><div class="type type--neg-xlarge-medium type--figma-white">UI Neg 14 Medium</div><div class="type type--neg-xlarge-bold type--figma-white">UI Neg 14 Bold</div></div></div></div><div class="flex flex--mb-small flex--column"><div class="flex--mb-small"><p class="section__content">Use the negative or positive type mixin to use in your own components:</p></div><pre><code class="css">@include font-ui-pos('small','normal') // Positive, 11px, Normal
+@include font-ui-neg('medium','bold')  // Negative, 12px, Bold
+
+// Sizes: small (11px), medium (12px), large (13px), xlarge (14px)
+// Weights: normal, medium, bold</code></pre></div><div class="flex flex--mb-small flex--column"><div class="flex--mb-small"><p class="section__content">Or you can use the type component/class with the same size weight variations as above:</p></div><pre><code class="css">&lt;p class='type type--pos-small-normal'&gt;Some type&lt;p&gt;
+&lt;p class='type type--neg-medium-bold'&gt;Some type&lt;p&gt;</code></pre></div></div></div></div></div><!--javascript--><script src="js/intersection-observer.js"></script><script src="js/highlight.pack.js"></script><script src="js/main.js" type="module"></script><script src="../plugin-ui/scripts.min.js"></script><script>iconInput.init(),disclosure.init(),selectMenu.init({position: 'positionToSelection'})</script></body>

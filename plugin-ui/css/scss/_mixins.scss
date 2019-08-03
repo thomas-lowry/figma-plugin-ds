@@ -1,0 +1,63 @@
+// Type mixins
+@mixin font-ui-pos($size, $weight) {
+	font-family: $font-stack;
+
+	//weight 
+	@if $weight == 'bold' {
+		font-weight: $font-weight-bold;
+	} @else if $weight == 'medium' {
+		font-weight: $font-weight-medium;
+	} @else {
+		font-weight: $font-weight-normal;
+	}
+	//letterspacing + size
+	@if $size == 'small' {
+		font-size: $font-size-small;
+		line-height: $font-lineheight;
+		letter-spacing: $font-letterspacing-pos-small;
+	} @else if $size == 'medium' {
+		font-size: $font-size-medium;
+		line-height: $font-lineheight;
+		letter-spacing: $font-letterspacing-pos-medium;
+	} @else if $size == 'large' {
+		font-size: $font-size-large;
+		line-height: $font-lineheight-large;
+		letter-spacing: $font-letterspacing-pos-xlarge;
+	} @else {
+		font-size: $font-size-xlarge;
+		line-height: $font-lineheight-large;
+		letter-spacing: $font-letterspacing-pos-xlarge;
+	}
+}
+
+@mixin font-ui-neg($size, $weight) {
+	font-family: $font-stack;
+
+	//weight 
+	@if $weight == 'bold' {
+		font-weight: $font-weight-bold;
+	} @else if $weight == 'medium' {
+		font-weight: $font-weight-medium;
+	} @else {
+		font-weight: $font-weight-normal;
+	}
+
+	//letterspacing + size
+	@if $size == 'small' {
+		font-size: $font-size-small;
+		line-height: $font-lineheight;
+		letter-spacing: $font-letterspacing-neg-small;
+	} @else if $size == 'medium' {
+		font-size: $font-size-medium;
+		line-height: $font-lineheight;
+		letter-spacing: $font-letterspacing-neg-medium;
+	} @else if $size == 'large' {
+		font-size: $font-size-large;
+		line-height: $font-lineheight-large;
+		letter-spacing: $font-letterspacing-neg-xlarge;
+	} @else {
+		font-size: $font-size-xlarge;
+		line-height: $font-lineheight-large;
+		letter-spacing: $font-letterspacing-neg-xlarge;
+	}
+}

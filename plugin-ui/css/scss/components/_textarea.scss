@@ -1,0 +1,46 @@
+.textarea {
+	@include font-ui-pos('small', 'normal');
+
+	display: flex;
+	overflow: hidden;
+	align-items: center;
+	width: calc(100% - 16px);
+	min-height: 62px;
+	margin: 1px 8px 1px 8px;
+	padding: 7px 7px 7px 7px;
+
+	resize: none;
+
+	color: $figma-black-8;
+	border: 1px solid $figma-black-1;
+	border-radius: $border-radius-small;
+	outline: none;
+	background-color: $figma-white;
+
+	&:active, &:focus {
+		padding: 6px 6px 6px 6px;
+
+		color: $figma-black;
+		border: 2px solid $figma-blue;
+		border-radius: $border-radius-small;
+	}
+
+	&::selection {
+		color: $figma-black;
+		background-color: $figma-blue-3;
+	}
+
+	&::placeholder {
+		color: $figma-black-3;
+	}
+
+	&:disabled {
+		color: $figma-black-3;
+
+		&:focus, &:active {
+			padding: 7px 7px 7px 7px;
+
+			border: 1px solid $figma-black-1;
+		}
+	}
+}

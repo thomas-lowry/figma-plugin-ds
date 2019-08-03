@@ -1,0 +1,75 @@
+.icon {
+	width: 32px;
+	height: 32px;
+
+	cursor: default;
+
+	color: $figma-black;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+
+	&--black-3 {
+		color: $figma-black-3;
+		background-position: 0 -32px;
+	}
+
+	&--blue {
+		color: $figma-blue;
+		background-position: 0 -64px;
+	}
+
+	&--white {
+		color: $figma-blue;
+		background-position: 0 -96px;
+	}
+
+	&--button {
+		width: 32px;
+		height: 32px;
+
+		border: 1px solid transparent;
+		border-radius: $border-radius-small;
+		outline: none;
+		background-position: -1px -1px;
+
+		&:hover {
+			background-color: $figma-hover-fill;
+		}
+
+		&:active {
+			border: 1px solid $figma-blue;
+			background-color: $figma-hover-fill;
+			box-shadow: inset 0 0 0 1px $figma-blue;
+		}
+
+		&:disabled {
+			opacity: .37;
+		}
+	}
+
+	&--selected {
+		color: $figma-white;
+		border: 1px solid transparent;
+		background-color: $figma-blue;
+		background-position: -1px -97px;
+
+		&:hover {
+			color: $figma-white;
+			background-color: $figma-blue;
+		}
+
+		&:active {
+			color: $figma-white;
+			background-color: $figma-blue;
+		}
+	}
+
+	&--text {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		font-family: $font-stack;
+		font-size: $font-size-small;
+	}
+}

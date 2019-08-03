@@ -1,26 +1,32 @@
 .flex.flex--column
 	.flex.flex--mb-med
-		h1.section__title Icons
+		h1.section__title Components
 	.flex.flex--mb-med
-		p.section__content Use the icon component with the corresponding modifier class to select the icon you want. Add additional modifier class to choose from blue, grey or white versions. You can also turn any icon into an icon button All icons are minified and URI encoded as SVG background images to avoid http requests. Customize the main.scss file to import only the icons you need to optimize performance.
+		p.section__content A collection of components for use in Figma plugins.
 
-	.flex.flex--mb-small.flex--wrap
-		.flex.flex--fifth.flex--outline.flex--column.flex--centered.flex--pv-small.flex--mb-small
+	.flex
+		.flex.flex--quarter.flex--outline.flex--column.flex--centered.flex--pv-small.flex--mb-small
 			<div class="icon icon--adjust"></div>
 			p.section__eyebrow --adjust
-		.flex.flex--fifth.flex--outline.flex--column.flex--centered.flex--pv-small.flex--mb-small
+		.flex.flex--quarter.flex--outline.flex--column.flex--centered.flex--pv-small.flex--mb-small
 			<div class="icon icon--adjust icon--blue"></div>
 			p.section__eyebrow --adjust --blue
-		.flex.flex--fifth.flex--outline.flex--column.flex--centered.flex--pv-small.flex--mb-small
-			<div class="icon icon--adjust icon--grey"></div>
-			p.section__eyebrow --adjust --grey
-		.flex.flex--fifth.flex--outline.flex--column.flex--centered.flex--pv-small.flex--mb-small.flex--dark
+		.flex.flex--quarter.flex--outline.flex--column.flex--centered.flex--pv-small.flex--mb-small
+			<div class="icon icon--adjust icon--black-3"></div>
+			p.section__eyebrow --adjust --black-3
+		.flex.flex--quarter.flex--outline.flex--column.flex--centered.flex--pv-small.flex--mb-small.flex--dark
 			<div class="icon icon--adjust icon--white"></div>
-			p.section__eyebrow.section__eyebrow--inverse --adjust --white
-		.flex.flex--fifth.flex--outline.flex--column.flex--centered.flex--pv-small.flex--mb-small
+			p.section__eyebrow.section--white --adjust --white
+	.flex.flex--mb-med
+		.flex.flex--third.flex--outline.flex--column.flex--centered.flex--pv-small.flex--mb-small
 			<div class="icon icon--adjust icon--button"></div>
 			p.section__eyebrow --adjust --button
-			
+		.flex.flex--third.flex--outline.flex--column.flex--centered.flex--pv-small.flex--mb-small
+			<div class="icon icon--adjust icon--button icon--selected"></div>
+			p.section__eyebrow --adjust --button --selected
+		.flex.flex--third.flex--outline.flex--column.flex--centered.flex--pv-small.flex--mb-small
+			<div class="icon icon--text">W</div>
+			p.section__eyebrow --text
 			
 
 
@@ -30,11 +36,15 @@
 				| &lt;!-- Icon --&gt;
 				| &lt;div class="icon icon--adjust"&gt;&lt;/div&gt;
 				| &lt;div class="icon icon--adjust icon--blue"&gt;&lt;/div&gt;
-				| &lt;div class="icon icon--adjust icon--grey"&gt;&lt;/div&gt;
+				| &lt;div class="icon icon--adjust icon--black-3"&gt;&lt;/div&gt;
 				| &lt;div class="icon icon--adjust icon--white"&gt;&lt;/div&gt;
 				|
 				| &lt;!-- Icon button --&gt;
 				| &lt;div class="icon icon--adjust icon--button"&gt;&lt;/div&gt;
+				| &lt;div class="icon icon--adjust icon--button icon--selected"&gt;&lt;/div&gt;
+				|
+				| &lt;!-- Icon button --&gt;
+				| &lt;div class="icon icon--text"&gt;W&lt;/div&gt;
 
 
 	.flex.flex--wrap.flex--scroll.flex--padding

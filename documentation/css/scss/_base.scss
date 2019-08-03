@@ -10,10 +10,6 @@ html, body {
 	font-family: Inter, sans-serif;
 
 	background-color: $figma-silver;
-
-	@media screen and (prefers-reduced-motion: no-preference) {
-		scroll-behavior: smooth;
-	}
 }
 ::-webkit-scrollbar {
 	width: 10px;

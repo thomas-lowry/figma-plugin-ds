@@ -1,0 +1,64 @@
+.flex.flex--column
+	.flex.flex--mb-med
+		h1.section__title Typography
+	.flex.flex--column.flex--mb-large
+		p.section__content The type system has 4 type sizes: small (11px), medium (12px), large (13px), and xlarge (14px). There are three different weights: normal, medium, and bold. There are versions optimized for positive and negative applications.
+.flex.flex--mb-med
+	.flex.flex--half.flex--padding.flex--outline.flex--column
+		.flex.flex--mb-small
+			h2.section__subhead Positive
+		.flex.flex--column
+			.type.type--pos-small-normal UI Pos 11 Normal
+			.type.type--pos-small-medium UI Pos 11 Medium
+			.type.type--pos-small-bold UI Pos 11 Bold
+			.divider
+			.type.type--pos-medium-normal UI Pos 12 Normal
+			.type.type--pos-medium-medium UI Pos 12 Medium
+			.type.type--pos-medium-bold UI Pos 12 Bold
+			.divider
+			.type.type--pos-large-normal UI Pos 13 Normal
+			.type.type--pos-large-medium UI Pos 13 Medium
+			.type.type--pos-large-bold UI Pos 13 Bold
+			.divider
+			.type.type--pos-xlarge-normal UI Pos 14 Normal
+			.type.type--pos-xlarge-medium UI Pos 14 Medium
+			.type.type--pos-xlarge-bold UI Pos 14 Bold
+
+
+	.flex.flex--half.flex--padding.flex--outline.flex--column.flex--dark
+		.flex.flex--mb-small
+			h2.section__subhead.section--white Negative
+		.flex.flex--column
+			.type.type--neg-small-normal.type--figma-white UI Neg 11 Normal
+			.type.type--neg-small-medium.type--figma-white UI Neg 11 Medium
+			.type.type--neg-small-bold.type--figma-white UI Neg 11 Bold
+			.divider
+			.type.type--neg-medium-normal.type--figma-white UI Neg 12 Normal
+			.type.type--neg-medium-medium.type--figma-white UI Neg 12 Medium
+			.type.type--neg-medium-bold.type--figma-white UI Neg 12 Bold
+			.divider
+			.type.type--neg-large-normal.type--figma-white UI Neg 13 Normal
+			.type.type--neg-large-medium.type--figma-white UI Neg 13 Medium
+			.type.type--neg-large-bold.type--figma-white UI Neg 13 Bold
+			.divider
+			.type.type--neg-xlarge-normal.type--figma-white UI Neg 14 Normal
+			.type.type--neg-xlarge-medium.type--figma-white UI Neg 14 Medium
+			.type.type--neg-xlarge-bold.type--figma-white UI Neg 14 Bold
+
+.flex.flex--mb-small.flex--column
+	.flex--mb-small
+		p.section__content Use the negative or positive type mixin to use in your own components:
+	pre
+		code.css
+			| @include font-ui-pos('small','normal') // Positive, 11px, Normal
+			| @include font-ui-neg('medium','bold')  // Negative, 12px, Bold
+			|
+			| // Sizes: small (11px), medium (12px), large (13px), xlarge (14px)
+			| // Weights: normal, medium, bold
+.flex.flex--mb-small.flex--column
+	.flex--mb-small
+		p.section__content Or you can use the type component/class with the same size weight variations as above:
+	pre
+		code.css
+			| &lt;p class='type type--pos-small-normal'&gt;Some type&lt;p&gt;
+			| &lt;p class='type type--neg-medium-bold'&gt;Some type&lt;p&gt;

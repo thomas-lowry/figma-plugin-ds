@@ -1,0 +1,89 @@
+.disclosure {
+	position: relative;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	&__item {
+		@include font-ui-pos('small','normal');
+
+		display: flex;
+		flex-direction: column;
+
+		border-bottom: 1px solid $figma-silver;
+		background-color: $figma-white;
+
+		&:last-child {
+			border-bottom: 1px solid transparent;
+		}
+	}
+
+	&__label {
+		@include font-ui-pos('small','normal');
+
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: 32px;
+		padding: 0 8px 0 24px;
+
+		cursor: default;
+		user-select: none;
+
+		color: $figma-black-8;
+
+		&:before {
+			position: absolute;
+			top: 8px;
+			left: 4px;
+			display: block;
+			width: 16px;
+			height: 16px;
+
+			content: '';
+
+			opacity: 0.3;
+			background-image: url('data:image/svg+xml;utf8,%3Csvg%20fill%3D%22none%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20width%3D%2216%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m11%208-4-3v6z%22%20fill%3D%22%23000%22%2F%3E%3C%2Fsvg%3E');
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+
+		&:hover {
+			&:before {
+				opacity: 0.8;
+			}
+		}
+	}
+
+	&__content {
+		@include font-ui-pos('small','normal');
+
+		display: none;
+		padding: 8px 8px 8px 24px;
+
+		color: $figma-black-8;
+	}
+
+	&--section & {
+		&__label {
+			@include font-ui-pos('small','bold');
+		}
+	}
+
+	&--expanded & {
+		&__content {
+			display: block;
+
+			border-bottom: 1px solid transparent;
+		}
+
+		&__label {
+			&:before {
+				opacity: 0.8;
+				background-image: url('data:image/svg+xml;utf8,%3Csvg%20fill%3D%22none%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20width%3D%2216%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m9%2010%203-4h-6z%22%20fill%3D%22%23000%22%2F%3E%3C%2Fsvg%3E');
+			}
+		}
+	}
+}

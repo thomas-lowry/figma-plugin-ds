@@ -1,0 +1,115 @@
+.type {
+	//Positive
+
+	//11px
+	&--pos-small-normal {
+		@include font-ui-pos('small', 'normal');
+	}
+	&--pos-small-medium {
+		@include font-ui-pos('small', 'medium');
+	}
+	&--pos-small-bold {
+		@include font-ui-pos('small', 'bold');
+	}
+
+	//12px
+	&--pos-medium-normal {
+		@include font-ui-pos('medium', 'normal');
+	}
+	&--pos-medium-medium {
+		@include font-ui-pos('medium', 'medium');
+	}
+	&--pos-medium-bold {
+		@include font-ui-pos('medium', 'bold');
+	}
+
+	//13px
+	&--pos-large-normal {
+		@include font-ui-pos('large', 'normal');
+	}
+	&--pos-large-medium {
+		@include font-ui-pos('large', 'medium');
+	}
+	&--pos-large-bold {
+		@include font-ui-pos('large', 'bold');
+	}
+
+	//14px
+	&--pos-xlarge-normal {
+		@include font-ui-pos('xlarge', 'normal');
+	}
+	&--pos-xlarge-medium {
+		@include font-ui-pos('xlarge', 'medium');
+	}
+	&--pos-xlarge-bold {
+		@include font-ui-pos('xlarge', 'bold');
+	}
+
+	&--figma-black {
+		color: $figma-black;
+	}
+	&--figma-black-3 {
+		color: $figma-black-3;
+	}
+	&--figma-black-8 {
+		color: $figma-black-8;
+	}
+
+
+
+	//Negative
+
+	//11px
+	&--neg-small-normal {
+		@include font-ui-neg('small', 'normal');
+	}
+	&--neg-small-medium {
+		@include font-ui-neg('small', 'medium');
+	}
+	&--neg-small-bold {
+		@include font-ui-neg('small', 'bold');
+	}
+
+	//12px
+	&--neg-medium-normal {
+		@include font-ui-neg('medium', 'normal');
+	}
+	&--neg-medium-medium {
+		@include font-ui-neg('medium', 'medium');
+	}
+	&--neg-medium-bold {
+		@include font-ui-neg('medium', 'bold');
+	}
+
+	//13px
+	&--neg-large-normal {
+		@include font-ui-neg('large', 'normal');
+	}
+	&--neg-large-medium {
+		@include font-ui-neg('large', 'medium');
+	}
+	&--neg-large-bold {
+		@include font-ui-neg('large', 'bold');
+	}
+
+	//14px
+	&--neg-xlarge-normal {
+		@include font-ui-neg('xlarge', 'normal');
+	}
+	&--neg-xlarge-medium {
+		@include font-ui-neg('xlarge', 'medium');
+	}
+	&--neg-xlarge-bold {
+		@include font-ui-neg('xlarge', 'bold');
+	}
+
+	&--figma-white {
+		color: $figma-white;
+	}
+	&--figma-white-4 {
+		color: $figma-white-4;
+	}
+	&--figma-white-8 {
+		color: $figma-white-8;
+	}
+}

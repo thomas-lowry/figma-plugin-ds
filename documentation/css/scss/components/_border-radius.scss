@@ -1,0 +1,25 @@
+.border-radius {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 40px;
+	height: 40px;
+
+	color: $figma-white-4;
+	background-color: $figma-blue;
+
+	@include font-ui-neg('small','normal');
+
+	&--small {
+		border-radius: $border-radius-small;
+	}
+
+	&--med {
+		border-radius: $border-radius-med;
+	}
+
+	&--large {
+		border-radius: $border-radius-large;
+	}
+}

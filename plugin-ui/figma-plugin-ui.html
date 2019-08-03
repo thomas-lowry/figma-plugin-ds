@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<title>Figma Plugin UI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/main.css">
+
+		<style>
+
+/* these styles are just used for presentation of components */
+
+body {
+	width: 400px;
+	margin: 24px auto 150px auto;
+}
+
+h1, h2, h3 {
+	box-sizing: border-box;
+	margin-top: 12px;
+	margin-bottom: 12px;
+
+	font-family: sans-serif;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+h2 {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+h3 {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+hr {
+	margin: 48px 0 48px 0;
+
+	border-top: 1px solid #cccccc;
+	border-bottom: none;
+	outline: none;
+}
+
+		</style>
+
+	</head>
+	<body>
+		<h1>Typography</h1>
+
+		<h2>Positive applications</h2>
+		<div style="background-color: #FFFFFF; border: 1px solid #cccccc; padding: 16px;">
+			<p class="type type--11-pos">UI 11 Normal</p>
+			<p class="type type--11-pos-medium">UI 11 Medium</p>
+			<p class="type type--11-pos-bold">UI 11 Bold</p>
+			<br>
+			<p class="type type--12-pos">UI 12 Normal</p>
+			<p class="type type--12-pos-medium">UI 12 Medium</p>
+			<p class="type type--12-pos-bold">UI 12 Bold</p>
+		</div>
+
+		<h2>Negative applications</h2>
+		<div style="background-color: #000000; padding: 16px;">
+			<p class="type type--11-neg">UI 11 Normal</p>
+			<p class="type type--11-neg-medium">UI 11 Medium</p>
+			<p class="type type--11-neg-bold">UI 11 Bold</p>
+			<br>
+			<p class="type type--12-neg">UI 12 Normal</p>
+			<p class="type type--12-neg-medium">UI 12 Medium</p>
+			<p class="type type--12-neg-bold">UI 12 Bold</p>
+		</div>
+
+		<hr>
+
+		<h1>Text components</h1>
+		<div class="label">Label</div>
+		<div class="section-title">Section title</div>
+		
+		<hr>
+
+		<h1>Controls</h1>
+
+		<h2>Inputs</h2>
+
+		<input type="input" class="input" placeholder="Value">
+		<br>
+		<input type="input" class="input" value='0'>
+		<br>
+		<div class="input-icon">
+			<div class="input-icon__icon">
+				<div class="icon icon--angle icon--black-3"></div><!--use icon component here-->
+			</div>
+			<input type="input" class="input-icon__input" placeholder="Value">
+		</div>
+		<br>
+		<textarea  rows="2" class="textarea"></textarea>
+		<br>
+		<h2>Switch</h2>
+		
+		<div class="switch">
+			<input class="switch__toggle" type="checkbox" id="switch1">
+			<label class="switch__label" for="switch1">Label</label>
+		</div>
+
+		<div class="switch">
+			<input class="switch__toggle" type="checkbox" id="switch2" checked>
+			<label class="switch__label" for="switch2">Label</label>
+		</div>
+
+		<div class="switch">
+			<input class="switch__toggle" type="checkbox" id="switch3" disabled>
+			<label class="switch__label" for="switch3">Label</label>
+		</div>
+
+		<div class="switch">
+			<input class="switch__toggle" type="checkbox" id="switch4" checked disabled>
+			<label class="switch__label" for="switch4">Label</label>
+		</div>
+		<br>
+		<h2>Checkbox</h2>
+			<div class="checkbox">
+				<input class="checkbox__box" type="checkbox" id="checkbox1">
+				<label class="checkbox__label" for="checkbox1">Label</label>
+			</div>
+			<div class="checkbox">
+				<input class="checkbox__box" type="checkbox" id="checkbox2" checked>
+				<label class="checkbox__label" for="checkbox2">Label</label>
+			</div>
+			<div class="checkbox">
+				<input class="checkbox__box" type="checkbox" id="checkbox3" checked disabled>
+				<label class="checkbox__label" for="checkbox3">Label</label>
+			</div>
+			<div class="checkbox">
+				<input class="checkbox__box" type="checkbox" id="checkbox4" disabled>
+				<label class="checkbox__label" for="checkbox4">Label</label>
+			</div>
+
+		<br>
+		<h2>Select menus</h2>
+		<br>
+		<h3>Without Groups with placeholder</h3>
+		
+		<!-- Select menu with initial selection -->
+		<select name="" id="select-menu1" class="select-menu">
+				<option value="1">Item 1</option>
+				<option value="2" selected="selected">Item 2</option>
+				<option value="3">Item 3</option>
+				<option value="4">Item 4</option>
+			</select>
+	
+			<br>
+			<br>
+	
+			<!-- Select menu with placehoolder text -->
+			<select name="" id="select-menu2" class="select-menu" required>
+				<option value="">Please make a selection</option>
+				<option value="1">Item 1</option>
+				<option value="2">Item 2</option>
+				<option value="3">Item 3</option>
+				<option value="4">Item 4</option>
+			</select>
+	
+			<br>
+			<br>
+	
+			<!-- Select menu with option groups -->
+			<select name="" id="select-menu3" class="select-menu">
+				<optgroup>
+					<option value="1">Item 1</option>
+					<option value="2">Item 2</option>
+				</optgroup>
+				<optgroup>
+					<option value="3">Item 3</option>
+					<option value="4" selected="selected">Item 4</option>
+				</optgroup>
+			</select>
+	
+			<br>
+			<br>
+	
+			<!-- Select menu with option groups that have labels-->
+			<select name="" id="select-menu4" class="select-menu">
+				<optgroup label="Group A">
+					<option value="1">Item 1</option>
+					<option value="2">Item 2</option>
+				</optgroup>
+				<optgroup label="Group B">
+					<option value="3">Item 3</option>
+					<option value="4" selected="selected">Item 4</option>
+				</optgroup>
+			</select>
+
+		<hr>
+
+		<h1>Buttons</h1>
+
+		<h2>Primary</h2>
+
+		<h3>Normal</h3>
+		<button class='button button--primary'>Label</button>
+		<button class='button button--primary' disabled>Label</button>
+		<h3>Destructive</h3>
+		<button class='button button--primary-destructive'>Label</button>
+		<button class='button button--primary-destructive' disabled>Label</button>
+
+		<h2>Secondary</h2>
+
+		<h3>Normal</h3>
+		<button class='button button--secondary'>Label</button>
+		<button class='button button--secondary' disabled>Label</button>
+		<h3>Destructive</h3>
+		<button class='button button--secondary-destructive'>Label</button>
+		<button class='button button--secondary-destructive' disabled>Label</button>
+
+		<hr>
+
+		<h1>Icon component</h1>
+
+		<h2>Icons</h2>
+		<h3>For text icon use --text. Default color.</h3>
+		<div style="display: flex; flex-direction: row; flex-wrap:wrap;">
+			<div class="icon icon--adjust"></div>
+			<div class="icon icon--angle"></div>
+			<div class="icon icon--break"></div>
+			<div class="icon icon--close"></div>
+			<div class="icon icon--break"></div>
+			<div class="icon icon--ellipses"></div>
+			<div class="icon icon--eyedropper"></div>
+			<div class="icon icon--visible"></div>
+			<div class="icon icon--hidden"></div>
+			<div class="icon icon--hyperlink"></div>
+			<div class="icon icon--link"></div>
+			<div class="icon icon--link-broken"></div>
+			<div class="icon icon--lock"></div>
+			<div class="icon icon--unlock"></div>
+			<div class="icon icon--minus"></div>
+			<div class="icon icon--plus"></div>
+			<div class="icon icon--play"></div>
+			<div class="icon icon--recent"></div>
+			<div class="icon icon--resolve"></div>
+			<div class="icon icon--resolve-filled"></div>
+			<div class="icon icon--search"></div>
+			<div class="icon icon--trash"></div>
+			<div class="icon icon--text">W</div>
+			<div class="icon icon--text">H</div>
+			<div class="icon icon--text">X</div>
+			<div class="icon icon--text">Y</div>
+		</div>
+
+		<h3>Modifier: --black-3</h3>
+		<div style="display: flex; flex-direction: row; flex-wrap:wrap;">
+			<div class="icon icon--adjust icon--black-3"></div>
+			<div class="icon icon--angle icon--black-3"></div>
+			<div class="icon icon--break icon--black-3"></div>
+			<div class="icon icon--close icon--black-3"></div>
+			<div class="icon icon--break icon--black-3"></div>
+			<div class="icon icon--ellipses icon--black-3"></div>
+			<div class="icon icon--eyedropper icon--black-3"></div>
+			<div class="icon icon--visible icon--black-3"></div>
+			<div class="icon icon--hidden icon--black-3"></div>
+			<div class="icon icon--hyperlink icon--black-3"></div>
+			<div class="icon icon--link icon--black-3"></div>
+			<div class="icon icon--link-broken icon--black-3"></div>
+			<div class="icon icon--lock icon--black-3"></div>
+			<div class="icon icon--unlock icon--black-3"></div>
+			<div class="icon icon--minus icon--black-3"></div>
+			<div class="icon icon--plus icon--black-3"></div>
+			<div class="icon icon--play icon--black-3"></div>
+			<div class="icon icon--recent icon--black-3"></div>
+			<div class="icon icon--resolve icon--black-3"></div>
+			<div class="icon icon--resolve-filled icon--black-3"></div>
+			<div class="icon icon--search icon--black-3"></div>
+			<div class="icon icon--trash icon--black-3"></div>
+			<div class="icon icon--text icon icon--black-3">W</div>
+			<div class="icon icon--text icon--black-3">H</div>
+			<div class="icon icon--text icon--black-3">X</div>
+			<div class="icon icon--text icon--black-3">Y</div>
+		</div>
+
+		<h3>Modifier: --blue</h3>
+		<div style="display: flex; flex-direction: row; flex-wrap:wrap;">
+			<div class="icon icon--adjust icon--blue"></div>
+			<div class="icon icon--angle icon--blue"></div>
+			<div class="icon icon--break icon--blue"></div>
+			<div class="icon icon--close icon--blue"></div>
+			<div class="icon icon--break icon--blue"></div>
+			<div class="icon icon--ellipses icon--blue"></div>
+			<div class="icon icon--eyedropper icon--blue"></div>
+			<div class="icon icon--visible icon--blue"></div>
+			<div class="icon icon--hidden icon--blue"></div>
+			<div class="icon icon--hyperlink icon--blue"></div>
+			<div class="icon icon--link icon--blue"></div>
+			<div class="icon icon--link-broken icon--blue"></div>
+			<div class="icon icon--lock icon--blue"></div>
+			<div class="icon icon--unlock icon--blue"></div>
+			<div class="icon icon--minus icon--blue"></div>
+			<div class="icon icon--plus icon--blue"></div>
+			<div class="icon icon--play icon--blue"></div>
+			<div class="icon icon--recent icon--blue"></div>
+			<div class="icon icon--resolve icon--blue"></div>
+			<div class="icon icon--resolve-filled icon--blue"></div>
+			<div class="icon icon--search icon--blue"></div>
+			<div class="icon icon--trash icon--blue"></div>
+			<div class="icon icon--text icon--blue">W</div>
+			<div class="icon icon--text icon--blue">H</div>
+			<div class="icon icon--text icon--blue">X</div>
+			<div class="icon icon--text icon--blue">Y</div>
+		</div>
+
+		<h2>Icon button </h2>
+		<h3>Modifier: --button</h3>
+		<div style="display: flex; flex-direction: row; flex-wrap:wrap;">
+			<div class="icon icon--adjust icon--button"></div>
+			<div class="icon icon--angle icon--button"></div>
+			<div class="icon icon--break icon--button"></div>
+			<div class="icon icon--close icon--button"></div>
+			<div class="icon icon--break icon--button"></div>
+			<div class="icon icon--ellipses icon--button"></div>
+			<div class="icon icon--eyedropper icon--button"></div>
+			<div class="icon icon--visible icon--button"></div>
+			<div class="icon icon--hidden icon--button"></div>
+			<div class="icon icon--hyperlink icon--button"></div>
+			<div class="icon icon--link icon--button"></div>
+			<div class="icon icon--link-broken icon--button"></div>
+			<div class="icon icon--lock icon--button"></div>
+			<div class="icon icon--unlock icon--button"></div>
+			<div class="icon icon--minus icon--button"></div>
+			<div class="icon icon--plus icon--button"></div>
+			<div class="icon icon--play icon--button"></div>
+			<div class="icon icon--recent icon--button"></div>
+			<div class="icon icon--resolve icon--button"></div>
+			<div class="icon icon--resolve-filled icon--button"></div>
+			<div class="icon icon--search icon--button"></div>
+			<div class="icon icon--trash icon--button"></div>
+		</div>
+
+		<hr>
+
+		<h1>Visual Bell</h1>
+		<br>
+		<div class="visual-bell">
+			<div class="visual-bell__spinner-container">
+				<span class="visual-bell__spinner"></span>
+			</div>
+			<span class="visual-bell__msg">Loading...</span>
+		</div>
+		<br>
+		<div class="visual-bell visual-bell--loading">
+			<div class="visual-bell__spinner-container">
+				<span class="visual-bell__spinner"></span>
+			</div>
+			<span class="visual-bell__msg">Loading...</span>
+		</div>
+		<br>
+		<div class="visual-bell visual-bell--error">
+			<div class="visual-bell__spinner-container">
+				<span class="visual-bell__spinner"></span>
+			</div>
+			<span class="visual-bell__msg">Loading...</span>
+		</div>
+		<br>
+
+		<hr>
+
+		<h1>Onboarding tip</h1>
+		<br>
+		<div class="onboarding-tip">
+			<div class="onboarding-tip__icon">
+				<div class="icon icon--visible"></div>
+			</div>
+			<div class="onboarding-tip__msg">Your onboarding tip goes here.</div>
+		</div>
+
+		<hr>
+
+		<h1>Disclosure panel</h1>
+		<br><br>
+		<h3>Disclosure</h3>
+		<br>
+		<ul class="disclosure">
+			<li class="disclosure__item">
+				<div class="disclosure__label">
+					Disclosure
+				</div>
+				<div class="disclosure__content">
+					Panel content here
+				</div>
+			</li>
+			<li class="disclosure__item">
+				<div class="disclosure__label">
+					Disclosure
+				</div>
+				<div class="disclosure__content">
+					Panel content here
+				</div>
+			</li>
+			<li class="disclosure__item">
+				<div class="disclosure__label">
+					Disclosure
+				</div>
+				<div class="disclosure__content">
+					Panel content here
+				</div>
+			</li>
+		</ul>
+
+		<br><br>
+		<h3>Disclosure with section</h3>
+		<br>
+
+		<ul class="disclosure">
+			<li class="disclosure__item disclosure--section">
+				<div class="disclosure__label">
+					Disclosure
+				</div>
+				<div class="disclosure__content">
+					Panel content here
+				</div>
+			</li>
+			<li class="disclosure__item">
+				<div class="disclosure__label">
+					Disclosure
+				</div>
+				<div class="disclosure__content">
+					Panel content here
+				</div>
+			</li>
+		</ul>
+		
+		<script src="scripts.min.js"></script>
+
+	</body>
+</html>

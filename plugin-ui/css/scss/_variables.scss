@@ -1,0 +1,77 @@
+// COLORS//////////
+
+//accent
+$figma-blue: #18a0fb; // Primary accent, used sparingly for primary actions
+$figma-purple: #7b61ff; //used for components + instances
+$figma-hot-pink: #ff00ff;
+$figma-green: #1bc47d;
+$figma-red: #f24822; // Used to communicate error 
+$figma-yellow: #ffeb00; // Used to communicate cautionary warning 
+
+//foreground
+$figma-black: #000000; // Used for active states when text is being edited or highlighted 
+$figma-black-8: rgba(0, 0, 0, .8); // Used for elements in resting state 
+$figma-black-3: rgba(0, 0, 0, .3); // Lower priority UI elements like labels, disabled UI 
+$figma-white: #ffffff; // Primary background for UI, text on menus 
+$figma-white-8: rgba(255, 255, 255, .8); // Only used for toolbar 
+$figma-white-4: rgba(255, 255, 255, .4); // Use for disabled menu items on black 
+
+//background
+$figma-grey: #f0f0f0; // For buttons and controls in active or selected state 
+$figma-silver: #e5e5e5; // For UI seperator lines 
+$figma-hud: #222222; // Used for heads up display, menu backgrouhnds and visual bell 
+$figma-toolbar: #2c2c2c;
+
+//special
+$figma-black-1: rgba(0, 0, 0, .1); // Primarily for Input borders on hover
+$figma-blue-3: rgba(24, 145, 251, .3); //Used for text selection in inputs 
+$figma-purple-4: rgba(123, 97, 255, .4);
+$figma-hover-fill: rgba(0, 0, 0, .06); // Light grey hover state for borderless UI controls 
+$figma-selection-a: #daebf7;
+$figma-selection-b: #edf5fa; //edf5fa
+$figma-white-2: rgba(255, 255, 255, .2); // Use for menu dividers
+
+
+// TYPOGRAPHY //////////
+// pos = positive applications, white on black bg, neg = inverse
+
+//font-stack
+$font-stack: 'Inter', sans-serif;
+
+//font-size
+$font-size-small: 11px;
+$font-size-medium: 12px;
+$font-size-large: 13px;
+$font-size-xlarge: 14px;
+
+//font-weight
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+
+//lineheight
+$font-lineheight: 16px; //For 11px, 12px type
+$font-lineheight-large: 24px; //13px, 14px
+
+//letterspacing
+$font-letterspacing-pos-small: .005em;
+$font-letterspacing-neg-small: .01em;
+$font-letterspacing-pos-medium: 0;
+$font-letterspacing-neg-medium: .005em;
+$font-letterspacing-pos-large: -.0025em;
+$font-letterspacing-neg-large: .0025em;
+$font-letterspacing-pos-xlarge: -.001em;
+$font-letterspacing-neg-xlarge: -.001em;
+
+
+// BORDER RADIUS //////////
+
+$border-radius-small: 2px;
+$border-radius-med: 5px;
+$border-radius-large: 6px;
+
+
+//SHADOWS //////////
+
+$shadow-hud: 0 5px 17px rgba(0, 0, 0, .2), 0 2px 7px rgba(0, 0, 0, .15);
+$shadow-floating-window: 0 2px 14px rgba(0, 0, 0, .15);

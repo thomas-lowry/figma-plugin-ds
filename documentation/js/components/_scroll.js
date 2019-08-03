@@ -1,14 +1,27 @@
 export function scroll() {
 
+	let target = document.querySelector('.intersect');
+	let windowHeight = window.innerHeight / 2 - 200;
+	windowHeight = windowHeight.toString();
+	target.style.top = windowHeight + 'px';
+
+	var windowResize = function() {
+		let win = window.innerHeight / 2 - 50;
+		win = win.toString();
+		target.style.top = win + 'px';
+	}
+
+	window.addEventListener('resize', windowResize, false);
+
 	//observe elements
-	let sections = document.querySelectorAll('.section');
+	let sections = document.querySelectorAll('.section__frame');
 
 	//observer options
 	let options = {
-		root: null, // relative to document viewport 
+		element: document.querySelector('.intersect'), // relative to document viewport 
 		rootMargin: '0px', // margin around root. Values are similar to css property. Unitless values not allowed
-		threshold: 0.8 // visible amount of item shown in relation to root
-	};
+		threshold: 1// visible amount of item shown in relation to root
+	}
 
 	//define observer
 	let observer = new IntersectionObserver(intersectionHandler, options);
@@ -16,14 +29,12 @@ export function scroll() {
 	function intersectionHandler(entries) {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
-				let section = entry.target.previousElementSibling.name;
+				let section = entry.target.parentNode.previousElementSibling.name;
+				window.location.hash = '#' + section;
 				highlightNav(section);
-				
-				let frame = entry.target.querySelector('.section__frame');
-				frame.classList.add('section__frame--selected');
+				entry.target.classList.add('section__frame--selected');
 			} else {
-				let frame = entry.target.querySelector('.section__frame');
-				frame.classList.remove('section__frame--selected');
+				entry.target.classList.remove('section__frame--selected');
 			}
 		});
 	}

@@ -9,6 +9,7 @@ html(lang='en')
 		link(href='../plugin-ui/css/main.css' rel='stylesheet' type='text/css')
 
 body
+	.intersect
 	.toolbar
 		.toolbar__left
 			.toolbar__menu
@@ -35,6 +36,8 @@ body
 			.toolbar__page {{ pageName }}
 
 		.toolbar__right
+			.avatar T
+			.zoom 100%
 
 	.layers-panel
 			.layers-panel__header
@@ -50,7 +53,8 @@ body
 
 			a(name="components")
 			.section
-				.section__frame.section--section-header
+				.section__frame.section--section-header.section__frame--components
+					include ../_inc/_components
 			
 			a(name="buttons")
 			.section.section--component
@@ -109,7 +113,7 @@ body
 
 			a(name="tokens")
 			.section
-				.section__frame.section--section-header
+				.section__frame.section--section-header.section__frame--tokens
 					include ../_inc/_tokens
 			
 			a(name="colors")
@@ -117,26 +121,15 @@ body
 				.section__frame 
 					include ../_inc/_colors
 			
-			a(name="border-radius")
+			a(name="border-shadows")
 			.section
 				.section__frame
-					include ../_inc/_border
-			
-			a(name="shadows")
-			.section
-				.section__frame 
+					include ../_inc/_border-shadow
 
 			a(name="typography")
 			.section
-				.section__frame.section--section-header
-			
-			a(name="typography-positive")
-			.section
 				.section__frame
-
-			a(name="typography-negative")
-			.section
-				.section__frame
+					include ../_inc/_typography
 
 	//javascript
 	script(src='js/intersection-observer.js')

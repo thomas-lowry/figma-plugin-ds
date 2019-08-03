@@ -1,0 +1,75 @@
+.switch {
+	@include font-ui-pos('small', 'normal');
+
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	height: 32px;
+
+	cursor: default;
+
+
+	&__toggle {
+		display: none;
+
+
+		&:checked + label:before {
+			background-color: $figma-black;
+		}
+
+		&:checked + label:after {
+			transform: translateX(14px);
+		}
+
+		&:disabled + label {
+			opacity: 0.3;
+		}
+	}
+
+
+	&__label {
+		display: flex;
+		width: 100%;
+		padding-left: 40px;
+
+		user-select: none;
+
+
+		//track
+		&:before {
+			position: absolute;
+			top: 10px;
+			left: 6px;
+			display: block;
+			width: 24px;
+			height: 10px;
+
+			content: '';
+
+			transition: background-color 0 0.2s;
+
+			border: 1px solid $figma-black;
+			border-radius: 6px;
+			background-color: $figma-white;
+		}
+
+		//slider
+		&:after {
+			position: absolute;
+			top: 10px;
+			left: 6px;
+			display: block;
+			width: 10px;
+			height: 10px;
+
+			content: '';
+
+			transition: transform 0.2s;
+
+			border: 1px solid $figma-black;
+			border-radius: 50%;
+			background-color: white;
+		}
+	}
+}

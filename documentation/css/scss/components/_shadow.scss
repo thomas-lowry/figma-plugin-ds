@@ -1,0 +1,22 @@
+.shadow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 160px;
+	height: 40px;
+
+	color: $figma-white-4;
+	border-radius: $border-radius-med;
+	background-color: $figma-white;
+
+	@include font-ui-neg('small','normal');
+
+	&--hud {
+		box-shadow: $shadow-hud;
+	}
+
+	&--floating {
+		box-shadow: $shadow-floating-window;
+	}
+}
