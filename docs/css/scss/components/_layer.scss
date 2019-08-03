@@ -15,9 +15,11 @@
 
 	&__row {
 		position: relative;
+
 		display: flex;
 		align-items: center;
 		flex-direction: row;
+
 		height: 32px;
 
 		border: 1px solid transparent;
@@ -28,10 +30,9 @@
 	}
 
 	&__name {
-		@include font-ui-pos('small','normal');
-
 		color: $figma-black-8;
 
+		@include font-ui-pos('small','normal');
 		font-feature-settings: 'ss02' 1;
 
 		&--top-level {
@@ -43,7 +44,9 @@
 		position: absolute;
 		top: 8px;
 		left: 0;
+
 		display: block;
+
 		width: 16px;
 		height: 16px;
 
@@ -62,7 +65,7 @@
 		height: 16px;
 		margin: 0 8px 0 16px;
 
-		opacity: 0.3;
+		opacity: .3;
 		background-repeat: no-repeat;
 		background-position: center center;
 	}

@@ -3,19 +3,17 @@
 	z-index: 1;
 	top: 40px;
 	left: 0;
+
 	overflow: auto;
+
 	width: 250px;
 	height: 100%;
 
 	border-right: 1px solid $figma-silver;
 	background-color: $figma-white;
-
-	&__header {
+	@media only screen and (max-width: 902px) {
+		display: none;
 	}
-
-	&__list {
-	}
-
 	&::-webkit-scrollbar {
 		width: 12px;
 

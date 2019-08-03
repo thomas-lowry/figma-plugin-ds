@@ -17,6 +17,10 @@
 		border: 1px solid transparent;
 		background-color: $figma-white;
 
+		@media only screen and (max-width: 902px) {
+			width: 90%;
+		}
+
 		&:before {
 			position: absolute;
 			top: -16px;
