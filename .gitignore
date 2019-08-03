@@ -1,3 +1,4 @@
 
 .DS_Store
-documentation/.vscode/settings.json
+docs/.vscode/settings.json
+.vscode/settings.json
