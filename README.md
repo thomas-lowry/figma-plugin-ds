@@ -23,4 +23,4 @@ Open to anyone willing to help or help me get this into a more npm-able format.
 
 ---
 
-Design of components and icon © [Figma](https://www.figma.com). Goal of this kit is to make UI components that mirror those found in the Figma UI available for use when creating plugins.
+Design of components and icon © [Figma](https://www.figma.com). The goal of this kit is to make UI components that mirror those found in the Figma UI available for use when creating plugins. This is not an official implementation of the Figma components.
