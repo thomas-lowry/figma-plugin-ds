@@ -3,7 +3,9 @@ A small lightweight design system for use in Figma Plugins
 
 ## To use:
 Include the contents of `figma-plugin-ds.min.css` inline within the `<style>` tag in `ui.html` of your plugin
+
 Include the contents of `figma-plugin-ds.min.js` inline within the `<script>` tag in `ui.html` of your plugin
+
 HTML markup can be found in the [docs](https://thomas-lowry.github.io/figma-plugin-ds/)
 
 ## To customize:
