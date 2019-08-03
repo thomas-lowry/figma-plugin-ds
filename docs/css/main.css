@@ -572,7 +572,8 @@ pre {
 
 @media only screen and (max-width: 902px) {
   .section__frame {
-    width: 90%;
+    width: 95%;
+    min-width: 450px;
   }
 }
 

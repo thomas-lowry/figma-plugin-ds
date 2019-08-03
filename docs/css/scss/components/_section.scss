@@ -18,7 +18,8 @@
 		background-color: $figma-white;
 
 		@media only screen and (max-width: 902px) {
-			width: 90%;
+			width: 95%;
+			min-width: 450px;
 		}
 
 		&:before {
