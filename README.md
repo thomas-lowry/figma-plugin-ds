@@ -1,5 +1,5 @@
 # Figma Plugin DS
-A small lightweight design system for use in [Figma Plugins](https://www.figma.com/plugin-docs/)
+A small lightweight design system for use in [Figma Plugins](https://www.figma.com/plugin-docs/). Built with html, css, and js without any dependencies or frameworks. My goal is to make it easier for someome to build their first Figma plugin with familiar languages.
 
 ## To use:
 Include the contents of `figma-plugin-ds.min.css` inline within the `<style>` tag in `ui.html` of your plugin
