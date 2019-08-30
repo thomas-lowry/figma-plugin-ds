@@ -53,6 +53,7 @@
           align-items: center;
   height: 32px;
   padding: 8px 4px 8px 8px;
+  cursor: default;
   color: rgba(0, 0, 0, 0.8);
   background-color: #ffffff;
   font-family: "Inter", sans-serif;
@@ -1099,6 +1100,7 @@
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 0 16px 0 0;
+  cursor: default;
 }
 
 .onboarding-tip__icon {
