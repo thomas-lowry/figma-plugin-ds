@@ -34,6 +34,7 @@
           align-items: center;
   height: 32px;
   padding: 8px 4px 8px 8px;
+  cursor: default;
   color: rgba(0, 0, 0, 0.3);
   background-color: #ffffff;
   font-family: "Inter", sans-serif;
