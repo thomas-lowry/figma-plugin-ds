@@ -1,6 +1,7 @@
 .button {
 	display: inline-block;
 	flex-shrink: 0;
+
 	margin: 1px 0 1px 0;
 	padding: 5px 16px 5px 16px;
 
@@ -12,12 +13,12 @@
 
 	//Primary
 	&--primary {
-		@include font-ui-neg('small', 'medium');
-
 		color: $figma-white;
 		background-color: $figma-blue;
 
-		&:active, &:focus {
+		@include font-ui-neg('small', 'medium');
+
+		&:enabled:active, &:enabled:focus {
 			border: 2px solid $figma-black-3;
 		}
 
@@ -28,55 +29,55 @@
 
 	//Primary Destructive
 	&--primary-destructive {
-		@include font-ui-neg('small', 'medium');
-
 		color: $figma-white;
 		background-color: $figma-red;
 
-		&:active, &:focus {
+		@include font-ui-neg('small', 'medium');
+
+		&:enabled:active, &:enabled:focus {
 			border: 2px solid $figma-black-3;
 		}
 
 		&:disabled {
-			opacity: 0.4;
+			opacity: .4;
 		}
 	}
 
 	//Secondary
 	&--secondary {
-		@include font-ui-pos('small', 'medium');
-
 		color: $figma-black-8;
 		border: 1px solid $figma-black-8;
 		background-color: $figma-white;
 
-		&:active, &:focus {
+		@include font-ui-pos('small', 'medium');
+
+		&:enabled:active, &:enabled:focus {
 			padding: 4px 15px 4px 15px;
 
 			border: 2px solid $figma-blue;
 		}
 
-		&:disabled {
+		&:disabled, &:disabled {
 			color: $figma-black-3;
 			border: 1px solid $figma-black-3;
 		}
 	}
 
 	&--secondary-destructive {
-		@include font-ui-pos('small', 'medium');
-
 		color: $figma-red;
 		border: 1px solid $figma-red;
 		background-color: $figma-white;
 
-		&:active, &:focus {
+		@include font-ui-pos('small', 'medium');
+
+		&:enabled:active, &:enabled:focus {
 			padding: 4px 15px 4px 15px;
 
 			border: 2px solid $figma-red;
 		}
 
 		&:disabled {
-			opacity: 0.4;
+			opacity: .4;
 		}
 	}
 
