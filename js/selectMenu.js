@@ -246,6 +246,8 @@
 			let selectedValue = element.getAttribute('data-value');
 			let selectItems = select.querySelectorAll('option');
 			let selectItemsLen = selectItems.length;
+			let event = new Event('change');
+			select.dispatchEvent(event);
 
 			selectItems.forEach((item) => {
 				item.removeAttribute("selected");
@@ -278,14 +280,6 @@
         }
 
 	}
-
-	//updates the selected value of the select menu
-    function selectItem(selectedID, selectedValue) {
-        let selectElement = document.getElementById(selectedID);
-        selectElement.value = selectedValue;
-        selectElement.setAttribute('selected', 'selected');
-    }
-
 
 	//EVENT HANDLERS //////////
 
