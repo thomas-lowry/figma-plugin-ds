@@ -26,8 +26,8 @@
 		}
 
 		&:checked:disabled + label:before {
-			border: 1px solid $figma-black;
-			background-color: $figma-black;
+			border: 1px solid $figma-black-8;
+			background-color: $figma-black-8;
 		}
 	}
 
@@ -46,7 +46,7 @@
 
 			content: '';
 
-			border: 1px solid $figma-black;
+			border: 1px solid $figma-black-8;
 			border-radius: $border-radius-small;
 		}
 	}
