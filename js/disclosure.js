@@ -14,7 +14,6 @@
         let disclosureSet = this.parentNode.parentNode;
         let disclosuresInSet = disclosureSet.querySelectorAll('li');
         let alreadyActive = this.parentNode.classList.contains(selector + '--expanded');
-        console.log(alreadyActive);
 
         disclosuresInSet.forEach((disclosure) => {
             disclosure.classList.remove(selector + '--expanded');
