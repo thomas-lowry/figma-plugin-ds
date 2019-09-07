@@ -966,8 +966,8 @@
 }
 
 .checkbox__box:checked:disabled + label:before {
-  border: 1px solid #000000;
-  background-color: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .checkbox__label {
@@ -987,7 +987,7 @@
   height: 10px;
   margin: 2px 10px 0 10px;
   content: '';
-  border: 1px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.8);
   border-radius: 2px;
 }
 
