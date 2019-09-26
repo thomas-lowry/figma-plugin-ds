@@ -247,13 +247,13 @@
 			let selectItems = select.querySelectorAll('option');
 			let selectItemsLen = selectItems.length;
 			let event = new Event('change');
-			select.dispatchEvent(event);
 
 			selectItems.forEach((item) => {
 				item.removeAttribute("selected");
 			});
 
 			select.value = selectedValue;
+			select.dispatchEvent(event);
 
 			for (let i = 0; i < selectItemsLen; i++) {
 				let value = selectItems[i].value;
