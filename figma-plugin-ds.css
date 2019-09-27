@@ -292,16 +292,16 @@
 }
 
 .button--primary {
-  color: #ffffff;
-  background-color: #18a0fb;
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 11px;
   line-height: 16px;
   letter-spacing: 0.01em;
+  color: #ffffff;
+  background-color: #18a0fb;
 }
 
-.button--primary:enabled:active, .button--primary:enabled:focus {
+.button--primary:enabled:active {
   border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
@@ -310,35 +310,35 @@
 }
 
 .button--primary-destructive {
-  color: #ffffff;
-  background-color: #f24822;
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 11px;
   line-height: 16px;
   letter-spacing: 0.01em;
+  color: #ffffff;
+  background-color: #f24822;
 }
 
-.button--primary-destructive:enabled:active, .button--primary-destructive:enabled:focus {
+.button--primary-destructive:enabled:active {
   border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .button--primary-destructive:disabled {
-  opacity: .4;
+  opacity: 0.4;
 }
 
 .button--secondary {
-  color: rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  background-color: #ffffff;
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 11px;
   line-height: 16px;
   letter-spacing: 0.005em;
+  color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-color: #ffffff;
 }
 
-.button--secondary:enabled:active, .button--secondary:enabled:focus {
+.button--secondary:enabled:active {
   padding: 4px 15px 4px 15px;
   border: 2px solid #18a0fb;
 }
@@ -349,23 +349,23 @@
 }
 
 .button--secondary-destructive {
-  color: #f24822;
-  border: 1px solid #f24822;
-  background-color: #ffffff;
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 11px;
   line-height: 16px;
   letter-spacing: 0.005em;
+  color: #f24822;
+  border: 1px solid #f24822;
+  background-color: #ffffff;
 }
 
-.button--secondary-destructive:enabled:active, .button--secondary-destructive:enabled:focus {
+.button--secondary-destructive:enabled:active {
   padding: 4px 15px 4px 15px;
   border: 2px solid #f24822;
 }
 
 .button--secondary-destructive:disabled {
-  opacity: .4;
+  opacity: 0.4;
 }
 
 .button--margin-right {
