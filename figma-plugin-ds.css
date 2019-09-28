@@ -283,6 +283,7 @@
   display: inline-block;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  height: 30px;
   margin: 1px 0 1px 0;
   padding: 5px 16px 5px 16px;
   text-decoration: none;

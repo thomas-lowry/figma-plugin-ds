@@ -168,6 +168,11 @@
         if (settings.position == 'overlap') {
             optionList.style.top = 0;
 		}
+
+		if (settings.position == 'alignBottom') {
+			//let height = optionList.offsetHeight + 32;
+            optionList.style.bottom = '0px';
+		}
 		
 		//add event listener		
 		selectButton.addEventListener('click', displayMenu, false);
@@ -275,7 +280,8 @@
             if (settings.position == 'positionToSelection') {
                 let menuPosition = -Math.abs(parseInt(element.getAttribute('position')));
                 element.parentNode.style.top = menuPosition + 'px';
-            }
+			}
+		
 
         }
 
