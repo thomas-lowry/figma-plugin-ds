@@ -3,3 +3,4 @@
 docs/.vscode/settings.json
 .vscode/settings.json
 js/select-test.html
+node_modules/
