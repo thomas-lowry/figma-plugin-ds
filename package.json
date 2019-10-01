@@ -15,7 +15,9 @@
     "figma-plugin-ds.css",
     "figma-plugin-ds.css.map",
     "figma-plugin-ds.css.min.css",
-    "figma-plugin-ds.css.min.js"
+    "figma-plugin-ds.css.min.js",
+    "js",
+    "scss"
   ],
   "scripts": {
     "build": "concurrently --no-color npm:css npm:js",
