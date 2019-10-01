@@ -1,0 +1,30 @@
+{
+  "name": "figma-plugin-ds",
+  "version": "0.0.0",
+  "description": "A small lightweight design system for use in Figma Plugins",
+  "keywords": [
+    "figma",
+    "figma-plugins"
+  ],
+  "author": "Thomas Lowry",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thomas-lowry/figma-plugin-ds"
+  },
+  "files": [
+    "figma-plugin-ds.css",
+    "figma-plugin-ds.css.map",
+    "figma-plugin-ds.css.min.css",
+    "figma-plugin-ds.css.min.js"
+  ],
+  "scripts": {
+    "build": "concurrently --no-color npm:css npm:js",
+    "css": "node-sass --source-map true scss/figma-plugin-ds.scss figma-plugin-ds.css && node-sass --output-style compressed scss/figma-plugin-ds.scss figma-plugin-ds.min.css",
+    "js": "terser --compress --mangle --output figma-plugin-ds.min.js -- 'js/*.js'"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "node-sass": "^4.12.0",
+    "terser": "^4.3.4"
+  }
+}
