@@ -14,8 +14,8 @@
   "files": [
     "figma-plugin-ds.css",
     "figma-plugin-ds.css.map",
-    "figma-plugin-ds.css.min.css",
-    "figma-plugin-ds.css.min.js",
+    "figma-plugin-ds.min.css",
+    "figma-plugin-ds.min.js",
     "js",
     "scss"
   ],
