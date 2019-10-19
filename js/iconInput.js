@@ -12,15 +12,13 @@
 
     //PRIVATE FUNCTIONS //////////
     var inputIconFocusIn = function(event) {
-        let parent = this.parentNode;
-        let iconNode = parent.querySelector('.icon');
+        let iconNode = this.querySelector('.icon');
         iconNode.classList.remove('icon--black-3');
         iconNode.classList.add('icon--blue');
     }
 
     var inputIconFocusOut = function(event) {
-        let parent = this.parentNode;
-        let iconNode = parent.querySelector('.icon');
+        let iconNode = this.querySelector('.icon');
         iconNode.classList.add('icon--black-3');
         iconNode.classList.remove('icon--blue');
     }
@@ -34,7 +32,7 @@
             let elements = document.querySelectorAll(selector);
 
             //initialize
-            elements.forEach((element) => {
+            elements.forEach(element => {
                 element.addEventListener('focusin', inputIconFocusIn, false);
                 element.addEventListener('focusout', inputIconFocusOut, false);
             });
@@ -44,7 +42,7 @@
             let elements = document.querySelectorAll(selector);
 
             //initialize
-            elements.forEach((element) => {
+            elements.forEach(element => {
                 element.removeEventListener('focusin', inputIconFocusIn, false);
                 element.removeEventListener('focusout', inputIconFocusOut, false);
             });
