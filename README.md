@@ -1,30 +1,35 @@
-# Figma Plugin DS
-A small lightweight design system for use in [Figma Plugins](https://www.figma.com/plugin-docs/). Built with html, css, and js without any dependencies or frameworks. My goal is to make it easier for someome to build their first Figma plugin with familiar languages.
+# rollup-starter-app
 
-## To use:
-Include the contents of `figma-plugin-ds.min.css` inline within the `<style>` tag in `ui.html` of your plugin
+This repo contains a bare-bones example of how to create an application using Rollup, including importing a module from `node_modules` and converting it from CommonJS.
 
-Include the contents of `figma-plugin-ds.min.js` inline within the `<script>` tag in `ui.html` of your plugin
-
-HTML markup can be found in the [docs](https://thomas-lowry.github.io/figma-plugin-ds/)
-
-## To customize:
-To customize any of the CSS or optimize for performance, you can fork and modify the `figma-plugin-ds.scss` file to remove the parts that you don't need. Pay particular attention to the icons which have separate SCSS files so that it is easy to eliminate the icons you don't need in your plugin. The SCSS source map has also been provided.
-
----
-
-### Additional help
-Open to anyone willing to help or help me get this into a more npm-able format.
+*See also https://github.com/rollup/rollup-starter-lib*
 
 
-### Roadmap
-* Tooltips
-* Option strips
+## Getting started
 
----
+Clone this repository and install its dependencies:
 
-Design of components and icons © [Figma](https://www.figma.com). The goal of this kit is to make UI components that mirror those found in the Figma UI available for use when creating plugins. This is not an official implementation of the Figma components.
+```bash
+git clone https://github.com/rollup/rollup-starter-app
+cd rollup-starter-app
+npm install
 
----
+# or
+npx degit "rollup/rollup-starter-app" my-app
+cd my-app
+npm install
+```
 
-Ongoing WIP :)
+The `public/index.html` file contains a `<script src='bundle.js'>` tag, which means we need to create `public/bundle.js`. The `rollup.config.js` file tells Rollup how to create this bundle, starting with `src/main.js` and including all its dependencies, including [date-fns](https://date-fns.org).
+
+`npm run build` builds the application to `public/bundle.js`, along with a sourcemap file for debugging.
+
+`npm start` launches a server, using [serve](https://github.com/zeit/serve). Navigate to [localhost:3000](http://localhost:3000).
+
+`npm run watch` will continually rebuild the application as your source files change.
+
+`npm run dev` will run `npm start` and `npm run watch` in parallel.
+
+## License
+
+[MIT](LICENSE).

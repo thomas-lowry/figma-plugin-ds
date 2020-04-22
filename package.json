@@ -1,0 +1,43 @@
+{
+  "name": "figma-plugin-ds-vanilla",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "autoprefixer": "^9.7.6",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "rollup": "^1.16.2",
+    "rollup-plugin-postcss": "^2.9.0",
+    "rollup-plugin-prettier": "^2.0.0",
+    "rollup-plugin-terser": "^5.0.0",
+    "serve": "^11.0.2"
+  },
+  "dependencies": {},
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "dev": "npm-run-all --parallel start watch",
+    "start": "serve public"
+  },
+  "description": "This repo contains a bare-bones example of how to create an application using Rollup, including importing a module from `node_modules` and converting it from CommonJS.",
+  "version": "0.0.1",
+  "main": "index.js",
+  "style": "dist/figma-plugin-ds.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomas-lowry/figma-plugin-ds.git"
+  },
+  "keywords": [
+    "figma",
+    "plugin",
+    "ui",
+    "vanilla"
+  ],
+  "author": "Thomas Lowry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thomas-lowry/figma-plugin-ds/issues"
+  },
+  "homepage": "https://github.com/thomas-lowry/figma-plugin-ds#readme"
+}

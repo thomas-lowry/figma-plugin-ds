@@ -1,5 +1,4 @@
-
 .DS_Store
-docs/.vscode/settings.json
-.vscode/settings.json
-js/select-test.html
+node_modules
+package-lock.json
+public/bundle*
