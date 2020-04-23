@@ -1,0 +1,81 @@
+.input {
+    position: relative;
+
+    &__field {
+        font-size: var(--font-size-xsmall);
+        font-weight: var(--font-weight-normal);
+        letter-spacing: var( --font-letter-spacing-neg-xsmall);
+        line-height: var(--line-height);
+        position: relative;
+        display: flex;
+        overflow: visible;
+        align-items: center;
+        width: 100%;
+        height: 30px;
+        margin: 1px 0 1px 0;
+        padding: 8px 4px 8px 8px;
+        color: var(--black8);
+        border: 1px solid transparent;
+        border-radius: var(--border-radius-small);
+        outline: none;
+        background-color: var(--white);
+
+        &:hover, &:placeholder-shown:hover {
+            color: var(--black8);
+            border: 1px solid var(--black1);
+            background-image: none;
+        }
+        &::selection {
+            color: var(--black);
+            background-color: var(--blue3);
+        }
+        &::placeholder {
+            color: var(--black3);
+            border: 1px solid transparent;
+        }
+        &:placeholder-shown {
+            border: 1px solid var(--black1);
+        }
+        &:focus:placeholder-shown {
+            border: 1px solid var(--blue);
+            outline: 1px solid var(--blue);
+            outline-offset: -2px;
+        }
+        &:disabled:hover {
+            border: 1px solid transparent;
+        }
+        &:active, &:focus {
+            padding: 8px 4px 8px 8px;
+        
+            color: var(--black);
+            border: 1px solid var(--blue);
+            outline: 1px solid var(--blue);
+            outline-offset: -2px;
+        }
+        &:disabled {
+            position: relative;
+            color: var(--black3);
+            user-select: none;
+        }
+        &:disabled:active {
+            padding: 8px 4px 8px 8px;
+            outline: none;
+        }
+    }
+
+    &--with-icon &{
+        &__field {
+            text-indent: 24px;
+        }
+    }
+
+    .icon {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: var(--size-medium);
+        height: var(--size-medium);
+        z-index: 1;
+    }
+
+}
