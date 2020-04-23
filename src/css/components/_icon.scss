@@ -8,12 +8,7 @@
     font-family: var(--font-stack);
     font-size: var(--font-size-xsmall);
     user-select: none;
-
-    //ensure icon svgs have fill overidden
-    * {
-        fill: inherit;
-        color: inherit; 
-    }
+    background-position: -2px -1px;
 
     //rotate the icon in an infinit loop, ex: for a spinner
     &--spin {
@@ -59,6 +54,10 @@
         filter: invert(78%) sepia(86%) saturate(1608%) hue-rotate(1deg) brightness(107%) contrast(104%);
     }
 
+    &--black {
+        filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(117deg) brightness(109%) contrast(105%);
+    }
+
     &--black8 {
         filter: invert(0%) sepia(56%) saturate(25%) hue-rotate(137deg) brightness(105%) contrast(60%);
     }
@@ -90,22 +89,22 @@
     &--angle {
         background-image: svg-load('../icons/angle.svg');
     }
-    &--arrowLeftRight {
+    &--arrow-left-right {
         background-image: svg-load('../icons/arrow-left-right.svg');
     }
-    &--upDown {
+    &--up-down {
         background-image: svg-load('../icons/arrow-up-down.svg');
     }
-    &--autoLayoutHorizontal {
+    &--auto-layout-horizontal {
         background-image: svg-load('../icons/auto-layout-horizontal.svg');
     }
-    &--autoLayoutVertical {
+    &--auto-layout-vertical {
         background-image: svg-load('../icons/auto-layout-vertical.svg');
     }
     &--back {
         background-image: svg-load('../icons/back.svg');
     }
-    &--blendEmpty {
+    &--blend-empty {
         background-image: svg-load('../icons/blend-empty.svg');
     }
     &--blend {
@@ -114,16 +113,16 @@
     &--break {
         background-image: svg-load('../icons/break.svg');
     }
-    &--caretDown {
+    &--caret-down {
         background-image: svg-load('../icons/caret-down.svg');
     }
-    &--caretLeft {
+    &--caret-left {
         background-image: svg-load('../icons/caret-left.svg');
     }
-    &--caretRight {
+    &--caret-right {
         background-image: svg-load('../icons/caret-right.svg');
     }
-    &--caretUp {
+    &--caret-up {
         background-image: svg-load('../icons/caret-up.svg');
     }
     &--check {
@@ -135,16 +134,16 @@
     &--component {
         background-image: svg-load('../icons/component.svg');
     }
-    &--cornerRadius {
+    &--corner-radius {
         background-image: svg-load('../icons/corner-radius.svg');
     }
     &--corners {
         background-image: svg-load('../icons/corners.svg');
     }
-    &--distributeHorizontalSpacing {
+    &--distribute-horizontal-spacing {
         background-image: svg-load('../icons/distribute-horizontal-spacing.svg');
     }
-    &--distributeVerticalSpacing {
+    &--distribute-vertical-spacing {
         background-image: svg-load('../icons/distribute-vertical-spacing.svg');
     }
     &--draft {
@@ -171,7 +170,7 @@
     &--hidden {
         background-image: svg-load('../icons/hidden.svg');
     }
-    &--horizontalPadding {
+    &--horizontal-padding {
         background-image: svg-load('../icons/horizontal-padding.svg');
     }
     &--hyperlink {
@@ -186,46 +185,46 @@
     &--key {
         background-image: svg-load('../icons/key.svg');
     }
-    &--layoutAlignBottom {
+    &--layout-align-bottom {
         background-image: svg-load('../icons/layout-align-bottom.svg');
     }
-    &--alignHorizontalCenters {
+    &--align-horizontal-centers {
         background-image: svg-load('../icons/layout-align-horizontal-centers.svg');
     }
-    &--alignLeft {
+    &--align-left {
         background-image: svg-load('../icons/layout-align-left.svg');
     }
-    &--alignRight {
+    &--align-right {
         background-image: svg-load('../icons/layout-align-right.svg');
     }
-    &--alignTop {
+    &--align-top {
         background-image: svg-load('../icons/layout-align-top.svg');
     }
-    &--alignVerticalCenters {
+    &--align-vertical-centers {
         background-image: svg-load('../icons/layout-align-vertical-centers.svg');
     }
-    &--layoutGridColumns {
+    &--layout-grid-columns {
         background-image: svg-load('../icons/layout-grid-columns.svg');
     }
-    &--layoutGridRows {
+    &--layout-grid-rows {
         background-image: svg-load('../icons/layout-grid-rows.svg');
     }
-    &--layoutGridUniform {
+    &--layout-grid-uniform {
         background-image: svg-load('../icons/layout-grid-uniform.svg');
     }
     &--library {
         background-image: svg-load('../icons/library.svg');
     }
-    &--linkBroken {
+    &--link-broken {
         background-image: svg-load('../icons/link-broken.svg');
     }
-    &--linkConnected {
+    &--link-connected {
         background-image: svg-load('../icons/link-connected.svg');
     }
-    &--listDetailed {
+    &--list-detailed {
         background-image: svg-load('../icons/list-detailed.svg');
     }
-    &--listTile {
+    &--list-tile {
         background-image: svg-load('../icons/list-tile.svg');
     }
     &--list {
@@ -252,10 +251,10 @@
     &--recent {
         background-image: svg-load('../icons/recent.svg');
     }
-    &--resizeToFit {
+    &--resize-to-fit {
         background-image: svg-load('../icons/resize-to-fit.svg');
     }
-    &--resolveFilled {
+    &--resolve-filled {
         background-image: svg-load('../icons/resolve-filled.svg');
     }
     &--resolve {
@@ -264,7 +263,7 @@
     &--reverse {
         background-image: svg-load('../icons/reverse.svg');
     }
-    &--searchLarge {
+    &--search-large {
         background-image: svg-load('../icons/search-large.svg');
     }
     &--search {
@@ -279,13 +278,13 @@
     &--smiley {
         background-image: svg-load('../icons/smiley.svg');
     }
-    &--sortAlphaAsc {
+    &--sort-alpha-asc {
         background-image: svg-load('../icons/sort-alpha-asc.svg');
     }
-    &--sortAlphaDsc {
+    &--sort-alpha-dsc {
         background-image: svg-load('../icons/sort-alpha-dsc.svg');
     }
-    &--sortTopBottom {
+    &--sort-top-bottom {
         background-image: svg-load('../icons/sort-top-bottom.svg');
     }
     &--spacing {
@@ -294,13 +293,13 @@
     &--spinner {
         background-image: svg-load('../icons/spinner.svg');
     }
-    &--starOff {
+    &--star-off {
         background-image: svg-load('../icons/star-off.svg');
     }
-    &--starOn {
+    &--star-on {
         background-image: svg-load('../icons/star-on.svg');
     }
-    &--strokeWeight {
+    &--stroke-weight {
         background-image: svg-load('../icons/stroke-weight.svg');
     }
     &--styles {
@@ -312,13 +311,13 @@
     &--theme {
         background-image: svg-load('../icons/theme.svg');
     }
-    &--tidyUpGrid {
+    &--tidy-up-grid {
         background-image: svg-load('../icons/tidy-up-grid.svg');
     }
-    &--tidyUpListHorizontal {
+    &--tidy-up-list-horizontal {
         background-image: svg-load('../icons/tidy-up-list-horizontal.svg');
     }
-    &--tidyUpListVertical {
+    &--tidy-up-list-vertical {
         background-image: svg-load('../icons/tidy-up-list-vertical.svg');
     }
     &--timer {
@@ -327,13 +326,13 @@
     &--trash {
         background-image: svg-load('../icons/trash.svg');
     }
-    &--verticalPadding {
+    &--vertical-padding {
         background-image: svg-load('../icons/vertical-padding.svg');
     }
     &--visible {
         background-image: svg-load('../icons/visible.svg');
     }
-    &--warningLarge {
+    &--warning-large {
         background-image: svg-load('../icons/warning-large.svg');
     }
     &--warning {

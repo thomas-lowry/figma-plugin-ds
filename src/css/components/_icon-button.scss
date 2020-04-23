@@ -1,0 +1,34 @@
+.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: var(--size-medium);
+    height: var(--size-medium);
+    border-radius: var(--border-radius-small);
+    border: 2px solid transparent;
+
+    * { filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(117deg) brightness(109%) contrast(105%); }
+
+    &:hover {
+        background: var(--hover-fill);
+    }
+    &:active, &:focus {
+        border: 2px solid var(--blue);
+        outline: none;
+    }
+
+    &--selected {
+        background-color: var(--blue);
+
+        &:hover {
+            background-color: var(--blue);
+        }
+        &:active, &:focus {
+            border: 2px solid var(--black3);
+        }
+
+        * { filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(269deg) brightness(103%) contrast(104%); }
+    }
+
+}
