@@ -13,7 +13,7 @@
         width: 100%;
         height: 30px;
         margin: 1px 0 1px 0;
-        padding: 8px 4px 8px 8px;
+        padding: var(--size-xxsmall) var(--size-xxxsmall) var(--size-xxsmall) var(--size-xxsmall);
         color: var(--black8);
         border: 1px solid transparent;
         border-radius: var(--border-radius-small);
@@ -44,9 +44,7 @@
         &:disabled:hover {
             border: 1px solid transparent;
         }
-        &:active, &:focus {
-            padding: 8px 4px 8px 8px;
-        
+        &:active, &:focus {       
             color: var(--black);
             border: 1px solid var(--blue);
             outline: 1px solid var(--blue);
@@ -58,7 +56,6 @@
             user-select: none;
         }
         &:disabled:active {
-            padding: 8px 4px 8px 8px;
             outline: none;
         }
     }

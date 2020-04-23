@@ -984,7 +984,7 @@ a:focus {
     width: 100%;
     height: 30px;
     margin: 1px 0 1px 0;
-    padding: 8px 4px 8px 8px;
+    padding: var(--size-xxsmall) var(--size-xxxsmall) var(--size-xxsmall) var(--size-xxsmall);
     color: var(--black8);
     border: 1px solid transparent;
     border-radius: var(--border-radius-small);
@@ -1024,7 +1024,6 @@ a:focus {
     .input__field:disabled:hover {
       border: 1px solid transparent; }
     .input__field:active, .input__field:focus {
-      padding: 8px 4px 8px 8px;
       color: var(--black);
       border: 1px solid var(--blue);
       outline: 1px solid var(--blue);
@@ -1037,7 +1036,6 @@ a:focus {
           -ms-user-select: none;
               user-select: none; }
     .input__field:disabled:active {
-      padding: 8px 4px 8px 8px;
       outline: none; }
   .input--with-icon .input__field {
     text-indent: 24px; }
@@ -1048,3 +1046,20 @@ a:focus {
     width: var(--size-medium);
     height: var(--size-medium);
     z-index: 1; }
+
+.label {
+  font-size: var(--font-size-xsmall);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--font-letter-spacing-pos-xsmall);
+  line-height: var(--line-height);
+  color: var(--black3);
+  height: var(--size-medium);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 0 var(--size-xxxsmall) 0 var(--size-xxsmall); }
