@@ -1,0 +1,343 @@
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    width: var(--size-medium);
+    height: var(--size-medium);
+    font-family: var(--font-stack);
+    font-size: var(--font-size-xsmall);
+    user-select: none;
+
+    //ensure icon svgs have fill overidden
+    * {
+        fill: inherit;
+        color: inherit; 
+    }
+
+    //rotate the icon in an infinit loop, ex: for a spinner
+    &--spin {
+        animation: rotating 1.0s linear infinite;
+    }
+    @keyframes rotating {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    //color modifiers
+
+    //blue
+    &--blue {
+        filter: invert(54%) sepia(16%) saturate(7499%) hue-rotate(179deg) brightness(98%) contrast(101%);
+    }
+
+    &--purple {
+        filter: invert(40%) sepia(59%) saturate(4001%) hue-rotate(232deg) brightness(103%) contrast(102%);
+    }
+
+    &--purple4 {
+        filter: invert(72%) sepia(40%) saturate(660%) hue-rotate(202deg) brightness(103%) contrast(103%);
+    }
+
+    &--hot-pink {
+        filter: invert(18%) sepia(90%) saturate(3347%) hue-rotate(293deg) brightness(116%) contrast(132%);
+    }
+
+    &--green {
+        filter: invert(66%) sepia(39%) saturate(5382%) hue-rotate(114deg) brightness(102%) contrast(79%);
+    }
+    
+    &--red {
+        filter: invert(43%) sepia(56%) saturate(5632%) hue-rotate(349deg) brightness(97%) contrast(95%);
+    }
+
+    &--yellow {
+        filter: invert(78%) sepia(86%) saturate(1608%) hue-rotate(1deg) brightness(107%) contrast(104%);
+    }
+
+    &--black8 {
+        filter: invert(0%) sepia(56%) saturate(25%) hue-rotate(137deg) brightness(105%) contrast(60%);
+    }
+
+    &--black3 {
+        filter: invert(100%) sepia(0%) saturate(698%) hue-rotate(219deg) brightness(66%) contrast(127%);
+    }
+
+    &--white {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(269deg) brightness(103%) contrast(104%);
+    }
+
+    &--white8 {
+        filter: invert(99%) sepia(2%) saturate(5%) hue-rotate(55deg) brightness(104%) contrast(98%);
+    }
+
+    &--white4 {
+        filter: invert(99%) sepia(2%) saturate(897%) hue-rotate(245deg) brightness(117%) contrast(93%);
+    }
+
+
+    //icons
+    &--adjust {
+        background-image: svg-load('../icons/adjust.svg');
+    }
+    &--alert {
+        background-image: svg-load('../icons/alert.svg');
+    }
+    &--angle {
+        background-image: svg-load('../icons/angle.svg');
+    }
+    &--arrowLeftRight {
+        background-image: svg-load('../icons/arrow-left-right.svg');
+    }
+    &--upDown {
+        background-image: svg-load('../icons/arrow-up-down.svg');
+    }
+    &--autoLayoutHorizontal {
+        background-image: svg-load('../icons/auto-layout-horizontal.svg');
+    }
+    &--autoLayoutVertical {
+        background-image: svg-load('../icons/auto-layout-vertical.svg');
+    }
+    &--back {
+        background-image: svg-load('../icons/back.svg');
+    }
+    &--blendEmpty {
+        background-image: svg-load('../icons/blend-empty.svg');
+    }
+    &--blend {
+        background-image: svg-load('../icons/blend.svg');
+    }
+    &--break {
+        background-image: svg-load('../icons/break.svg');
+    }
+    &--caretDown {
+        background-image: svg-load('../icons/caret-down.svg');
+    }
+    &--caretLeft {
+        background-image: svg-load('../icons/caret-left.svg');
+    }
+    &--caretRight {
+        background-image: svg-load('../icons/caret-right.svg');
+    }
+    &--caretUp {
+        background-image: svg-load('../icons/caret-up.svg');
+    }
+    &--check {
+        background-image: svg-load('../icons/check.svg');
+    }
+    &--close {
+        background-image: svg-load('../icons/close.svg');
+    }
+    &--component {
+        background-image: svg-load('../icons/component.svg');
+    }
+    &--cornerRadius {
+        background-image: svg-load('../icons/corner-radius.svg');
+    }
+    &--corners {
+        background-image: svg-load('../icons/corners.svg');
+    }
+    &--distributeHorizontalSpacing {
+        background-image: svg-load('../icons/distribute-horizontal-spacing.svg');
+    }
+    &--distributeVerticalSpacing {
+        background-image: svg-load('../icons/distribute-vertical-spacing.svg');
+    }
+    &--draft {
+        background-image: svg-load('../icons/draft.svg');
+    }
+    &--effects {
+        background-image: svg-load('../icons/effects.svg');
+    }
+    &--ellipses {
+        background-image: svg-load('../icons/ellipses.svg');
+    }
+    &--eyedropper {
+        background-image: svg-load('../icons/eyedropper.svg');
+    }
+    &--forward {
+        background-image: svg-load('../icons/forward.svg');
+    }
+    &--frame {
+        background-image: svg-load('../icons/frame.svg');
+    }
+    &--group {
+        background-image: svg-load('../icons/group.svg');
+    }
+    &--hidden {
+        background-image: svg-load('../icons/hidden.svg');
+    }
+    &--horizontalPadding {
+        background-image: svg-load('../icons/horizontal-padding.svg');
+    }
+    &--hyperlink {
+        background-image: svg-load('../icons/hyperlink.svg');
+    }
+    &--image {
+        background-image: svg-load('../icons/image.svg');
+    }
+    &--instance {
+        background-image: svg-load('../icons/instance.svg');
+    }
+    &--key {
+        background-image: svg-load('../icons/key.svg');
+    }
+    &--layoutAlignBottom {
+        background-image: svg-load('../icons/layout-align-bottom.svg');
+    }
+    &--alignHorizontalCenters {
+        background-image: svg-load('../icons/layout-align-horizontal-centers.svg');
+    }
+    &--alignLeft {
+        background-image: svg-load('../icons/layout-align-left.svg');
+    }
+    &--alignRight {
+        background-image: svg-load('../icons/layout-align-right.svg');
+    }
+    &--alignTop {
+        background-image: svg-load('../icons/layout-align-top.svg');
+    }
+    &--alignVerticalCenters {
+        background-image: svg-load('../icons/layout-align-vertical-centers.svg');
+    }
+    &--layoutGridColumns {
+        background-image: svg-load('../icons/layout-grid-columns.svg');
+    }
+    &--layoutGridRows {
+        background-image: svg-load('../icons/layout-grid-rows.svg');
+    }
+    &--layoutGridUniform {
+        background-image: svg-load('../icons/layout-grid-uniform.svg');
+    }
+    &--library {
+        background-image: svg-load('../icons/library.svg');
+    }
+    &--linkBroken {
+        background-image: svg-load('../icons/link-broken.svg');
+    }
+    &--linkConnected {
+        background-image: svg-load('../icons/link-connected.svg');
+    }
+    &--listDetailed {
+        background-image: svg-load('../icons/list-detailed.svg');
+    }
+    &--listTile {
+        background-image: svg-load('../icons/list-tile.svg');
+    }
+    &--list {
+        background-image: svg-load('../icons/list.svg');
+    }
+    &--lockOff {
+        background-image: svg-load('../icons/lock-off.svg');
+    }
+    &--lockOn {
+        background-image: svg-load('../icons/lock-on.svg');
+    }
+    &--minus {
+        background-image: svg-load('../icons/minus.svg');
+    }
+    &--play {
+        background-image: svg-load('../icons/play.svg');
+    }
+    &--plus {
+        background-image: svg-load('../icons/plus.svg');
+    }
+    &--random {
+        background-image: svg-load('../icons/random.svg');
+    }
+    &--recent {
+        background-image: svg-load('../icons/recent.svg');
+    }
+    &--resizeToFit {
+        background-image: svg-load('../icons/resize-to-fit.svg');
+    }
+    &--resolveFilled {
+        background-image: svg-load('../icons/resolve-filled.svg');
+    }
+    &--resolve {
+        background-image: svg-load('../icons/resolve.svg');
+    }
+    &--reverse {
+        background-image: svg-load('../icons/reverse.svg');
+    }
+    &--searchLarge {
+        background-image: svg-load('../icons/search-large.svg');
+    }
+    &--search {
+        background-image: svg-load('../icons/search.svg');
+    }
+    &--settings {
+        background-image: svg-load('../icons/settings.svg');
+    }
+    &--share {
+        background-image: svg-load('../icons/share.svg');
+    }
+    &--smiley {
+        background-image: svg-load('../icons/smiley.svg');
+    }
+    &--sortAlphaAsc {
+        background-image: svg-load('../icons/sort-alpha-asc.svg');
+    }
+    &--sortAlphaDsc {
+        background-image: svg-load('../icons/sort-alpha-dsc.svg');
+    }
+    &--sortTopBottom {
+        background-image: svg-load('../icons/sort-top-bottom.svg');
+    }
+    &--spacing {
+        background-image: svg-load('../icons/spacing.svg');
+    }
+    &--spinner {
+        background-image: svg-load('../icons/spinner.svg');
+    }
+    &--starOff {
+        background-image: svg-load('../icons/star-off.svg');
+    }
+    &--starOn {
+        background-image: svg-load('../icons/star-on.svg');
+    }
+    &--strokeWeight {
+        background-image: svg-load('../icons/stroke-weight.svg');
+    }
+    &--styles {
+        background-image: svg-load('../icons/styles.svg');
+    }
+    &--swap {
+        background-image: svg-load('../icons/swap.svg');
+    }
+    &--theme {
+        background-image: svg-load('../icons/theme.svg');
+    }
+    &--tidyUpGrid {
+        background-image: svg-load('../icons/tidy-up-grid.svg');
+    }
+    &--tidyUpListHorizontal {
+        background-image: svg-load('../icons/tidy-up-list-horizontal.svg');
+    }
+    &--tidyUpListVertical {
+        background-image: svg-load('../icons/tidy-up-list-vertical.svg');
+    }
+    &--timer {
+        background-image: svg-load('../icons/timer.svg');
+    }
+    &--trash {
+        background-image: svg-load('../icons/trash.svg');
+    }
+    &--verticalPadding {
+        background-image: svg-load('../icons/vertical-padding.svg');
+    }
+    &--visible {
+        background-image: svg-load('../icons/visible.svg');
+    }
+    &--warningLarge {
+        background-image: svg-load('../icons/warning-large.svg');
+    }
+    &--warning {
+        background-image: svg-load('../icons/warning.svg');
+    }
+
+}

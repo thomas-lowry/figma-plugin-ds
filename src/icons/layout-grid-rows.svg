@@ -1,0 +1,1 @@
+<svg fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><g fill="#000"><path d="m9 9h14v3h-14z"/><path d="m9 14.5h14v3h-14z"/><path d="m9 20h14v3h-14z"/></g></svg>

@@ -4,6 +4,7 @@ import { terser } from 'rollup-plugin-terser';
 import prettier from 'rollup-plugin-prettier';
 import postcss from 'rollup-plugin-postcss';
 import autoprefixer from 'autoprefixer';
+import inlineSVG from 'postcss-inline-svg';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -11,7 +12,7 @@ export default {
 	input: 'src/js/figma-plugin-ds.js',
 	output: {
 		file: 'public/figma-plugin-ds.js',
-		format: 'iife'
+		format: 'cjs'
 	},
 	plugins: [
 		resolve(),
@@ -23,7 +24,8 @@ export default {
 			extract: true,
 			minimize: production && true, // minify, only on build for prod
 			plugins: [
-				autoprefixer()
+				autoprefixer(),
+				inlineSVG()
 			]
 		}),
 		production && terser() // minify, only on build for prod

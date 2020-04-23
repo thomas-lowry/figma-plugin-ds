@@ -3,4 +3,5 @@ import '../css/figma-plugin-ds.scss'
 
 //import disclosure
 import disclosure from "./modules/disclosure"
-disclosure.init();
+
+export { disclosure }
