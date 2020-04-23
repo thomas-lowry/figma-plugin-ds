@@ -22,6 +22,8 @@
 <button class="button button--tertiary-destructive mb-xxsmall">Label</button>
 <button class="button button--tertiary-destructive mb-xxsmall" disabled>Label</button>
 
+<hr>
+
 <h3>Checkboxes</h3>
 <div class="checkbox">
     <input id="uniqueCheckboxId" type="checkbox" class="checkbox__box">
@@ -43,6 +45,25 @@
     <label for="uniqueCheckboxId4" class="checkbox__label">Checkbox label</label>
 </div>	
 
-<script src="figma-plugin-ds.js"></script>
+<hr>
+
+
+<h3>Disclosure Panels</h3>
+
+<ul class="disclosure">
+    <li class="disclosure__item disclosure--expanded">
+        <div class="disclosure__label disclosure--section">Disclosure</div>
+        <div class="disclosure__content">Panel content here</div>
+    </li>
+    <li class="disclosure__item">
+        <div class="disclosure__label">Disclosure</div>
+        <div class="disclosure__content">Panel content here</div>
+    </li>
+ </ul>
+
+
+
+
+<script type="module" src="figma-plugin-ds.js"></script>
 </body>
 </html>

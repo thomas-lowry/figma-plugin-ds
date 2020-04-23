@@ -1,0 +1,85 @@
+.disclosure {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        border-bottom: 1px solid var(--silver);
+
+        &:last-child {
+            border-bottom: 1px solid transparent;
+        }
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        height: var(--size-medium);
+        font-size: var(--font-size-xsmall);
+        font-weight: var(--font-weight-normal);
+        letter-spacing: var( --font-letter-spacing-pos-xsmall);
+        line-height: var(--line-height);
+        color: var(--black8);
+        padding: 0 8px 0 24px;
+        cursor: default;
+        user-select: none;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 4px;
+            display: block;
+            width: 16px;
+            height: 16px;
+            opacity: 0.3;
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20fill%3D%22none%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20width%3D%2216%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m11%208-4-3v6z%22%20fill%3D%22%23000%22%2F%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        &:hover {
+			&:before {
+				opacity: 0.8;
+			}
+		}
+    }
+
+    &__content {
+        font-size: var(--font-size-xsmall);
+        font-weight: var(--font-weight-normal);
+        letter-spacing: var( --font-letter-spacing-pos-xsmall);
+        line-height: var(--line-height);
+        color: var(--black8);
+        padding: var(--size-xxsmall) var(--size-xxsmall) var(--size-xxsmall) var(--size-small);
+        display: none;
+        user-select: none;
+        pointer-events: none;
+    }
+
+    &--section {
+		font-weight: var(--font-weight-bold);
+    }
+    
+    &--expanded & {
+		&__content {
+			display: block;
+			border-bottom: 1px solid transparent;
+		}
+		&__label {
+			&:before {
+				opacity: 0.8;
+				background-image: url('data:image/svg+xml;utf8,%3Csvg%20fill%3D%22none%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20width%3D%2216%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m9%2010%203-4h-6z%22%20fill%3D%22%23000%22%2F%3E%3C%2Fsvg%3E');
+			}
+		}
+	}
+
+}

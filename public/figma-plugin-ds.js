@@ -1,12 +1,42 @@
 (function () {
 	'use strict';
 
+	const selector = 'disclosure';
+
+	const disclosureHandler = function (event) {
+		let disclosureSet = this.parentNode.parentNode;
+		let disclosuresInSet = disclosureSet.querySelectorAll('li');
+		let alreadyActive = this.parentNode.classList.contains(selector + '--expanded');
+
+		disclosuresInSet.forEach((disclosure) => {
+			disclosure.classList.remove(selector + '--expanded');
+		});
+
+		this.parentNode.classList.add(selector + '--expanded');
+
+		if (alreadyActive) {
+			this.parentNode.classList.remove(selector + '--expanded');
+		}
+	};
+
+	const disclosure = {
+		init: function () {
+			let disclosures = document.querySelectorAll('.' + selector + '__label');
+
+			disclosures.forEach((disclosure) => {
+				disclosure.addEventListener('click', disclosureHandler, false);
+			});
+		},
+
+		destroy: function () {
+			let disclosures = document.querySelectorAll('.' + selector + '__label');
+
+			disclosures.forEach((disclosure) => {
+				disclosure.removeEventListener('click', disclosureHandler, false);
+			});
+		}
+	};
+
 	// import css to be processed to css file
-
-	//scripts
-	function helloThere(name) {
-		console.log('hello there, ' + name);
-	}
-
-	helloThere('thomas');
+	disclosure.init();
 })();
