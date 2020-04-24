@@ -1132,3 +1132,82 @@ a:focus {
       height: 10px;
       margin: 2px 10px 0 -8px;
       border-radius: 50%; }
+
+.section {
+  font-size: var(--font-size-xsmall);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--font-letter-spacing-pos-xsmall);
+  line-height: var(--line-height);
+  color: var(--black8);
+  height: var(--size-medium);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 0 calc(var(--size-xxsmall) / 2) 0 var(--size-xxsmall); }
+
+.switch {
+  align-items: center;
+  cursor: default;
+  display: flex;
+  height: var(--size-medium);
+  position: relative; }
+  .switch__toggle {
+    opacity: 0; }
+  .switch__toggle:checked + .switch__label:before {
+    color: var(--black8);
+    background-color: var(--black8-opaque); }
+  .switch__toggle:checked + .switch__label:after {
+    transform: translateX(12px); }
+  .switch__toggle:disabled + .switch__label {
+    color: var(--black);
+    opacity: 0.3; }
+  .switch__toggle:checked:disabled + .switch__label:before {
+    border: 1px solid var(--black);
+    background-color: var(--black); }
+  .switch__toggle:focus + .switch__label:before {
+    box-shadow: 0 0 0 2px var(--blue); }
+  .switch__label {
+    align-items: center;
+    color: var(--black8);
+    display: flex;
+    font-family: var(--font-stack);
+    font-size: var(--font-size-xsmall);
+    font-weight: var(--font-weight-normal);
+    height: 100%;
+    letter-spacing: var(--font-letter-spacing-pos-xsmall);
+    line-height: var(--font-line-height);
+    margin-left: -16px;
+    padding: 0 var(--size-xsmall) 0 calc(var(--size-xlarge) - 2px);
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+    .switch__label:before {
+      background-color: var(--white);
+      border: 1px solid var(--black8-opaque);
+      border-radius: 6px;
+      content: '';
+      display: block;
+      height: 10px;
+      left: 8px;
+      position: absolute;
+      top: 10px;
+      transition: background-color 0 0.2s;
+      width: 22px; }
+    .switch__label:after {
+      background-color: var(--white);
+      border: 1px solid var(--black8-opaque);
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: 10px;
+      left: 8px;
+      position: absolute;
+      top: 10px;
+      transition: transform 0.2s;
+      width: 10px; }
