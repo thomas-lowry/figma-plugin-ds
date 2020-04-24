@@ -1063,3 +1063,72 @@ a:focus {
       -ms-user-select: none;
           user-select: none;
   padding: 0 var(--size-xxxsmall) 0 var(--size-xxsmall); }
+
+.onboarding-tip {
+  display: flex;
+  align-items: top;
+  padding: 0 var(--size-xsmall) 0 0; }
+  .onboarding-tip .icon {
+    margin-right: var(--size-xxsmall); }
+  .onboarding-tip__msg {
+    padding: var(--size-xxsmall) 0 var(--size-xxsmall) 0;
+    font-size: var(--font-size-xsmall);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--font-letter-spacing-pos-xsmall);
+    line-height: var(--line-height);
+    color: var(--black8);
+    margin: 0; }
+
+.radio {
+  align-items: center;
+  cursor: default;
+  display: flex;
+  height: var(--size-medium);
+  position: relative; }
+  .radio__button {
+    opacity: 0;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    padding: 0; }
+  .radio__button:checked + .radio__label:before {
+    background-image: url('data:image/svg+xml,%3Csvg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="6" height="6" rx="3" fill="black" fill-opacity="0.8"/%3E%3C/svg%3E%0A');
+    background-repeat: no-repeat;
+    background-position: 2px 2px; }
+  .radio__button:disabled + .radio__label {
+    opacity: 0.3; }
+  .radio__button:checked:disabled + .radio__label:before {
+    border: 1px solid var(--black); }
+  .radio__button:enabled:checked:focus + .radio__label:before {
+    border: 1px solid var(--blue);
+    box-shadow: 0 0 0 1px var(--blue);
+    border-radius: var(--border-radius-small);
+    border-radius: 50%; }
+  .radio__button:enabled:focus + .radio__label:before {
+    border: 1px solid var(--blue);
+    box-shadow: 0 0 0 1px var(--blue); }
+  .radio__label {
+    align-items: center;
+    color: var(--black8);
+    display: flex;
+    font-family: var(--font-stack);
+    font-size: var(--font-size-xsmall);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-line-height);
+    letter-spacing: var(--font-letter-spacing-pos-xsmall);
+    margin-left: -16px;
+    padding: 0 var(--size-xsmall) 0 var(--size-small);
+    height: 100%;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+    .radio__label:before {
+      border: 1px solid var(--black8);
+      border-radius: var(--border-radius-small);
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin: 2px 10px 0 -8px;
+      border-radius: 50%; }
