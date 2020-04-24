@@ -1262,7 +1262,6 @@ a:focus {
     outline: 1px solid var(--blue);
     outline-offset: -2px; }
   .textarea:active, .textarea:focus {
-    padding: 7px 4px 9px 7px;
     color: var(--black);
     border: 1px solid var(--blue);
     outline: 1px solid var(--blue);
@@ -1272,7 +1271,6 @@ a:focus {
     color: var(--black3);
     border: 1px solid transparent; }
   .textarea:disabled:active {
-    padding: 7px 4px 9px 7px;
     outline: none; }
 
 .type {
