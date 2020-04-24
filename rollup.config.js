@@ -1,18 +1,19 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import { terser } from 'rollup-plugin-terser';
 import prettier from 'rollup-plugin-prettier';
 import postcss from 'rollup-plugin-postcss';
 import autoprefixer from 'autoprefixer';
 import inlineSVG from 'postcss-inline-svg';
+import { terser } from 'rollup-plugin-terser';
 
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
-	input: 'src/js/figma-plugin-ds.js',
+	input: './src/figma-plugin-ds.js',
 	output: {
 		file: 'public/figma-plugin-ds.js',
-		format: 'cjs'
+		format: 'umd',
+		name: 'figma-plugin-ds'
 	},
 	plugins: [
 		resolve(),
@@ -28,6 +29,6 @@ export default {
 				inlineSVG()
 			]
 		}),
-		production && terser() // minify, only on build for prod
+		production && terser()
 	]
 };

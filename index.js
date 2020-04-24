@@ -1,7 +1,3 @@
-// import css to be processed to css file
-import '../css/figma-plugin-ds.scss'
+import disclosure from './src/modules/disclosure';
 
-//import disclosure
-import disclosure from "./modules/disclosure"
-
-export { disclosure }
+export { disclosure };

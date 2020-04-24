@@ -1274,3 +1274,38 @@ a:focus {
   .textarea:disabled:active {
     padding: 7px 4px 9px 7px;
     outline: none; }
+
+.type {
+  font-family: var(--font-stack);
+  font-size: var(--font-size-xsmall);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-line-height);
+  letter-spacing: var(--font-letter-spacing-pos-xsmall);
+  /* sizes */
+  /* weights */
+  /* letter spacing adjustments based pos/neg application */ }
+  .type--small {
+    font-size: var(--font-size-small);
+    letter-spacing: var(--font-letter-spacing-pos-small); }
+  .type--large {
+    font-size: var(--font-size-large);
+    line-height: var(--font-line-height-large);
+    letter-spacing: var(--font-letter-spacing-pos-large); }
+  .type--xlarge {
+    font-size: var(--font-size-xlarge);
+    line-height: var(--font-line-height-large);
+    letter-spacing: var(--font-letter-spacing-pos-xlarge); }
+  .type--medium {
+    font-weight: var(--font-weight-medium); }
+  .type--bold {
+    font-weight: var(--font-weight-bold); }
+  .type--inverse {
+    letter-spacing: var(--font-letter-spacing-neg-xsmall); }
+  .type--inverse + .type--small {
+    letter-spacing: var(--font-letter-spacing-neg-small); }
+  .type--inverse + .type--large {
+    letter-spacing: var(--font-letter-spacing-neg-large); }
+  .type--inverse + .type--xlarge {
+    letter-spacing: var(--font-letter-spacing-neg-xlarge); }
+  .type--inline {
+    display: inline-block; }

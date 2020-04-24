@@ -12,7 +12,8 @@
     "rollup-plugin-postcss": "^2.9.0",
     "rollup-plugin-prettier": "^2.0.0",
     "rollup-plugin-terser": "^5.0.0",
-    "serve": "^11.0.2"
+    "serve": "^11.0.2",
+    "terser": "^4.6.11"
   },
   "dependencies": {},
   "scripts": {
