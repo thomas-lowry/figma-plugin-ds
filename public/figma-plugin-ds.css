@@ -1211,3 +1211,66 @@ a:focus {
       top: 10px;
       transition: transform 0.2s;
       width: 10px; }
+
+.textarea {
+  font-size: var(--font-size-xsmall);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--font-letter-spacing-neg-xsmall);
+  line-height: var(--line-height);
+  position: relative;
+  display: flex;
+  overflow: visible;
+  align-items: center;
+  width: 100%;
+  min-height: 62px;
+  margin: 1px 0 1px 0;
+  padding: var(--size-xxsmall) var(--size-xxxsmall) var(--size-xxsmall) var(--size-xxsmall);
+  color: var(--black8);
+  border: 1px solid var(--black1);
+  border-radius: var(--border-radius-small);
+  outline: none;
+  background-color: var(--white);
+  resize: none;
+  overflow-y: auto; }
+  .textarea:hover, .textarea:placeholder-shown:hover {
+    color: var(--black8);
+    border: 1px solid var(--black1);
+    background-image: none; }
+  .textarea::-moz-selection {
+    color: var(--black);
+    background-color: var(--blue3); }
+  .textarea::selection {
+    color: var(--black);
+    background-color: var(--blue3); }
+  .textarea::-webkit-input-placeholder {
+    color: var(--black3);
+    border: 1px solid transparent; }
+  .textarea::-moz-placeholder {
+    color: var(--black3);
+    border: 1px solid transparent; }
+  .textarea:-ms-input-placeholder {
+    color: var(--black3);
+    border: 1px solid transparent; }
+  .textarea::-ms-input-placeholder {
+    color: var(--black3);
+    border: 1px solid transparent; }
+  .textarea::placeholder {
+    color: var(--black3);
+    border: 1px solid transparent; }
+  .textarea:focus:placeholder-shown {
+    border: 1px solid var(--blue);
+    outline: 1px solid var(--blue);
+    outline-offset: -2px; }
+  .textarea:active, .textarea:focus {
+    padding: 7px 4px 9px 7px;
+    color: var(--black);
+    border: 1px solid var(--blue);
+    outline: 1px solid var(--blue);
+    outline-offset: -2px; }
+  .textarea:disabled, .textarea:disabled:hover {
+    position: relative;
+    color: var(--black3);
+    border: 1px solid transparent; }
+  .textarea:disabled:active {
+    padding: 7px 4px 9px 7px;
+    outline: none; }
