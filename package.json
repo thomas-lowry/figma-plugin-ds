@@ -37,7 +37,7 @@
     "vanilla"
   ],
   "author": "Thomas Lowry",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/thomas-lowry/figma-plugin-ds/issues"
   },
