@@ -22,8 +22,8 @@
     "dev": "npm-run-all --parallel start watch",
     "start": "serve public"
   },
-  "description": "This repo contains a bare-bones example of how to create an application using Rollup, including importing a module from `node_modules` and converting it from CommonJS.",
-  "version": "0.0.1",
+  "description": "A UI library with CSS and vanilla JS that match the Figma UI for building plugins.",
+  "version": "0.0.2",
   "main": "index.js",
   "style": "dist/figma-plugin-ds.css",
   "repository": {
