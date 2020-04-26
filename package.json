@@ -1,5 +1,5 @@
 {
-  "name": "figma-plugin-ds-vanilla",
+  "name": "figma-plugin-ds",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-node-resolve": "^7.0.0",

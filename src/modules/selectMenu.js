@@ -111,9 +111,7 @@ const createMenus = function() {
                 createMenuItem(option);
             });
         }
-
     });
-
 }
 
 //create the wrapper for the select menu
@@ -127,7 +125,10 @@ const createWrapper = function(menu) {
     menu.style.display = 'none';
     
     //set the selected option to correct menu item if not set
-    menu.options[menu.selectedIndex].selected = true;
+
+    if (menu.selectedIndex != -1) {
+        menu.options[menu.selectedIndex].selected = true;
+    }
 
     //create the wrapper, and insert the hidden select menu
     let menuWrapper = document.createElement('div');
@@ -147,10 +148,6 @@ const createWrapper = function(menu) {
         icon = document.createElement('span')
         icon.className = 'icon ' + iconName; 
     }
-
-    if (menu.disabled) {
-        button.disabled = true;
-    }
     
     //add classes
     button.className = selector + '__button';
@@ -158,10 +155,16 @@ const createWrapper = function(menu) {
     buttonCaret.className = selector + '__caret';
 
     //add content
-    buttonLabel.textContent = menu.options[menu.selectedIndex].text;
-    if (!menu.options[menu.selectedIndex].hasAttribute('value')) {
+    if (menu.selectedIndex != -1) {
+        buttonLabel.textContent = menu.options[menu.selectedIndex].text;
+        if (!menu.options[menu.selectedIndex].hasAttribute('value')) {
+            buttonLabel.classList.add(selector + '__label--placeholder');
+        }
+    } else {
+        buttonLabel.textContent = 'No items to display';
         buttonLabel.classList.add(selector + '__label--placeholder');
     }
+
 
     //create the menu container
     optionList = document.createElement('ul');
@@ -231,15 +234,23 @@ var displayMenu = function(event) {
     and then determine if the button or menu item is clicked */
     if (this.tagName == 'BUTTON') {
 
-        //add active class to button (is this needed?)
-        this.classList.toggle(selector + '__button--active');
+        //get the menu element so we can see if there are options to display
+        let selectMenu = this.parentNode.querySelector('select');
 
-        //toggle the menu
-        let menu = this.parentNode.querySelector('UL');
-        menu.classList.toggle(selector + '__menu--active');
+        if (selectMenu.children.length > 0) {
 
-        //update position of menu
-        resizeAndPosition(menu);
+            //add active class to button (is this needed?)
+            this.classList.toggle(selector + '__button--active');
+
+            //toggle the menu
+            let menu = this.parentNode.querySelector('UL');
+            menu.classList.toggle(selector + '__menu--active');
+
+            //update position of menu
+            resizeAndPosition(menu);
+        }
+
+        this.blur();
 
     } else if (this.tagName === 'LI') {
 
