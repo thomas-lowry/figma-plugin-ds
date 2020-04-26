@@ -8,6 +8,11 @@
     &__toggle {
         opacity: 0;
     }
+    /*
+    &__toggle:focus + &__label:before {
+        box-shadow: 0 0 0 2px var(--blue);
+    }
+    */
     &__toggle:checked + &__label:before {
         color: var(--black8);
         background-color: var(--black8-opaque);
@@ -15,16 +20,13 @@
     &__toggle:checked + &__label:after {
         transform: translateX(12px);
     }
-    &__toggle:disabled + &__label {
-        color: var(--black);
-        opacity: 0.3;
-    }
     &__toggle:checked:disabled + &__label:before {
         border: 1px solid var(--black);
         background-color: var(--black);
     }
-    &__toggle:focus + &__label:before {
-        box-shadow: 0 0 0 2px var(--blue);
+    &__toggle:disabled + &__label {
+        color: var(--black);
+        opacity: 0.3;
     }
 
     &__label {

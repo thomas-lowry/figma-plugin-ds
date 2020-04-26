@@ -1,5 +1,6 @@
 const selector = 'disclosure';
 
+//PRIVATE
 const disclosureHandler = function(event) {
     let disclosureSet = this.parentNode.parentNode;
     let disclosuresInSet = disclosureSet.querySelectorAll('li');
@@ -17,6 +18,7 @@ const disclosureHandler = function(event) {
 
 }
 
+//PUBLIC
 const disclosure = {
 
     init: function() {
