@@ -22,12 +22,14 @@ const disclosureHandler = function(event) {
 const disclosure = {
 
     init: function() {
-        
+
         let disclosures = document.querySelectorAll('.' + selector + '__label');
 
-        disclosures.forEach((disclosure) => {
-            disclosure.addEventListener('click', disclosureHandler, false);
-        });
+        if (disclosures) {
+            disclosures.forEach(disclosure => {
+                disclosure.addEventListener('click', disclosureHandler, false);
+            });
+        }
 
     },
 
@@ -35,9 +37,12 @@ const disclosure = {
         
         let disclosures = document.querySelectorAll('.' + selector + '__label');
 
-        disclosures.forEach((disclosure) => {
-            disclosure.removeEventListener('click', disclosureHandler, false);
-        });
+        if (disclosures) {
+            disclosures.forEach((disclosure) => {
+                disclosure.removeEventListener('click', disclosureHandler, false);
+            });
+        }
+
 
     }
 };

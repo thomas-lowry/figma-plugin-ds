@@ -387,6 +387,7 @@ function arraySum(data) {
 const selectMenu = {
 
     init: function() {
+
         //destroy first if already initialized
         if (init == true) {
             this.destroy();
@@ -395,14 +396,17 @@ const selectMenu = {
         //initialize all menus
         elements = document.querySelectorAll('.' + selector);
 
-        //create the menu(s)
-        createMenus();
+        if (elements) {
+            //create the menu(s)
+            createMenus();
 
-        //click handler for clicks outside of menu
-        document.addEventListener('click', isOutside, false);
+            //click handler for clicks outside of menu
+            document.addEventListener('click', isOutside, false);
         
-        //set init to true now that menu has been initialized
-        init = true;
+            //set init to true now that menu has been initialized
+            init = true;
+
+        }
 
     },
 
@@ -426,9 +430,7 @@ const selectMenu = {
             init = false;
 
         }
-
     }
-
 }
 
 
