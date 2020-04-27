@@ -23,9 +23,9 @@
     "start": "serve public"
   },
   "description": "A UI library with CSS and vanilla JS that match the Figma UI for building plugins.",
-  "version": "0.0.2",
-  "main": "index.js",
-  "style": "dist/figma-plugin-ds.css",
+  "version": "0.0.3",
+  "main": "public/figma-plugin-ds.js",
+  "style": "public/figma-plugin-ds.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thomas-lowry/figma-plugin-ds.git"

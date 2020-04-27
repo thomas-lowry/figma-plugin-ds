@@ -198,7 +198,13 @@
 
 
 
-<script src="figma-plugin-ds.js"></script>
+<script type="module">
+    import { disclosure, selectMenu } from './figma-plugin-ds.js';
+
+    disclosure.init();
+    selectMenu.init();
+
+</script>
 
 </script>
 </body>

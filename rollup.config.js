@@ -12,7 +12,7 @@ export default {
 	input: './src/figma-plugin-ds.js',
 	output: {
 		file: 'public/figma-plugin-ds.js',
-		format: 'cjs',
+		format: 'module',
 		name: 'figma-plugin-ds'
 	},
 	plugins: [
