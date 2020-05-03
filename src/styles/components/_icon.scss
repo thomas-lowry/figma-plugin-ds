@@ -1,0 +1,342 @@
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    width: var(--size-medium);
+    height: var(--size-medium);
+    font-family: var(--font-stack);
+    font-size: var(--font-size-xsmall);
+    user-select: none;
+    background-position: -2px -1px;
+
+    //rotate the icon in an infinit loop, ex: for a spinner
+    &--spin {
+        animation: rotating 1.0s linear infinite;
+    }
+    @keyframes rotating {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    //color modifiers
+
+    //blue
+    &--blue {
+        filter: invert(54%) sepia(16%) saturate(7499%) hue-rotate(179deg) brightness(98%) contrast(101%);
+    }
+
+    &--purple {
+        filter: invert(40%) sepia(59%) saturate(4001%) hue-rotate(232deg) brightness(103%) contrast(102%);
+    }
+
+    &--purple4 {
+        filter: invert(72%) sepia(40%) saturate(660%) hue-rotate(202deg) brightness(103%) contrast(103%);
+    }
+
+    &--hot-pink {
+        filter: invert(18%) sepia(90%) saturate(3347%) hue-rotate(293deg) brightness(116%) contrast(132%);
+    }
+
+    &--green {
+        filter: invert(66%) sepia(39%) saturate(5382%) hue-rotate(114deg) brightness(102%) contrast(79%);
+    }
+    
+    &--red {
+        filter: invert(43%) sepia(56%) saturate(5632%) hue-rotate(349deg) brightness(97%) contrast(95%);
+    }
+
+    &--yellow {
+        filter: invert(78%) sepia(86%) saturate(1608%) hue-rotate(1deg) brightness(107%) contrast(104%);
+    }
+
+    &--black {
+        filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(117deg) brightness(109%) contrast(105%);
+    }
+
+    &--black8 {
+        filter: invert(0%) sepia(56%) saturate(25%) hue-rotate(137deg) brightness(105%) contrast(60%);
+    }
+
+    &--black3 {
+        filter: invert(100%) sepia(0%) saturate(698%) hue-rotate(219deg) brightness(66%) contrast(127%);
+    }
+
+    &--white {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(269deg) brightness(103%) contrast(104%);
+    }
+
+    &--white8 {
+        filter: invert(99%) sepia(2%) saturate(5%) hue-rotate(55deg) brightness(104%) contrast(98%);
+    }
+
+    &--white4 {
+        filter: invert(99%) sepia(2%) saturate(897%) hue-rotate(245deg) brightness(117%) contrast(93%);
+    }
+
+
+    //icons
+    &--adjust {
+        background-image: url('../icons/adjust.svg');
+    }
+    &--alert {
+        background-image: url('../icons/alert.svg');
+    }
+    &--angle {
+        background-image: url('../icons/angle.svg');
+    }
+    &--arrow-left-right {
+        background-image: url('../icons/arrow-left-right.svg');
+    }
+    &--up-down {
+        background-image: url('../icons/arrow-up-down.svg');
+    }
+    &--auto-layout-horizontal {
+        background-image: url('../icons/auto-layout-horizontal.svg');
+    }
+    &--auto-layout-vertical {
+        background-image: url('../icons/auto-layout-vertical.svg');
+    }
+    &--back {
+        background-image: url('../icons/back.svg');
+    }
+    &--blend-empty {
+        background-image: url('../icons/blend-empty.svg');
+    }
+    &--blend {
+        background-image: url('../icons/blend.svg');
+    }
+    &--break {
+        background-image: url('../icons/break.svg');
+    }
+    &--caret-down {
+        background-image: url('../icons/caret-down.svg');
+    }
+    &--caret-left {
+        background-image: url('../icons/caret-left.svg');
+    }
+    &--caret-right {
+        background-image: url('../icons/caret-right.svg');
+    }
+    &--caret-up {
+        background-image: url('../icons/caret-up.svg');
+    }
+    &--check {
+        background-image: url('../icons/check.svg');
+    }
+    &--close {
+        background-image: url('../icons/close.svg');
+    }
+    &--component {
+        background-image: url('../icons/component.svg');
+    }
+    &--corner-radius {
+        background-image: url('../icons/corner-radius.svg');
+    }
+    &--corners {
+        background-image: url('../icons/corners.svg');
+    }
+    &--distribute-horizontal-spacing {
+        background-image: url('../icons/distribute-horizontal-spacing.svg');
+    }
+    &--distribute-vertical-spacing {
+        background-image: url('../icons/distribute-vertical-spacing.svg');
+    }
+    &--draft {
+        background-image: url('../icons/draft.svg');
+    }
+    &--effects {
+        background-image: url('../icons/effects.svg');
+    }
+    &--ellipses {
+        background-image: url('../icons/ellipses.svg');
+    }
+    &--eyedropper {
+        background-image: url('../icons/eyedropper.svg');
+    }
+    &--forward {
+        background-image: url('../icons/forward.svg');
+    }
+    &--frame {
+        background-image: url('../icons/frame.svg');
+    }
+    &--group {
+        background-image: url('../icons/group.svg');
+    }
+    &--hidden {
+        background-image: url('../icons/hidden.svg');
+    }
+    &--horizontal-padding {
+        background-image: url('../icons/horizontal-padding.svg');
+    }
+    &--hyperlink {
+        background-image: url('../icons/hyperlink.svg');
+    }
+    &--image {
+        background-image: url('../icons/image.svg');
+    }
+    &--instance {
+        background-image: url('../icons/instance.svg');
+    }
+    &--key {
+        background-image: url('../icons/key.svg');
+    }
+    &--layout-align-bottom {
+        background-image: url('../icons/layout-align-bottom.svg');
+    }
+    &--align-horizontal-centers {
+        background-image: url('../icons/layout-align-horizontal-centers.svg');
+    }
+    &--align-left {
+        background-image: url('../icons/layout-align-left.svg');
+    }
+    &--align-right {
+        background-image: url('../icons/layout-align-right.svg');
+    }
+    &--align-top {
+        background-image: url('../icons/layout-align-top.svg');
+    }
+    &--align-vertical-centers {
+        background-image: url('../icons/layout-align-vertical-centers.svg');
+    }
+    &--layout-grid-columns {
+        background-image: url('../icons/layout-grid-columns.svg');
+    }
+    &--layout-grid-rows {
+        background-image: url('../icons/layout-grid-rows.svg');
+    }
+    &--layout-grid-uniform {
+        background-image: url('../icons/layout-grid-uniform.svg');
+    }
+    &--library {
+        background-image: url('../icons/library.svg');
+    }
+    &--link-broken {
+        background-image: url('../icons/link-broken.svg');
+    }
+    &--link-connected {
+        background-image: url('../icons/link-connected.svg');
+    }
+    &--list-detailed {
+        background-image: url('../icons/list-detailed.svg');
+    }
+    &--list-tile {
+        background-image: url('../icons/list-tile.svg');
+    }
+    &--list {
+        background-image: url('../icons/list.svg');
+    }
+    &--lockOff {
+        background-image: url('../icons/lock-off.svg');
+    }
+    &--lockOn {
+        background-image: url('../icons/lock-on.svg');
+    }
+    &--minus {
+        background-image: url('../icons/minus.svg');
+    }
+    &--play {
+        background-image: url('../icons/play.svg');
+    }
+    &--plus {
+        background-image: url('../icons/plus.svg');
+    }
+    &--random {
+        background-image: url('../icons/random.svg');
+    }
+    &--recent {
+        background-image: url('../icons/recent.svg');
+    }
+    &--resize-to-fit {
+        background-image: url('../icons/resize-to-fit.svg');
+    }
+    &--resolve-filled {
+        background-image: url('../icons/resolve-filled.svg');
+    }
+    &--resolve {
+        background-image: url('../icons/resolve.svg');
+    }
+    &--reverse {
+        background-image: url('../icons/reverse.svg');
+    }
+    &--search-large {
+        background-image: url('../icons/search-large.svg');
+    }
+    &--search {
+        background-image: url('../icons/search.svg');
+    }
+    &--settings {
+        background-image: url('../icons/settings.svg');
+    }
+    &--share {
+        background-image: url('../icons/share.svg');
+    }
+    &--smiley {
+        background-image: url('../icons/smiley.svg');
+    }
+    &--sort-alpha-asc {
+        background-image: url('../icons/sort-alpha-asc.svg');
+    }
+    &--sort-alpha-dsc {
+        background-image: url('../icons/sort-alpha-dsc.svg');
+    }
+    &--sort-top-bottom {
+        background-image: url('../icons/sort-top-bottom.svg');
+    }
+    &--spacing {
+        background-image: url('../icons/spacing.svg');
+    }
+    &--spinner {
+        background-image: url('../icons/spinner.svg');
+    }
+    &--star-off {
+        background-image: url('../icons/star-off.svg');
+    }
+    &--star-on {
+        background-image: url('../icons/star-on.svg');
+    }
+    &--stroke-weight {
+        background-image: url('../icons/stroke-weight.svg');
+    }
+    &--styles {
+        background-image: url('../icons/styles.svg');
+    }
+    &--swap {
+        background-image: url('../icons/swap.svg');
+    }
+    &--theme {
+        background-image: url('../icons/theme.svg');
+    }
+    &--tidy-up-grid {
+        background-image: url('../icons/tidy-up-grid.svg');
+    }
+    &--tidy-up-list-horizontal {
+        background-image: url('../icons/tidy-up-list-horizontal.svg');
+    }
+    &--tidy-up-list-vertical {
+        background-image: url('../icons/tidy-up-list-vertical.svg');
+    }
+    &--timer {
+        background-image: url('../icons/timer.svg');
+    }
+    &--trash {
+        background-image: url('../icons/trash.svg');
+    }
+    &--vertical-padding {
+        background-image: url('../icons/vertical-padding.svg');
+    }
+    &--visible {
+        background-image: url('../icons/visible.svg');
+    }
+    &--warning-large {
+        background-image: url('../icons/warning-large.svg');
+    }
+    &--warning {
+        background-image: url('../icons/warning.svg');
+    }
+
+}

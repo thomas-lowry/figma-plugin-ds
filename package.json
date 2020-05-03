@@ -1,31 +1,21 @@
 {
   "name": "figma-plugin-ds",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^11.0.1",
-    "@rollup/plugin-node-resolve": "^7.0.0",
     "autoprefixer": "^9.7.6",
-    "node-sass": "^4.13.1",
-    "npm-run-all": "^4.1.5",
-    "postcss-inline-svg": "^4.1.0",
-    "prettier": "^2.0.5",
-    "rollup": "^1.16.2",
-    "rollup-plugin-postcss": "^2.9.0",
-    "rollup-plugin-prettier": "^2.0.0",
-    "rollup-plugin-terser": "^5.0.0",
-    "serve": "^11.0.2",
-    "terser": "^4.6.11"
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-css-svg": "^1.3.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0"
   },
   "dependencies": {},
   "scripts": {
-    "build": "rollup -c",
-    "watch": "rollup -c -w",
-    "dev": "npm-run-all --parallel start watch",
-    "start": "serve public"
+    "build": "gulp"
   },
   "description": "A UI library with CSS and vanilla JS that match the Figma UI for building plugins.",
-  "version": "0.0.3",
-  "main": "public/figma-plugin-ds.js",
-  "style": "public/figma-plugin-ds.css",
+  "version": "0.0.4",
+  "main": "dist/figma-plugin-ds.js",
+  "style": "dist/figma-plugin-ds.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thomas-lowry/figma-plugin-ds.git"
@@ -34,7 +24,10 @@
     "figma",
     "plugin",
     "ui",
-    "vanilla"
+    "vanilla",
+    "css",
+    "ui-library",
+    "design-system"
   ],
   "author": "Thomas Lowry",
   "license": "ISC",
