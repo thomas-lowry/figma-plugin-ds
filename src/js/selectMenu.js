@@ -136,7 +136,7 @@
 
         //create the wrapper, and insert the hidden select menu
         let menuWrapper = document.createElement('div');
-        menuWrapper.className = selector;
+        menuWrapper.className = selectMenuSelector;
         menu.parentNode.insertBefore(menuWrapper, menu);
         menuWrapper.appendChild(menu);
 
@@ -318,7 +318,7 @@
 
     //track clicks outside the menu
     var isOutside = function(event) {
-        let selectMenus = document.querySelectorAll('select.' + selector);
+        let selectMenus = document.querySelectorAll('select.' + selectMenuSelector);
 
         selectMenus.forEach(select => {
             let menuWrapper = select.parentNode;
@@ -399,7 +399,7 @@
 
 
     // PUBLIC
-    const selectMenu = {
+    window.selectMenu = {
 
         init: function() {
 
@@ -409,7 +409,7 @@
             }
 
             //initialize all menus
-            elements = document.querySelectorAll('.' + selector);
+            elements = document.querySelectorAll('.' + selectMenuSelector);
 
             if (elements) {
                 //create the menu(s)
