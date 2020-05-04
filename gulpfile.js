@@ -7,47 +7,74 @@ const concat = require('gulp-concat');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssSvg = require('gulp-css-svg');
+const prettier = require('gulp-prettier');
 
 // File paths
 const files = { 
     scssPath: 'src/styles/**/*.scss',
-    jsPath: 'src/js/**/*.js',
-    html: 'src/index.html',
+    jsPathIIFE: 'src/js/iife/**/*.js',
+    jsPathES6: 'src/js/modules/**/*.js',
     assetsPath: 'src/icons/**/*.svg'
 }
 
 // SCSS task: compiles the styles.scss file into styles.css
 function scssTask(){    
     return src(files.scssPath)
-        .pipe(sass()) //compile to css
+        .pipe(sass({
+            outputStyle: 'expanded'
+        })) //compile to css
         .pipe(postcss([autoprefixer()])) // PostCSS plugins
         .pipe(cssSvg())
         .pipe(dest('dist')
     ); 
 }
 
-// JS task: concatenates JS files to scripts.js (minifies on production build)
-function jsTask(){
-    return src([files.jsPath])
+//JS Task Modules: Generates all modules ready for export
+function jsTaskIIFE(){
+    return src([files.jsPathIIFE])
         .pipe(concat('figma-plugin-ds.js'))
-        .pipe(dest('dist')
+        .pipe(prettier({ 
+            "parser":"babel",
+            "printWidth":100,
+            "tabWidth":4,
+            "useTabs":true,
+            "semi":true,
+            "singleQuote":true,
+            "trailingComma":"none",
+            "bracketSpacing":true,
+            "jsxBracketSameLine":true,
+            "arrowParens":"always"
+        }))
+        .pipe(dest('dist/iife')
     );
 }
 
-//HTML task: copies and minifies 
-function htmlTask() {
-    return src([files.html])
-        .pipe(dest('dist'))
+// JS task: concatenates JS files to scripts.js (minifies on production build)
+function jsTaskES6(){
+    return src([files.jsPathES6])
+        .pipe(prettier({ 
+            "parser":"babel",
+            "printWidth":100,
+            "tabWidth":4,
+            "useTabs":true,
+            "semi":true,
+            "singleQuote":true,
+            "trailingComma":"none",
+            "bracketSpacing":true,
+            "jsxBracketSameLine":true,
+            "arrowParens":"always"
+        }))
+        .pipe(dest('dist/modules')
+    );
 }
 
 // Watch task: watch SCSS and JS files for changes
 // If any change, run scss and js tasks simultaneously
 function watchTask(){
-    watch([files.scssPath, files.jsPath, files.html, files.assetsPath],
+    watch([files.scssPath, files.jsPathIIFE, files.jsPathES6, files.assetsPath],
         {interval: 1000, usePolling: true}, 
         series(
-            parallel(scssTask, jsTask),
-            htmlTask
+            parallel(scssTask, jsTaskIIFE, jsTaskES6)
         )
     );    
 }
@@ -56,7 +83,6 @@ function watchTask(){
 // Runs the scss and js tasks simultaneously
 // then runs cacheBust, then watch task
 exports.default = series(
-    parallel(scssTask, jsTask), 
-    htmlTask,
-    watchTask,
+    parallel(scssTask, jsTaskIIFE, jsTaskES6),
+    watchTask
 );

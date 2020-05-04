@@ -23,17 +23,6 @@
     &__button:checked:disabled + &__label:before {
         border: 1px solid var(--black);
     }
-    /*
-    &__button:enabled:checked:focus + &__label:before {
-        border: 1px solid var(--blue);
-        box-shadow: 0 0 0 1px var(--blue);
-        border-radius: var(--border-radius-small);
-        border-radius: 50%;
-    }
-    &__button:enabled:focus + &__label:before {
-        border: 1px solid var(--blue);
-        box-shadow: 0 0 0 1px var(--blue);
-    }*/
 
     &__label {
         align-items: center;
