@@ -1,13 +1,13 @@
 (function () {
 	'use strict';
 
-	var disclosureSelector = 'disclosure';
+	const disclosureSelector = 'disclosure';
 
 	//PRIVATE
-	var disclosureHandler = function (event) {
-		var disclosureSet = this.parentNode.parentNode;
-		var disclosuresInSet = disclosureSet.querySelectorAll('li');
-		var alreadyActive = this.parentNode.classList.contains(disclosureSelector + '--expanded');
+	const disclosureHandler = function (event) {
+		let disclosureSet = this.parentNode.parentNode;
+		let disclosuresInSet = disclosureSet.querySelectorAll('li');
+		let alreadyActive = this.parentNode.classList.contains(disclosureSelector + '--expanded');
 
 		disclosuresInSet.forEach((disclosure) => {
 			disclosure.classList.remove(disclosureSelector + '--expanded');
@@ -23,7 +23,7 @@
 	//PUBLIC
 	window.disclosure = {
 		init: function () {
-			var disclosures = document.querySelectorAll('.' + disclosureSelector + '__label');
+			let disclosures = document.querySelectorAll('.' + disclosureSelector + '__label');
 
 			if (disclosures) {
 				disclosures.forEach((disclosure) => {
@@ -33,7 +33,7 @@
 		},
 
 		destroy: function () {
-			var disclosures = document.querySelectorAll('.' + disclosureSelector + '__label');
+			let disclosures = document.querySelectorAll('.' + disclosureSelector + '__label');
 
 			if (disclosures) {
 				disclosures.forEach((disclosure) => {
@@ -47,21 +47,21 @@
 (function () {
 	'use strict';
 
-	var selectMenuSelector = 'select-menu';
+	const selectMenuSelector = 'select-menu';
 
-	var elements, optionList, itemHeight, selectedItem;
-	var init = false;
+	let elements, optionList, itemHeight, selectedItem;
+	let init = false;
 
 	//PRIVATE
 
 	//create the menus
-	var createMenus = function () {
+	const createMenus = function () {
 		// loop through all select menus on screen
 		elements.forEach(function (menu, index) {
 			//  setup mutation observer
-			var mutationConfig = { attributes: true, childList: true, subtree: true };
-			var callback = function (mutationsList, observer) {
-				for (var mutation of mutationsList) {
+			let mutationConfig = { attributes: true, childList: true, subtree: true };
+			let callback = function (mutationsList, observer) {
+				for (let mutation of mutationsList) {
 					if (mutation.type === 'childList') {
 						selectMenu.init();
 					} else if (mutation.type === 'attributes') {
@@ -74,7 +74,7 @@
 					}
 				}
 			};
-			var observer = new MutationObserver(callback);
+			let observer = new MutationObserver(callback);
 			observer.observe(menu, mutationConfig);
 
 			//keep track of menu height, reset to 0 when building new one
@@ -87,19 +87,19 @@
 			selectedItem = menu.selectedIndex;
 
 			//find out if there are option groups present
-			var optionGroups = Array.from(menu.getElementsByTagName('optgroup'));
+			let optionGroups = Array.from(menu.getElementsByTagName('optgroup'));
 
 			if (optionGroups.length != 0) {
 				//do this if optgroups present
 
 				//determine if the option groups have labels
-				var hasLabels = optionGroups[0].label ? true : false;
+				let hasLabels = optionGroups[0].label ? true : false;
 
 				//loop through every option group
 				optionGroups.forEach(function (group, index) {
 					if (hasLabels) {
 						if (index != 0) {
-							var divider = document.createElement('div');
+							let divider = document.createElement('div');
 							divider.className = selectMenuSelector + '__divider';
 							optionList.appendChild(divider);
 							addItemHeight(divider);
@@ -109,7 +109,7 @@
 						}
 
 						//create the divider element w/ a label
-						var divider = document.createElement('div');
+						let divider = document.createElement('div');
 						divider.textContent = group.label;
 						divider.className = selectMenuSelector + '__divider-label';
 
@@ -125,7 +125,7 @@
 
 					if (index > 0 && !hasLabels) {
 						//create the divider element
-						var divider = document.createElement('div');
+						let divider = document.createElement('div');
 						divider.className = selectMenuSelector + '__divider';
 
 						//add to menu
@@ -139,7 +139,7 @@
 					}
 
 					//get children of group
-					var options = Array.from(group.getElementsByTagName('option'));
+					let options = Array.from(group.getElementsByTagName('option'));
 
 					//loop through all options and generate an item
 					options.forEach((option) => {
@@ -149,7 +149,7 @@
 			} else {
 				//do this if there are no optgroupss
 
-				var options = Array.from(menu.options);
+				let options = Array.from(menu.options);
 				//loop through all options and generate an item
 				options.forEach((option) => {
 					createMenuItem(option);
@@ -160,7 +160,7 @@
 
 	//create the wrapper for the select menu
 	//includes button and generates the wrapper UL for the list of menu items
-	var createWrapper = function (menu) {
+	const createWrapper = function (menu) {
 		//add top margin
 		itemHeight += 6;
 
@@ -174,19 +174,19 @@
 		}
 
 		//create the wrapper, and insert the hidden select menu
-		var menuWrapper = document.createElement('div');
+		let menuWrapper = document.createElement('div');
 		menuWrapper.className = selectMenuSelector;
 		menu.parentNode.insertBefore(menuWrapper, menu);
 		menuWrapper.appendChild(menu);
 
 		//determine if an icon is specified
-		var iconName = menu.getAttribute('icon');
+		let iconName = menu.getAttribute('icon');
 
 		//create the button + nested elements
-		var button = document.createElement('button');
-		var icon;
-		var buttonLabel = document.createElement('span');
-		var buttonCaret = document.createElement('span');
+		let button = document.createElement('button');
+		let icon;
+		let buttonLabel = document.createElement('span');
+		let buttonCaret = document.createElement('span');
 		if (iconName) {
 			icon = document.createElement('span');
 			icon.className = 'icon ' + iconName;
@@ -226,14 +226,14 @@
 	};
 
 	//create a list item
-	var createMenuItem = function (menuItem) {
+	const createMenuItem = function (menuItem) {
 		/* only create an item if there is a value this will ignore 
         the first menu item (if included) as a placeholder */
 		if (menuItem.hasAttribute('value')) {
 			//create list item elements
-			var item = document.createElement('li');
-			var itemIcon = document.createElement('span');
-			var itemLabel = document.createElement('span');
+			let item = document.createElement('li');
+			let itemIcon = document.createElement('span');
+			let itemLabel = document.createElement('span');
 
 			//set classnames
 			item.className = selectMenuSelector + '__item';
@@ -258,7 +258,7 @@
 			//if item is selected, add active class
 			if (menuItem.index === selectedItem) {
 				item.classList.add(selectMenuSelector + '__item--selected');
-				var menuPosition = -Math.abs(parseInt(item.getAttribute('position')));
+				let menuPosition = -Math.abs(parseInt(item.getAttribute('position')));
 				optionList.style.top = menuPosition + 'px';
 			}
 
@@ -273,14 +273,14 @@
         and then determine if the button or menu item is clicked */
 		if (this.tagName == 'BUTTON') {
 			//get the menu element so we can see if there are options to display
-			var selectMenu = this.parentNode.querySelector('select');
+			let selectMenu = this.parentNode.querySelector('select');
 
 			if (selectMenu.children.length > 0) {
 				//add active class to button (is this needed?)
 				this.classList.toggle(selectMenuSelector + '__button--active');
 
 				//toggle the menu
-				var menu = this.parentNode.querySelector('UL');
+				let menu = this.parentNode.querySelector('UL');
 				menu.classList.toggle(selectMenuSelector + '__menu--active');
 
 				//update position of menu
@@ -290,10 +290,10 @@
 			this.blur();
 		} else if (this.tagName === 'LI') {
 			//define the menu
-			var menu = this.parentNode.parentNode.querySelector('UL');
+			let menu = this.parentNode.parentNode.querySelector('UL');
 
 			//remove active classses from all menus
-			var menuItems = Array.from(menu.getElementsByTagName('LI'));
+			let menuItems = Array.from(menu.getElementsByTagName('LI'));
 			menuItems.forEach((item) => {
 				item.classList.remove(selectMenuSelector + '__item--selected');
 			});
@@ -302,9 +302,9 @@
 			this.classList.add(selectMenuSelector + '__item--selected');
 
 			//update the value of the select menu
-			var select = menu.parentNode.querySelector('SELECT');
-			var selectedValue = this.getAttribute('data-value');
-			var options = select.querySelectorAll('option');
+			let select = menu.parentNode.querySelector('SELECT');
+			let selectedValue = this.getAttribute('data-value');
+			let options = select.querySelectorAll('option');
 
 			//remove selected option for all elements
 			options.forEach((option) => {
@@ -317,12 +317,12 @@
 			select.value = selectedValue;
 
 			//dispatch change event
-			var event = new Event('change');
+			let event = new Event('change');
 			select.dispatchEvent(event);
 
 			//update the button on the dropdown
-			var button = this.parentNode.parentNode.querySelector('BUTTON');
-			var buttonLabel = button.querySelector('.' + selectMenuSelector + '__label');
+			let button = this.parentNode.parentNode.querySelector('BUTTON');
+			let buttonLabel = button.querySelector('.' + selectMenuSelector + '__label');
 			buttonLabel.textContent = this.textContent;
 			buttonLabel.classList.remove(selectMenuSelector + '__label--placeholder');
 
@@ -332,7 +332,7 @@
 			menu.classList.toggle(selectMenuSelector + '__menu--active');
 
 			//update the position of the drop down after hidden
-			var menuPosition = -Math.abs(parseInt(this.getAttribute('position')));
+			let menuPosition = -Math.abs(parseInt(this.getAttribute('position')));
 			menu.style.top = menuPosition + 'px';
 
 			//update position of menu
@@ -349,15 +349,15 @@
 
 	//track clicks outside the menu
 	var isOutside = function (event) {
-		var selectMenus = document.querySelectorAll('select.' + selectMenuSelector);
+		let selectMenus = document.querySelectorAll('select.' + selectMenuSelector);
 
 		selectMenus.forEach((select) => {
-			var menuWrapper = select.parentNode;
-			var menu = menuWrapper.querySelector('UL');
-			var button = menuWrapper.querySelector('BUTTON');
+			let menuWrapper = select.parentNode;
+			let menu = menuWrapper.querySelector('UL');
+			let button = menuWrapper.querySelector('BUTTON');
 
 			if (menu.classList.contains(selectMenuSelector + '__menu--active')) {
-				var clickInside = menuWrapper.contains(event.target);
+				let clickInside = menuWrapper.contains(event.target);
 				if (!clickInside) {
 					menu.classList.remove(selectMenuSelector + '__menu--active');
 					button.classList.remove(selectMenuSelector + '__button--active');
@@ -370,28 +370,28 @@
 	// fits inside the plugin viewport
 	// if its too big, it will resize it and enable a scrollbar
 	// if its off screen it will shift the position
-	var resizeAndPosition = function (menu) {
+	const resizeAndPosition = function (menu) {
 		//set the max height of the menu based on plugin/iframe window
-		var maxMenuHeight = window.innerHeight - 16;
-		var menuHeight = menu.offsetHeight;
-		var menuResized = false;
-		var menuButton = menu.parentNode.querySelector('BUTTON');
+		let maxMenuHeight = window.innerHeight - 16;
+		let menuHeight = menu.offsetHeight;
+		let menuResized = false;
+		let menuButton = menu.parentNode.querySelector('BUTTON');
 
 		if (menuHeight > maxMenuHeight) {
 			menu.style.height = maxMenuHeight + 'px';
 			menuResized = true;
 		}
 
-		//vars adjust the position of the menu if its cut off from viewport
-		var bounding = menu.getBoundingClientRect();
-		var parentBounding = menuButton.getBoundingClientRect();
+		//lets adjust the position of the menu if its cut off from viewport
+		let bounding = menu.getBoundingClientRect();
+		let parentBounding = menuButton.getBoundingClientRect();
 
 		if (bounding.top < 0) {
 			menu.style.top = -Math.abs(parentBounding.top - 8) + 'px';
 		}
 		if (bounding.bottom > (window.innerHeight || document.documentElement.clientHeight)) {
-			var minTop = -Math.abs(parentBounding.top - (window.innerHeight - menuHeight - 8));
-			var newTop = -Math.abs(bounding.bottom - window.innerHeight + 16);
+			let minTop = -Math.abs(parentBounding.top - (window.innerHeight - menuHeight - 8));
+			let newTop = -Math.abs(bounding.bottom - window.innerHeight + 16);
 			if (menuResized) {
 				menu.style.top = -Math.abs(parentBounding.top - 8) + 'px';
 			} else if (newTop > minTop) {
@@ -407,7 +407,7 @@
 	//increment itemHeight
 	function addItemHeight(element) {
 		//get key dimensions to calculate height
-		var dimensions = [
+		let dimensions = [
 			parseInt(window.getComputedStyle(element, null).getPropertyValue('margin-top')),
 			parseInt(window.getComputedStyle(element, null).getPropertyValue('margin-bottom')),
 			parseInt(window.getComputedStyle(element, null).getPropertyValue('padding-top')),
@@ -451,7 +451,7 @@
 			if (elements) {
 				//remove all the generated DOM elements
 				elements.forEach((menu) => {
-					var parent = menu.parentNode;
+					let parent = menu.parentNode;
 					parent.querySelector('BUTTON').remove();
 					parent.querySelector('UL').remove();
 					parent.outerHTML = parent.innerHTML;
