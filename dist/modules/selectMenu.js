@@ -2,7 +2,6 @@ const selector = 'select-menu';
 
 let elements, optionList, itemHeight, selectedItem;
 let init = false;
-let config = { attributes: true, childList: true, subtree: true };
 
 //PRIVATE
 
