@@ -131,10 +131,12 @@ To use a disclosure panel, you must use the following markup and also make sure 
     <div class="disclosure__label disclosure--section">Disclosure heading</div> <!-- This item is styled as a section -->
     <div class="disclosure__content">Panel content here</div>
   </li>
+
   <li class="disclosure__item disclosure--expanded"> <!-- This item is expanded on load -->
     <div class="disclosure__label">Disclosure heading</div>
     <div class="disclosure__content">Panel content here</div>
   </li>
+
   <li class="disclosure__item">
     <div class="disclosure__label">Disclosure heading</div>
     <div class="disclosure__content">Panel content here</div>
@@ -450,6 +452,8 @@ To use the switch, use the following HTML markup. Remember each switch should ge
     <label class="switch__label" for="uniqueId">Label</label>
 </div>
 ```
+
+---
 
 ### Textarea
 
