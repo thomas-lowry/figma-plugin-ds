@@ -9,7 +9,7 @@ A lightweight UI library for creating Figma plugins. Comes pre-installed with [F
   * [Intro](#intro)
   * [Getting started](#getting-started)
   * [Roadmap](#roadmap)
-- [Components](#components)
+  * [Components](#components)
     + [Button](#button)
     + [Checkbox](#checkbox)
     + [Disclosure](#disclosure)
