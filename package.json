@@ -15,7 +15,7 @@
     "build": "gulp --production"
   },
   "description": "A UI library with CSS and vanilla JS that match the Figma UI for building plugins.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "index.js",
   "style": "dist/figma-plugin-ds.css",
   "repository": {

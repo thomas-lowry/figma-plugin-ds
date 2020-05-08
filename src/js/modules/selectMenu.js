@@ -155,7 +155,7 @@ const createWrapper = function(menu) {
     //add content
     if (menu.selectedIndex != -1) {
         buttonLabel.textContent = menu.options[menu.selectedIndex].text;
-        if (!menu.options[menu.selectedIndex].hasAttribute('value')) {
+        if (menu.options[menu.selectedIndex].value === '') {
             buttonLabel.classList.add(selector + '__label--placeholder');
         }
     } else {
@@ -186,7 +186,7 @@ const createMenuItem = function(menuItem) {
 
     /* only create an item if there is a value this will ignore 
     the first menu item (if included) as a placeholder */
-    if (menuItem.hasAttribute('value')) {
+    if (menuItem.hasAttribute('value') && menuItem.value != '') {
 
         //create list item elements
         let item =  document.createElement('li');
