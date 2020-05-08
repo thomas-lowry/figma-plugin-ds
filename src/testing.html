@@ -2,13 +2,21 @@
 <head>
     <meta charset="utf-8">
     <title>Figma Plugin DS</title>
-    <link rel="stylesheet" href="figma-plugin-ds.css">
+    <link rel="stylesheet" href="../dist/figma-plugin-ds.css">
 </head>
 <body class="m-medium">
 
 <h1>Components</h1>
 
 <h3>Select menu</h3>
+
+<select name="" id="select-menu1" class="select-menu">
+    <option>Make a selection</option>
+    <option value="1" >Item 1</option>
+    <option value="2">Item 2</option>
+    <option value="3" >Item 3</option>
+    <option value="4" >Item 4</option>
+</select>
 
 <select name="" id="select-menu1" class="select-menu">
     <option value="1" >Item 1</option>
@@ -197,7 +205,7 @@
  </ul>
 
 
-<script src="figma-plugin-ds.js"></script>
+<script src="../dist/iife/figma-plugin-ds.js"></script>
 <script>
     selectMenu.init();
     disclosure.init();
