@@ -85,7 +85,6 @@ To use the button, use the following HTML markup. Each button has a destructive 
 
 | Modifier class                  | Description                                                                                     |
 |---------------------------------|-------------------------------------------------------------------------------------------------|
-| :-----------------              | :---------------------------------------------------------------------------------------------- |
 | `button--primary`               | Primary button                                                                                  |
 | `button--primary-destructive`   | Primary button with red destructive variant for actions such as deleting something              |
 | `button--secondary`             | Secondary button with outline style                                                             |
@@ -156,7 +155,6 @@ disclosure.destroy();
 
 | Modifier class         | Description                                                                                     |
 |------------------------|-------------------------------------------------------------------------------------------------|
-| :-----------------     | :---------------------------------------------------------------------------------------------- |
 | `disclosure--section`  | Add this class to the `disclosure__label` to style it like a heading                            |
 | `disclosure--expanded` | Add this class to the `disclosure__item` to have it expanded on load                            |
 
@@ -184,7 +182,6 @@ To use the icon component, use the following markup. Apply the appropriate modif
 
 | Modifier class     | Description                                                                                     |
 |--------------------|-------------------------------------------------------------------------------------------------|
-| :----------------- | :---------------------------------------------------------------------------------------------- |
 | `icon--iconName`*  | Sepcify which icon to use. Ex: `icon--adjust` or `icon--settings`                               |
 | `icon--spin`       | Causes the icon to spin in an endless loop (for example: a loader used with `icon--spinner`)    |
 | `icon--colorName`* | Pass the name of any Figma color var to this prop. Ex: `icon--blue` or `icon--black3`           |
@@ -335,7 +332,6 @@ To use the input, use the following markup. You can also insert an icon into the
 
 | Modifier class      | Description                                                                                     |
 |---------------------|-------------------------------------------------------------------------------------------------|
-| :-----------------  | :---------------------------------------------------------------------------------------------- |
 | `input--with-icon`* | Add this modifier class if you plan to include the icon component within the input              |
 
 ---
@@ -483,7 +479,6 @@ To use the typography that is styled like it is in the Figma UI, use the followi
 
 | Modifier class     | Description                                                                                         |
 |--------------------|-----------------------------------------------------------------------------------------------------|
-| :----------------- | :----------------------------------------------------------------------------------------------     |
 | `type--small`      | Font size 11px                                                                                      |
 | `type--large`      | Font size 12px                                                                                      |
 | `type--xlarge`     | Font size 14px                                                                                      |
