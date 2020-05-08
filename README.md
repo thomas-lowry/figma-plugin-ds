@@ -5,6 +5,24 @@ A lightweight UI library for creating Figma plugins.
 
 ## Contents
 
+  * [Contents](#contents)
+  * [Intro](#intro)
+  * [Getting started](#getting-started)
+  * [Roadmap](#roadmap)
+- [Components](#components)
+    + [Button](#button)
+    + [Checkbox](#checkbox)
+    + [Disclosure](#disclosure)
+    + [Icon](#icon)
+    + [Icon button](#icon-button)
+    + [Input](#input)
+    + [Labels and sections](#labels-and-sections)
+    + [Onboarding tip](#onboarding-tip)
+    + [Radio button](#radio-button)
+    + [Select menu](#select-menu)
+    + [Switch](#switch)
+    + [Textarea](#textarea)
+    + [Type](#type)
 
 
 ## Intro
