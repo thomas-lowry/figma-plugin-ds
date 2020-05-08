@@ -1,7 +1,7 @@
 
 # Figma Plugin DS
 
-A lightweight UI library for creating Figma plugins.
+A lightweight UI library for creating Figma plugins. Comes pre-installed with [Figma Plugin Boilerplate](https://github.com/thomas-lowry/figma-plugin-boilerplate/).
 
 ## Contents
 
@@ -47,9 +47,9 @@ To use the styles, you can use them via a link tag, or import them like a module
 import styles from 'figma-plugin-ds/dist/figma-plugin-ds.css'
 ```
 
-To use the Select menu or Disclosure components, you will need to import the Javascript files as well. This package supports both standard IIFEs and ES6 Modules. There are a number of ways to get started.
+To use the Select menu or Disclosure components, you will need to import the Javascript files as well. This package supports both standard IIFE (Immediately Invoked Function Expressions) and ES6 Modules. There are a number of ways to get started.
 
-Hosted IIFE (quick and easy, I don't want to mess with npm packages):
+**IIFE hosted on CDN (quick and easy, I don't want to mess with npm packages)**
 ```HTML
 <script src="https://cdn.jsdelivr.net/gh/thomas-lowry/figma-plugin-ds/dist/iife/figma-plugin-ds.js"></script>
 <script>
@@ -58,21 +58,23 @@ Hosted IIFE (quick and easy, I don't want to mess with npm packages):
 <script>
 ```
 
-IIFE 
+**IIFE**
 ```HTML
 <!-- Standard link tag-->
 <script src="../node_modules/figma-plugin-ds/dist/iife/figma-plugin-ds.js"></script> 
 ```
 
-Modules
+**ES6 Modules**
 ```Javascript
 import { selectMenu, disclosure } from 'figma-plugin-ds'
 ```
 
+
 ## Roadmap
-- New documentation website in progress
+- New documentation website 
 - Improved support for keyboard nav in the select menu
 - Slider component
+
 
 ---
 
