@@ -36,6 +36,8 @@ If you want to get started with a basic plugin (and are new to NPM packages), I 
 
 You can also install this package as a dependecy on your own project: `npm install figma-plugin-ds`
 
+
+**Styles**
 To use the styles, you can use them via a link tag, or import them like a module using a CSS loader.
 ```HTML
 <!-- Standard link tag-->
@@ -43,13 +45,13 @@ To use the styles, you can use them via a link tag, or import them like a module
 ```
 
 ```Javascript
-//or import
+//You could also inport the css via a CSS Loader in your JS environment
 import styles from 'figma-plugin-ds/dist/figma-plugin-ds.css'
 ```
 
 To use the Select menu or Disclosure components, you will need to import the Javascript files as well. This package supports both standard IIFE (Immediately Invoked Function Expressions) and ES6 Modules. There are a number of ways to get started.
 
-**IIFE hosted on CDN (quick and easy, I don't want to mess with npm packages)**
+**Scripts: IIFE hosted on CDN (quick and easy, I don't want to mess with npm packages)**
 ```HTML
 <script src="https://cdn.jsdelivr.net/gh/thomas-lowry/figma-plugin-ds/dist/iife/figma-plugin-ds.js"></script>
 <script>
@@ -58,15 +60,15 @@ To use the Select menu or Disclosure components, you will need to import the Jav
 <script>
 ```
 
-**IIFE**
+**Scripts: IIFE**
 ```HTML
 <!-- Standard link tag-->
 <script src="../node_modules/figma-plugin-ds/dist/iife/figma-plugin-ds.js"></script> 
 ```
 
-**ES6 Modules**
+**Scripts: ES6 Modules**
 ```Javascript
-import { selectMenu, disclosure } from 'figma-plugin-ds'
+import { selectMenu, disclosure } from 'figma-plugin-ds';
 ```
 
 
