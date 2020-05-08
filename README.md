@@ -105,14 +105,14 @@ To use the button, use the following HTML markup. Each button has a destructive 
 
 **Modifiers**
 
-| Modifier class                  | Description                                                                                     |
-|---------------------------------|-------------------------------------------------------------------------------------------------|
-| `button--primary`               | Primary button                                                                                  |
-| `button--primary-destructive`   | Primary button with red destructive variant for actions such as deleting something              |
-| `button--secondary`             | Secondary button with outline style                                                             |
-| `button--secondary-destructive` | Secondary button with red destructive variant for actions such as deleting something            |
-| `button--tertiary`              | Tertiary button with hyperlink style                                                            |
-| `button--tertiary-destructive`  | Tertiary button with red destructive variant for actions such as deleting something             |
+| Modifier class                  | Description                                                                                        |
+|------------------------------------|-------------------------------------------------------------------------------------------------|
+| `button--primary`                  | Primary button                                                                                  |
+| `button--primary-destructive`      | Primary button with red destructive variant for actions such as deleting something              |
+| `button--secondary`                | Secondary button with outline style                                                             |
+| `button--secondary-destructive`    | Secondary button with red destructive variant for actions such as deleting something            |
+| `button--tertiary`                 | Tertiary button with hyperlink style                                                            |
+| `button--tertiary-destructive`     | Tertiary button with red destructive variant for actions such as deleting something             |
 
 ---
 
