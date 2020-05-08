@@ -471,8 +471,24 @@ To use the textarea, use the following HTML markup.
 
 ### Type
 
-To use the typography that is styled like it is in the Figma UI, use the following markup.
+To use the typography that is styled like it is in the Figma UI, use the following markup plus additional modifier classes to modify the size, weight, and letterspacing that is optimized for positive (dark text on light background) and negative (light text on dark background) applications.
 
 ```HTML
-
+<div class="type">UI11, size: xsmall (default) weight: normal, positive</div>
+<div class="type type--large type--bold">UI13, size: large, weight: bold, positive</div>
+<div class="type type--small type--medium type--inverse">UI12, size: large, weight: medium, negative</div>
 ```
+
+**Modifiers**
+
+| Modifier class     | Description                                                                                         |
+|--------------------|-----------------------------------------------------------------------------------------------------|
+| :----------------- | :----------------------------------------------------------------------------------------------     |
+| `type--small`      | Font size 11px                                                                                      |
+| `type--large`      | Font size 12px                                                                                      |
+| `type--xlarge`     | Font size 14px                                                                                      |
+| `type--medium`     | Font weight medium                                                                                  |
+| `type--bold`       | Font weight bold                                                                                    |
+| `type--inverse`    | Inversed (negative) application where light text is on dark background with increased letterspacing |
+
+_Defaults: Font size 11px, normal weight, positive application_
