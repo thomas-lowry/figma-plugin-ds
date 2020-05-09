@@ -1,4 +1,3 @@
-
 # Figma Plugin DS
 
 A lightweight UI library for creating Figma plugins. Comes pre-installed with [Figma Plugin Boilerplate](https://github.com/thomas-lowry/figma-plugin-boilerplate/).
