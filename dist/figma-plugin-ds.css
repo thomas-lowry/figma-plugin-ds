@@ -112,25 +112,6 @@ body {
   src: url("https://rsms.me/inter/font-files/Inter-SemiBold.woff2?v=3.7") format("woff2"), url("https://rsms.me/inter/font-files/Inter-SemiBold.woff2?v=3.7") format("woff");
 }
 
-/* Hyperlink styling */
-a {
-  color: var(--blue);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-a:hover {
-  color: var(--blue);
-}
-
-a:active {
-  color: var(--blue);
-}
-
-a:focus {
-  text-decoration: underline;
-}
-
 /* UTILITIES */
 /* padding */
 .p-xxxsmall {
