@@ -1513,6 +1513,7 @@ a:focus {
   width: var(--size-medium);
   height: var(--size-medium);
   z-index: 1;
+  opacity: 0.3;
 }
 
 .label {
