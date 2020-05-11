@@ -1725,7 +1725,7 @@ select.select-menu {
   padding: var(--size-xxsmall) 0 var(--size-xxsmall) 0;
   border-radius: var(--border-radius-small);
   margin: 0;
-  z-index: 50;
+  z-index: 1000;
   overflow-x: overlay;
   overflow-y: auto;
 }
