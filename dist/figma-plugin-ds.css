@@ -663,7 +663,7 @@ body {
 }
 
 .button--primary-destructive:disabled {
-  background-color: var(--black3);
+  opacity: 0.3;
 }
 
 .button--secondary, .button--secondary-destructive {
