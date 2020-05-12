@@ -504,8 +504,8 @@ To use the typography that is styled like it is in the Figma UI, use the followi
 
 | Modifier class     | Description                                                                                         |
 |--------------------|-----------------------------------------------------------------------------------------------------|
-| `type--small`      | Font size 11px                                                                                      |
-| `type--large`      | Font size 12px                                                                                      |
+| `type--small`      | Font size 12px                                                                                      |
+| `type--large`      | Font size 13px                                                                                      |
 | `type--xlarge`     | Font size 14px                                                                                      |
 | `type--medium`     | Font weight medium                                                                                  |
 | `type--bold`       | Font weight bold                                                                                    |
