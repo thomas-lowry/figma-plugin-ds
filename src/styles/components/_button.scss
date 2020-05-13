@@ -69,6 +69,9 @@
             padding: 0 var(--size-xsmall) 0 var(--size-xsmall);
         }
         &:disabled {
+            border: 1px solid var(--red);
+            background-color: var(--white);
+            color: var(--red);
             opacity: 0.4;
         }
     }
