@@ -788,7 +788,7 @@ body {
   display: block;
   width: 10px;
   height: 10px;
-  margin: 1px 10px 0 -8px;
+  margin: -1px 10px 0 -8px;
   box-shadow: none;
 }
 
@@ -1487,7 +1487,8 @@ body {
 }
 
 .input--with-icon .input__field {
-  text-indent: 24px;
+  text-indent: -24px;
+  padding-left: 24px;
 }
 
 .input .icon {
