@@ -1487,8 +1487,7 @@ body {
 }
 
 .input--with-icon .input__field {
-  text-indent: -24px;
-  padding-left: 24px;
+  padding-left: 32px;
 }
 
 .input .icon {
