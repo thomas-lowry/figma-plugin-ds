@@ -788,7 +788,7 @@ body {
   display: block;
   width: 10px;
   height: 10px;
-  margin: 2px 10px 0 -8px;
+  margin: 1px 10px 0 -8px;
   box-shadow: none;
 }
 
@@ -1126,7 +1126,7 @@ body {
 }
 
 .icon--hyperlink {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg fill='none' height='32' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000'%3E%3Cpath d='M13.5 18a4.502 4.502 0 004.244-3h1.049a5.5 5.5 0 110-3h-1.05A4.502 4.502 0 009 13.5a4.5 4.5 0 004.5 4.5z'/%3E%3Cpath d='M18.5 23a4.5 4.5 0 10-4.244-6h-1.049a5.5 5.5 0 110 3h1.05a4.502 4.502 0 004.243 3z'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg fill='none' height='32' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.824 14.492l-1.657 1.657.828.829 1.658-1.657a3.517 3.517 0 00-4.973-4.973l-1.657 1.658.829.828 1.657-1.657a2.345 2.345 0 013.315 3.315zm-4.974 4.972l.829.829-1.658 1.657a3.516 3.516 0 11-4.972-4.972l1.659-1.658.828.829-1.656 1.657a2.343 2.343 0 103.315 3.315l1.657-1.657zm2.072-6.216l-4.972 4.973.828.829 4.973-4.973z' fill='%23000'/%3E%3C/svg%3E");
 }
 
 .icon--image {
