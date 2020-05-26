@@ -31,9 +31,7 @@ This package contains CSS and Javascript to closely match the look, feel and fun
 
 ## Getting started
 
-If you want to get started with a basic plugin (and are new to NPM packages), I recommend checking out my companion project called [Figma Plugin Boilerplate](https://github.com/thomas-lowry/figma-plugin-boilerplate/). This starter project makes development simpler if you just want to write HTML, CSS, and Javascript (without any frameworks). This library comes pre-configured and ready to go. 
-
-You can also install this package as a dependecy on your own project: `npm install figma-plugin-ds`
+You can install this package as a dependecy on your own project: `npm install figma-plugin-ds`
 
 
 **Styles**
@@ -44,7 +42,7 @@ To use the styles, you can use them via a link tag, or import them like a module
 ```
 
 ```Javascript
-//You could also inport the css via a CSS Loader in your JS environment
+//You could also inport the css via a CSS Loader in your JS environment (refer to syntax of whatever loader you are using)
 import styles from 'figma-plugin-ds/dist/figma-plugin-ds.css'
 ```
 
