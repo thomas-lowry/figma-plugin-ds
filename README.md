@@ -81,7 +81,7 @@ import { selectMenu, disclosure } from 'figma-plugin-ds';
 
 ### Button
 
-To use the button, use the following HTML markup. Each button has a destructive option. Teritary buttons are styled like hyperlinks.
+To use the button, use the following HTML markup. Each button has a destructive option. Tertiary buttons are styled like hyperlinks.
 
 ```HTML
 <!-- Primary -->
@@ -94,7 +94,7 @@ To use the button, use the following HTML markup. Each button has a destructive 
 <button class='button button--secondary-destructive'>Label</button>
 <button class='button button--secondary' disabled>Label</button>
 
-<!-- Tertirary (Hyperlink style button) -->
+<!-- Tertiary (Hyperlink style button) -->
 <button class='button button--tertiary'>Label</button>
 <button class='button button--tertiary-destructive'>Label</button>
 <button class='button button--tertiary' disabled>Label</button>
