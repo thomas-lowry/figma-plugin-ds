@@ -69,11 +69,13 @@
 		font-weight: var(--font-weight-bold);
     }
     
-    &--expanded & {
+    &--expanded  > 
 		&__content {
 			display: block;
-			border-bottom: 1px solid transparent;
-		}
+            border-bottom: 1px solid transparent;
+            pointer-events: all;
+        }
+    &--expanded >
 		&__label {
 			&:before {
 				opacity: 0.8;
@@ -82,4 +84,3 @@
 		}
 	}
 
-}
