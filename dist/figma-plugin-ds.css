@@ -911,7 +911,7 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background-position: -2px -1px;
+  background-position: 50% 50%;
 }
 
 .icon--spin {

@@ -8,7 +8,7 @@
     font-family: var(--font-stack);
     font-size: var(--font-size-xsmall);
     user-select: none;
-    background-position: -2px -1px;
+    background-position: 50% 50%;
 
     //rotate the icon in an infinit loop, ex: for a spinner
     &--spin {
