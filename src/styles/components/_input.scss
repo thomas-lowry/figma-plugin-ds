@@ -66,6 +66,10 @@
         }
     }
 
+    &--borders {
+        border: 1px solid var(--black1);
+    }
+
     .icon {
         position: absolute;
         top: 0px;
