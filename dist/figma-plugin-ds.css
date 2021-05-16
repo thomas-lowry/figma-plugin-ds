@@ -1500,7 +1500,7 @@ body {
 
 .onboarding-tip {
   display: flex;
-  align-items: top;
+  align-items: flex-start;
   padding: 0 var(--size-xsmall) 0 0;
 }
 
