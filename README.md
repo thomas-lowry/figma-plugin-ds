@@ -219,7 +219,7 @@ To use an icon, add one of the following modifier classes (see markup example ab
 | ![IconAlert](src/icons/alert.svg "icon")                                               | `icon--alert`                         |
 | ![IconAngle](src/icons/angle.svg "icon")                                               | `icon--angle`                         |
 | ![IconArrowLeftRight](src/icons/arrow-left-right.svg "icon")                           | `icon--arrow-left-right`              |
-| ![IconUpDown](src/icons/arrow-up-down.svg "icon")                                      | `icon--updown`                        |
+| ![IconUpDown](src/icons/arrow-up-down.svg "icon")                                      | `icon--up-down`                        |
 | ![IconAutoLayoutHorizontal](src/icons/auto-layout-horizontal.svg "icon")               | `icon--auto-layout-horizontal`        |
 | ![IconAutoLayoutVertical](src/icons/auto-layout-vertical.svg "icon")                   | `icon--auto-layout-vertical`          |
 | ![IconBack](src/icons/back.svg "icon")                                                 | `icon--back`                          |
