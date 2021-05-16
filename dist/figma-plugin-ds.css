@@ -1490,6 +1490,10 @@ body {
   padding-left: 32px;
 }
 
+.input--borders {
+  border: 1px solid var(--black1);
+}
+
 .input .icon {
   position: absolute;
   top: 0px;
