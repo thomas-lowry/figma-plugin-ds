@@ -297,6 +297,7 @@ To use an icon, add one of the following modifier classes (see markup example ab
 | ![IconTidyUpListVertical](src/icons/tidy-up-list-vertical.svg "icon")                  | `icon--tidy-up-list-vertical`         |
 | ![IconTimer](src/icons/timer.svg "icon")                                               | `icon--timer`                         |
 | ![IconTrash](src/icons/trash.svg "icon")                                               | `icon--trash`                         |
+| ![IconType](src/icons/type.svg "icon")                                                 | `icon--type`                          |
 | ![IconVerticalPadding](src/icons/vertical-padding.svg "icon")                          | `icon--vertical-padding`              |
 | ![IconVisible](src/icons/visible.svg "icon")                                           | `icon--visible`                       |
 | ![IconWarningLarge](src/icons/warning-large.svg "icon")                                | `icon--warning-large`                 |

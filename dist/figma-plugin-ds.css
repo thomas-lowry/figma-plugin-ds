@@ -1397,6 +1397,18 @@ body {
   background-color: var(--white);
 }
 
+.input__field:-moz-placeholder-shown:hover {
+  color: var(--black8);
+  border: 1px solid var(--black1);
+  background-image: none;
+}
+
+.input__field:-ms-input-placeholder:hover {
+  color: var(--black8);
+  border: 1px solid var(--black1);
+  background-image: none;
+}
+
 .input__field:hover, .input__field:placeholder-shown:hover {
   color: var(--black8);
   border: 1px solid var(--black1);
@@ -1428,8 +1440,28 @@ body {
   border: 1px solid transparent;
 }
 
+.input__field:-moz-placeholder-shown {
+  border: 1px solid var(--black1);
+}
+
+.input__field:-ms-input-placeholder {
+  border: 1px solid var(--black1);
+}
+
 .input__field:placeholder-shown {
   border: 1px solid var(--black1);
+}
+
+.input__field:focus:-moz-placeholder-shown {
+  border: 1px solid var(--blue);
+  outline: 1px solid var(--blue);
+  outline-offset: -2px;
+}
+
+.input__field:focus:-ms-input-placeholder {
+  border: 1px solid var(--blue);
+  outline: 1px solid var(--blue);
+  outline-offset: -2px;
 }
 
 .input__field:focus:placeholder-shown {
@@ -1906,6 +1938,18 @@ select.select-menu {
   overflow-y: auto;
 }
 
+.textarea:-moz-placeholder-shown:hover {
+  color: var(--black8);
+  border: 1px solid var(--black1);
+  background-image: none;
+}
+
+.textarea:-ms-input-placeholder:hover {
+  color: var(--black8);
+  border: 1px solid var(--black1);
+  background-image: none;
+}
+
 .textarea:hover, .textarea:placeholder-shown:hover {
   color: var(--black8);
   border: 1px solid var(--black1);
@@ -1935,6 +1979,18 @@ select.select-menu {
 .textarea::placeholder {
   color: var(--black3);
   border: 1px solid transparent;
+}
+
+.textarea:focus:-moz-placeholder-shown {
+  border: 1px solid var(--blue);
+  outline: 1px solid var(--blue);
+  outline-offset: -2px;
+}
+
+.textarea:focus:-ms-input-placeholder {
+  border: 1px solid var(--blue);
+  outline: 1px solid var(--blue);
+  outline-offset: -2px;
 }
 
 .textarea:focus:placeholder-shown {
