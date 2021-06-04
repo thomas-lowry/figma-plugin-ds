@@ -54,7 +54,7 @@ To use the Select menu or Disclosure components, you will need to import the Jav
 <script>
     selectMenu.init(); //initiates the select menu component
     disclosure.init(); //initiates the disclosure component
-<script>
+</script>
 ```
 
 **Scripts: IIFE**
