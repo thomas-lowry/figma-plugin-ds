@@ -1669,7 +1669,6 @@ select.select-menu {
   line-height: var(--line-height);
   color: var(--black8);
   margin-right: 6px;
-  margin-top: -2px;
   white-space: nowrap;
   overflow-x: hidden;
   text-overflow: ellipsis;
