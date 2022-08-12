@@ -456,7 +456,7 @@ To use the switch, use the following HTML markup. Remember each switch should ge
 <!-- Switch -->
 <div class="switch">
     <input class="switch__toggle" type="checkbox" id="uniqueId">
-    <label class="switch__label" for="uniqueIdA">Label</label>
+    <label class="switch__label" for="uniqueId">Label</label>
 </div>
 
 <!-- Switch checked -->
