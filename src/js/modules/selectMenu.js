@@ -139,6 +139,7 @@ const createWrapper = function(menu) {
 
     //create the button + nested elements
     let button = document.createElement('button')
+    button.type = 'button'
     let icon;
     let buttonLabel = document.createElement('span')
     let buttonCaret = document.createElement('span')
